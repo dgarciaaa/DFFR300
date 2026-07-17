@@ -1,0 +1,296 @@
+\documentclass[11pt]{article}
+\input{preamble}
+
+\title{\curso\\[0.4em]\Large Semana 1 - Parte 2: referencia, coordenadas y vectores}
+\author{Apunte de clase}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section*{Proposito}
+\addcontentsline{toc}{section}{Proposito}
+
+La segunda clase introduce el lenguaje geometrico necesario para describir movimiento. La Unidad I del syllabus comienza explicitamente con vectores, operaciones elementales y nocion de sistema de referencia; por eso, antes de definir velocidad o aceleracion, conviene fijar como se representa una posicion y como se trabaja con cantidades que tienen direccion.
+
+El contenido se apoya principalmente en el capitulo 3 de Serway y Jewett, con conexion hacia los conceptos iniciales de cinematica del capitulo 2 y con la secuencia de la presentacion inicial del curso.
+
+\section*{Fuentes usadas}
+\addcontentsline{toc}{section}{Fuentes usadas}
+
+\begin{itemize}
+  \item Syllabus DFFR300: Unidad I, ``Elementos de mecanica de la particula en 1D''.
+  \item Serway y Jewett, \emph{Fisica para ciencias e ingenieria}, volumen 1, septima edicion: capitulo 3, ``Vectores''. Secciones usadas: 3.1 ``Sistemas coordenados''; 3.2 ``Cantidades vectoriales y escalares''; 3.3 ``Algunas propiedades de los vectores''; 3.4 ``Componentes de un vector y vectores unitarios''. Del capitulo 2 se usaron solo las nociones iniciales de posicion, desplazamiento y velocidad media como puente hacia cinematica.
+  \item Presentacion `general/1Clases.pdf': diapositivas sobre trigonometria, sistemas de coordenadas, vectores, componentes, vectores unitarios y puente hacia cinematica.
+\end{itemize}
+
+\begin{objetivos}
+  \item Explicar por que toda descripcion de posicion requiere un sistema de referencia.
+  \item Distinguir cantidades escalares y vectoriales.
+  \item Representar vectores graficamente y mediante componentes.
+  \item Sumar, restar y multiplicar vectores por escalares.
+  \item Preparar el paso hacia posicion, desplazamiento y velocidad en una dimension.
+\end{objetivos}
+
+\section*{Hilo de pizarra}
+\addcontentsline{toc}{section}{Hilo de pizarra}
+
+La clase puede presentarse como la respuesta progresiva a una pregunta: \emph{como decimos donde esta algo y como cambia su posicion?}
+
+Primero se fija un sistema de referencia. Luego se distingue entre cantidades que solo necesitan un numero y cantidades que necesitan direccion. Finalmente se aprende a operar esas cantidades con componentes, porque el metodo grafico es util para entender, pero el metodo algebraico es el que permite resolver problemas con precision.
+
+El hilo recomendado para la pizarra es:
+
+\begin{enumerate}
+  \item Elegir origen y ejes.
+  \item Representar una posicion.
+  \item Definir desplazamiento como cambio de posicion.
+  \item Introducir vector, magnitud, direccion y sentido.
+  \item Pasar del dibujo a componentes.
+  \item Cerrar con la idea de que en una dimension el signo contiene la direccion.
+\end{enumerate}
+
+Con esto queda preparado el lenguaje de la cinematica: la proxima clase no se definira velocidad desde cero, sino como razon de cambio del desplazamiento con respecto al tiempo.
+
+\section{Sistema de referencia}
+
+Para describir el movimiento hay que responder primero: movimiento respecto de que. Un sistema de referencia fija un origen, ejes coordenados y una forma de medir el tiempo. Sin esta eleccion, la frase ``la particula se movio hacia la derecha'' es incompleta.
+
+En pizarra conviene dibujar primero una recta sin origen y preguntar donde esta una particula. La respuesta no es unica. Solo cuando se marca un origen y un sentido positivo, la posicion puede expresarse mediante una coordenada. Esa es la razon conceptual para introducir sistemas de referencia antes de hablar de movimiento.
+
+En una dimension basta un eje, por ejemplo el eje $x$. La posicion de una particula se representa con un numero con signo:
+
+\[
+  x>0 \quad \text{a la derecha del origen},\qquad
+  x<0 \quad \text{a la izquierda del origen}.
+\]
+
+En dos dimensiones se usa comunmente un plano cartesiano y la posicion se escribe como un par ordenado:
+
+\[
+  (x,y).
+\]
+
+Tambien se pueden usar coordenadas polares $(r,\theta)$, donde $r$ es la distancia al origen y $\theta$ es el angulo medido respecto de un eje de referencia. La conversion usual es
+
+\[
+  x=r\cos\theta,\qquad y=r\sin\theta,
+\]
+
+y, si se conocen $x$ e $y$,
+
+\[
+  r=\sqrt{x^2+y^2},\qquad \tan\theta=\frac{y}{x}.
+\]
+
+La eleccion del sistema de coordenadas no cambia el fenomeno, pero puede hacer que el problema sea mas facil o mas dificil.
+
+El cambio entre coordenadas cartesianas y polares debe desarrollarse desde el triangulo rectangulo. Si $r$ es la hipotenusa y $\theta$ se mide desde el eje $x$ positivo, entonces $x$ es el cateto adyacente e $y$ el cateto opuesto. Por eso aparecen coseno y seno en ese orden. Si el angulo se mide desde otro eje, las formulas deben revisarse. Esta advertencia sera importante cuando se descompongan fuerzas.
+
+\section{Escalares y vectores}
+
+Una cantidad escalar queda especificada por un numero y una unidad. Ejemplos: masa, tiempo, temperatura, energia.
+
+Una cantidad vectorial requiere magnitud, direccion y sentido. Ejemplos: posicion, desplazamiento, velocidad, aceleracion y fuerza. En el escrito usaremos negrita para vectores:
+
+\[
+  \vect{A},\qquad \vect{v},\qquad \vect{F}.
+\]
+
+La magnitud o modulo de un vector se escribe como
+
+\[
+  |\vect{A}|.
+\]
+
+El vector opuesto $-\vect{A}$ tiene la misma magnitud que $\vect{A}$, pero sentido contrario.
+
+La distincion debe quedar ligada a una necesidad fisica. La masa de una muestra no apunta hacia ningun lado; basta un numero con unidad. En cambio, un desplazamiento de $2\unidadSI{m}$ no queda determinado si no se dice hacia donde. Dos desplazamientos con la misma magnitud pueden producir efectos distintos si apuntan en sentidos diferentes.
+
+\section{Suma y resta geometrica}
+
+La suma vectorial se puede construir con la regla punta-cola. Para sumar $\vect{A}+\vect{B}$, se dibuja $\vect{A}$ y luego se coloca la cola de $\vect{B}$ en la punta de $\vect{A}$. El vector resultante va desde la cola inicial hasta la punta final.
+
+Esta suma cumple:
+
+\[
+  \vect{A}+\vect{B}=\vect{B}+\vect{A},
+\]
+
+\[
+  \vect{A}+(\vect{B}+\vect{C})=(\vect{A}+\vect{B})+\vect{C}.
+\]
+
+La resta se define sumando el opuesto:
+
+\[
+  \vect{A}-\vect{B}=\vect{A}+(-\vect{B}).
+\]
+
+Un punto esencial para pizarra: en general,
+
+\[
+  |\vect{A}+\vect{B}| \ne |\vect{A}|+|\vect{B}|.
+\]
+
+La igualdad solo ocurre cuando los vectores tienen la misma direccion y el mismo sentido.
+
+Este punto se puede mostrar con dos caminatas. Caminar $3\unidadSI{m}$ al este y luego $4\unidadSI{m}$ al norte no deja a la persona a $7\unidadSI{m}$ del origen; la distancia al origen es $5\unidadSI{m}$. La suma de caminos recorridos no coincide necesariamente con la magnitud del desplazamiento resultante. Esta diferencia prepara la distincion entre distancia recorrida y desplazamiento en cinematica.
+
+\section{Componentes cartesianas}
+
+Si un vector $\vect{A}$ esta en el plano y forma un angulo $\theta$ con el eje $x$ positivo, sus componentes cartesianas son
+
+\[
+  A_x=|\vect{A}|\cos\theta,\qquad A_y=|\vect{A}|\sin\theta.
+\]
+
+Entonces se puede escribir
+
+\[
+  \vect{A}=(A_x,A_y).
+\]
+
+La magnitud se recupera con Pitagoras:
+
+\[
+  |\vect{A}|=\sqrt{A_x^2+A_y^2}.
+\]
+
+La direccion se obtiene con
+
+\[
+  \theta=\tan^{-1}\left(\frac{A_y}{A_x}\right),
+\]
+
+teniendo cuidado con el cuadrante. La calculadora puede entregar un angulo principal que no corresponde al dibujo fisico si no se revisan los signos de $A_x$ y $A_y$.
+
+El libro separa claramente el vector de sus componentes. El vector es el objeto geometrico completo; las componentes son numeros con signo que indican cuanto de ese vector apunta en cada eje. Por eso las componentes pueden ser negativas aunque la magnitud del vector siempre sea positiva.
+
+El orden de resolucion recomendado es:
+
+\begin{enumerate}
+  \item Dibujar el vector y los ejes.
+  \item Identificar el angulo respecto del eje usado.
+  \item Decidir signos mirando el cuadrante.
+  \item Calcular componentes con trigonometria.
+  \item Reconstruir magnitud y direccion como verificacion.
+\end{enumerate}
+
+\section{Vectores unitarios}
+
+Un vector unitario tiene magnitud uno y no introduce unidades fisicas. Sirve para indicar direccion. En el plano cartesiano se usan
+
+\[
+  \uvect{i} \quad \text{en la direccion } +x,\qquad
+  \uvect{j} \quad \text{en la direccion } +y.
+\]
+
+Con esta notacion,
+
+\[
+  \vect{A}=A_x\uvect{i}+A_y\uvect{j}.
+\]
+
+La suma vectorial se reduce a sumar componentes:
+
+\[
+  \vect{R}=\vect{A}+\vect{B}
+  =(A_x+B_x)\uvect{i}+(A_y+B_y)\uvect{j}.
+\]
+
+Y la multiplicacion por un escalar $\alpha$ queda
+
+\[
+  \alpha \vect{A}=(\alpha A_x)\uvect{i}+(\alpha A_y)\uvect{j}.
+\]
+
+Los vectores unitarios son una notacion economica: separan direccion y tamano. La cantidad $A_x$ dice cuanto hay en la direccion horizontal, mientras que $\uvect{i}$ recuerda cual es esa direccion. Esta forma sera especialmente util cuando se sumen fuerzas o desplazamientos, porque convierte una suma geometrica en una suma de numeros con signo.
+
+\begin{ejemplo}{desplazamiento en dos tramos}
+Una estudiante camina $1.00\unidadSI{km}$ hacia el norte y luego $2.00\unidadSI{km}$ hacia el este. Tomemos $+x$ hacia el este y $+y$ hacia el norte. Los desplazamientos son
+
+\[
+  \vect{A}=0\uvect{i}+1.00\uvect{j}\ \unidadSI{km},\qquad
+  \vect{B}=2.00\uvect{i}+0\uvect{j}\ \unidadSI{km}.
+\]
+
+El desplazamiento resultante es
+
+\[
+  \vect{R}=\vect{A}+\vect{B}
+  =2.00\uvect{i}+1.00\uvect{j}\ \unidadSI{km}.
+\]
+
+Su magnitud es
+
+\[
+  |\vect{R}|=\sqrt{(2.00)^2+(1.00)^2}\unidadSI{km}
+  =2.24\unidadSI{km}.
+\]
+
+El angulo respecto del este es
+
+\[
+  \theta=\tan^{-1}\left(\frac{1.00}{2.00}\right)=26.6^\circ.
+\]
+
+Por lo tanto, la estudiante queda a $2.24\unidadSI{km}$ del punto de partida, en direccion $26.6^\circ$ al norte del este.
+\end{ejemplo}
+
+\begin{ejemplo}{componentes de una fuerza}
+Una fuerza de magnitud $0.10\unidadSI{N}$ forma un angulo de $27^\circ$ con la vertical. Si el vector apunta hacia abajo y hacia la derecha, entonces su componente horizontal es positiva y su componente vertical es negativa.
+
+Como el angulo esta medido respecto del eje vertical, no conviene memorizar $F_x=F\cos\theta$. Hay que mirar el triangulo: la componente horizontal es el cateto opuesto al angulo y la vertical es el cateto adyacente.
+
+\[
+  F_x=F\sin 27^\circ,\qquad F_y=-F\cos 27^\circ.
+\]
+
+Luego,
+
+\[
+  F_x=(0.10)\sin 27^\circ=0.045\unidadSI{N},
+\]
+
+\[
+  F_y=-(0.10)\cos 27^\circ=-0.089\unidadSI{N}.
+\]
+
+Asi,
+
+\[
+  \vect{F}=0.045\uvect{i}-0.089\uvect{j}\ \unidadSI{N}.
+\]
+\end{ejemplo}
+
+\section{Puente hacia cinematica en una dimension}
+
+En una dimension, el vector posicion se reduce a una coordenada con signo. Si una particula esta inicialmente en $x_i$ y luego en $x_f$, el desplazamiento es
+
+\[
+  \Delta x=x_f-x_i.
+\]
+
+El desplazamiento no es lo mismo que la distancia recorrida. El desplazamiento conserva signo y depende solo de la posicion inicial y final. La distancia recorrida suma la longitud de la trayectoria.
+
+La proxima semana se usara esta idea para definir velocidad media:
+
+\[
+  v_{\mathrm{med}}=\frac{\Delta x}{\Delta t},
+\]
+
+y luego velocidad instantanea como el limite cuando el intervalo de tiempo se hace muy pequeno.
+
+Este cierre es importante: en una dimension no desaparece la naturaleza vectorial del movimiento; queda codificada en el signo. Si $\Delta x>0$, el desplazamiento apunta en el sentido positivo del eje; si $\Delta x<0$, apunta en el sentido opuesto. Asi, la cinematica en una dimension sera mas simple, pero no conceptualmente distinta.
+
+\begin{pizarra}
+  \item Dibujar dos vectores no paralelos y mostrar graficamente por que $|\vect{A}+\vect{B}|$ no suele ser $|\vect{A}|+|\vect{B}|$.
+  \item Para $\vect{A}=3\uvect{i}+4\uvect{j}$, hallar $|\vect{A}|$ y un vector unitario en la direccion opuesta.
+  \item Dados $\vect{D}=6\uvect{i}+3\uvect{j}$ y $\vect{E}=4\uvect{i}-5\uvect{j}$, calcular $2\vect{D}-\vect{E}$.
+  \item Una particula se mueve desde $x_i=-2\unidadSI{m}$ hasta $x_f=5\unidadSI{m}$ y luego vuelve a $x=1\unidadSI{m}$. Comparar desplazamiento neto y distancia recorrida.
+\end{pizarra}
+
+\end{document}

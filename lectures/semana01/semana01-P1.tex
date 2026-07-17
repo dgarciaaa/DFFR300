@@ -1,0 +1,256 @@
+\documentclass[11pt]{article}
+\input{preamble}
+
+\title{\curso\\[0.4em]\Large Semana 1 - Parte 1: medir, modelar y estimar}
+\author{Apunte de clase}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section*{Proposito}
+\addcontentsline{toc}{section}{Proposito}
+
+El curso comienza con una idea simple: la fisica describe fenomenos naturales mediante magnitudes medibles y relaciones matematicas entre ellas. Para que una descripcion sea util, no basta con escribir formulas; hay que decir que sistema se observa, que cantidades lo caracterizan, en que unidades se miden y respecto de que referencia se describe el cambio.
+
+Esta primera clase prepara el lenguaje de medicion que se usara en toda la Unidad I del syllabus: magnitudes fisicas, unidades, notacion cientifica, conversiones, analisis dimensional y estimaciones. El contenido se apoya principalmente en el capitulo 1 de Serway y Jewett, y en la primera parte de la presentacion inicial del curso.
+
+\section*{Fuentes usadas}
+\addcontentsline{toc}{section}{Fuentes usadas}
+
+\begin{itemize}
+  \item Syllabus DFFR300: Unidad I, ``Elementos de mecanica de la particula en 1D''.
+  \item Serway y Jewett, \emph{Fisica para ciencias e ingenieria}, volumen 1, septima edicion: capitulo 1, ``Fisica y medicion''. Secciones usadas: 1.1 ``Estandares de longitud, masa y tiempo''; 1.2 ``Materia y construccion de modelos''; 1.3 ``Analisis dimensional''; 1.4 ``Conversion de unidades''; 1.5 ``Estimaciones y calculos de orden de magnitud''.
+  \item Presentacion `general/1Clases.pdf': diapositivas sobre fisica, cantidades, unidades, analisis dimensional, prefijos y estimaciones.
+\end{itemize}
+
+\begin{objetivos}
+  \item Reconocer que una ley fisica relaciona magnitudes medibles.
+  \item Distinguir magnitudes fundamentales y derivadas.
+  \item Usar unidades SI y prefijos de potencias de diez.
+  \item Verificar la consistencia dimensional de una expresion.
+  \item Hacer estimaciones de orden de magnitud antes de calcular.
+\end{objetivos}
+
+\section*{Hilo de pizarra}
+\addcontentsline{toc}{section}{Hilo de pizarra}
+
+La clase puede narrarse como una cadena:
+
+\[
+  \text{fenomeno} \longrightarrow \text{modelo} \longrightarrow \text{magnitudes}
+  \longrightarrow \text{unidades} \longrightarrow \text{ecuaciones}.
+\]
+
+El punto de partida no es una formula, sino una pregunta: \emph{que podemos medir de un sistema fisico?} Una vez elegida la pregunta, se decide que parte de la realidad se modela, que cantidades describen el modelo y con que unidades se comparan las mediciones. Solo al final aparecen las ecuaciones.
+
+Para que el desarrollo sea ordenado, conviene escribir en pizarra cuatro preguntas que se repetiran durante el curso:
+
+\begin{enumerate}
+  \item Cual es el sistema fisico?
+  \item Que modelo usaremos para describirlo?
+  \item Que magnitudes se necesitan?
+  \item Las unidades y dimensiones de la respuesta son coherentes?
+\end{enumerate}
+
+Esta rutina prepara el trabajo de las semanas siguientes: cuando se estudie movimiento, fuerza, energia o fluidos, cada formula se interpretara como una relacion entre magnitudes medibles, no como una receta aislada.
+
+\section{Fisica como descripcion cuantitativa}
+
+La fisica es una ciencia experimental: parte de observaciones, propone modelos, extrae consecuencias y las compara con mediciones. En este curso interesan especialmente sistemas simples que aparecen en contextos quimicos, biologicos y farmaceuticos: particulas en movimiento, fluidos, sistemas que intercambian calor y cargas electricas.
+
+Un \emph{modelo} no es una copia completa de la realidad. Es una version simplificada que conserva las caracteristicas necesarias para responder una pregunta. Por ejemplo, para estudiar el movimiento vertical de una gota durante un intervalo corto puede bastar tratarla como una particula. Esa decision ignora su extension, su forma y, si se declara explicitamente, incluso el roce con el aire. El modelo es aceptable solo mientras esas omisiones no controlen el fenomeno que se quiere explicar.
+
+En mecanica, muchas preguntas se reducen a describir como cambia la posicion de una particula en el tiempo. Para llegar a eso necesitamos construir primero el lenguaje de medicion.
+
+En pizarra, es util separar el fenomeno real del modelo. Por ejemplo, una capsula que cae dentro de un fluido tiene forma, volumen, masa, roce, empuje y posiblemente rotacion. Si la primera pregunta es solo por su posicion vertical en un intervalo breve, se puede comenzar con un modelo de particula. Si mas adelante interesa el fluido, ese modelo ya no sera suficiente. Esta distincion evita una confusion comun: un modelo no es verdadero o falso en abstracto; es adecuado o inadecuado para una pregunta concreta.
+
+\section{Magnitudes fisicas}
+
+Una magnitud fisica es una propiedad que puede medirse y expresarse mediante un numero y una unidad. En mecanica se usan tres magnitudes fundamentales:
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Magnitud & Simbolo dimensional & Unidad SI \\
+\midrule
+Longitud & $L$ & metro, $\mathrm{m}$ \\
+Masa & $M$ & kilogramo, $\mathrm{kg}$ \\
+Tiempo & $T$ & segundo, $\mathrm{s}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Otras magnitudes se construyen a partir de estas. Se llaman magnitudes derivadas. Por ejemplo:
+
+\[
+  \text{area} = \text{longitud}^2,\qquad
+  \text{volumen} = \text{longitud}^3,\qquad
+  \text{rapidez} = \frac{\text{longitud}}{\text{tiempo}}.
+\]
+
+En simbolos dimensionales:
+
+\[
+  [A] = L^2,\qquad [V] = L^3,\qquad [v] = L T^{-1}.
+\]
+
+La notacion $[x]$ se lee como ``dimension de $x$''. No dice cuanto vale $x$, sino que tipo de cantidad es. Dos cantidades pueden tener unidades distintas y la misma dimension; por ejemplo, metros y centimetros son unidades de longitud.
+
+La idea central para enfatizar es que medir significa comparar. Decir que una longitud vale $2\unidadSI{m}$ significa que contiene dos veces el patron llamado metro. Decir que un tiempo vale $5\unidadSI{s}$ significa que contiene cinco veces el patron llamado segundo. Por eso las unidades no son un adorno: son parte de la informacion fisica.
+
+Esta lectura permite introducir cantidades derivadas sin memorizarlas. Si una rapidez mide ``distancia recorrida por tiempo transcurrido'', su dimension debe ser longitud dividida por tiempo. Si una densidad mide ``masa por volumen'', su dimension debe ser masa dividida por longitud al cubo:
+
+\[
+  [\rho]=\frac{M}{L^3}=ML^{-3}.
+\]
+
+Este tipo de razonamiento sera mas importante que recordar una tabla.
+
+\section{Sistema Internacional y prefijos}
+
+El Sistema Internacional permite comparar resultados sin depender de unidades locales. Para este curso conviene acostumbrarse a escribir cada resultado con unidad. Un numero aislado rara vez tiene significado fisico completo.
+
+Los prefijos simplifican numeros muy grandes o muy pequenos:
+
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+Prefijo & Simbolo & Factor & Ejemplo \\
+\midrule
+kilo & k & $10^3$ & $1\unidadSI{km}=10^3\unidadSI{m}$ \\
+centi & c & $10^{-2}$ & $1\unidadSI{cm}=10^{-2}\unidadSI{m}$ \\
+mili & m & $10^{-3}$ & $1\unidadSI{mm}=10^{-3}\unidadSI{m}$ \\
+micro & $\mu$ & $10^{-6}$ & $1\unidadSI{\mu m}=10^{-6}\unidadSI{m}$ \\
+nano & n & $10^{-9}$ & $1\unidadSI{nm}=10^{-9}\unidadSI{m}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+En ciencias farmaceuticas aparecen escalas muy distintas: tamanos moleculares, dimensiones celulares, volumenes de gotas, masas de principios activos y tiempos de respuesta fisiologica. La notacion cientifica evita perder informacion por escribir demasiados ceros.
+
+El libro insiste en desarrollar intuicion de escala. En clase conviene detenerse en ejemplos cotidianos: un campo de futbol tiene una longitud del orden de $10^2\unidadSI{m}$, una celula tipica tiene tamano del orden de $10^{-5}\unidadSI{m}$ y una distancia astronomica puede llegar a $10^{11}\unidadSI{m}$ o mas. La fisica usa el mismo lenguaje para todos esos casos; lo que cambia es la escala.
+
+\section{Conversion de unidades}
+
+Convertir unidades no cambia la magnitud fisica, solo la forma de escribirla. La regla practica es multiplicar por factores equivalentes a uno.
+
+El procedimiento debe escribirse como una cancelacion organizada de unidades. Si la unidad que se quiere eliminar esta arriba, se pone abajo en el factor de conversion; si esta abajo, se pone arriba. La aritmetica viene despues. Esta prioridad reduce errores porque obliga a mirar primero la estructura fisica del calculo.
+
+\begin{ejemplo}{conversion de rapidez}
+Convertir $72\unidadSI{km/h}$ a $\mathrm{m/s}$.
+
+\[
+72\frac{\mathrm{km}}{\mathrm{h}}
+\left(\frac{1000\mathrm{m}}{1\mathrm{km}}\right)
+\left(\frac{1\mathrm{h}}{3600\mathrm{s}}\right)
+=20\frac{\mathrm{m}}{\mathrm{s}}.
+\]
+
+El resultado dice que un objeto que avanza a $72\unidadSI{km/h}$ recorre $20\unidadSI{m}$ cada segundo.
+\end{ejemplo}
+
+\begin{ejemplo}{densidad}
+La densidad se define como masa por unidad de volumen:
+
+\[
+  \rho=\frac{m}{V}.
+\]
+
+Si una solucion tiene masa $m=50\unidadSI{g}$ y volumen $V=40\unidadSI{mL}$, entonces
+
+\[
+  \rho=\frac{50\unidadSI{g}}{40\unidadSI{mL}}
+  =1.25\unidadSI{g/mL}.
+\]
+
+En SI, usando $1\unidadSI{g}=10^{-3}\unidadSI{kg}$ y $1\unidadSI{mL}=10^{-6}\unidadSI{m^3}$,
+
+\[
+  1.25\unidadSI{g/mL}
+  =1.25\times 10^3\unidadSI{kg/m^3}.
+\]
+\end{ejemplo}
+
+\section{Analisis dimensional}
+
+El analisis dimensional es una prueba de coherencia. Si una ecuacion fisica es correcta, ambos lados deben tener la misma dimension. Esto no garantiza que la ecuacion sea verdadera, pero una ecuacion dimensionalmente inconsistente no puede ser una ley fisica correcta.
+
+La forma de presentarlo en pizarra es como una prueba de sanidad antes de confiar en un resultado. No responde ``cuanto vale'', sino ``puede tener sentido''. Esta diferencia es importante: muchas expresiones dimensionalmente correctas pueden ser fisicamente falsas, pero ninguna expresion dimensionalmente incorrecta puede describir una igualdad fisica entre magnitudes.
+
+Supongamos que se propone
+
+\[
+  x = x_0 + vt.
+\]
+
+La posicion $x$ y la posicion inicial $x_0$ tienen dimension $L$. La velocidad tiene dimension $LT^{-1}$ y el tiempo tiene dimension $T$, de modo que
+
+\[
+  [vt] = (LT^{-1})T = L.
+\]
+
+Todos los terminos tienen dimension de longitud, por lo que la expresion pasa la prueba dimensional.
+
+Ahora consideremos la expresion erronea
+
+\[
+  x = x_0 + v + t.
+\]
+
+Aqui se estarian sumando longitud, velocidad y tiempo. Esa suma no tiene sentido fisico: solo se pueden sumar cantidades con la misma dimension.
+
+\begin{ejemplo}{forma posible de una distancia}
+Queremos construir una distancia $x$ usando una aceleracion constante $a$ y un tiempo $t$. Buscamos una relacion del tipo
+
+\[
+  x \propto a^n t^m.
+\]
+
+Las dimensiones son
+
+\[
+  L = (LT^{-2})^n T^m = L^n T^{m-2n}.
+\]
+
+Comparando potencias, se obtiene $n=1$ y $m-2n=0$, luego $m=2$. Por lo tanto,
+
+\[
+  x \propto at^2.
+\]
+
+El analisis dimensional no entrega el factor numerico. En cinematica veremos que, para ciertas condiciones iniciales, aparece el factor $1/2$.
+\end{ejemplo}
+
+\section{Estimaciones de orden de magnitud}
+
+Una estimacion de orden de magnitud busca la potencia de diez dominante. Sirve para detectar errores y para decidir si una respuesta es razonable antes de hacer un calculo detallado.
+
+Por ejemplo, estimemos el numero de latidos de un corazon durante una vida. Si una persona vive cerca de $80$ anos, y su frecuencia cardiaca promedio es del orden de $1$ latido por segundo, entonces:
+
+\[
+  80\ \text{anos}
+  \approx 80(3.2\times 10^7)\unidadSI{s}
+  \approx 2.6\times 10^9\unidadSI{s}.
+\]
+
+Como hay aproximadamente un latido por segundo, el numero total de latidos es del orden de
+
+\[
+  10^9.
+\]
+
+El punto no es obtener el valor exacto, sino construir una intuicion de escala. Si un calculo posterior diera $10^4$ o $10^{15}$ latidos, habria que revisar supuestos, unidades o algebra.
+
+La estimacion se debe cerrar con una frase interpretativa. En este caso, el resultado $10^9$ no es solo un numero grande: dice que una vida humana contiene miles de millones de ciclos cardiacos. Esa interpretacion es lo que vuelve util el calculo aproximado.
+
+\begin{pizarra}
+  \item Convertir $5.0\unidadSI{cm}$ a metros, micrometros y nanometros.
+  \item Determinar la dimension de la energia cinetica $K=\frac{1}{2}mv^2$.
+  \item Verificar dimensionalmente $v_f^2=v_i^2+2a\Delta x$.
+  \item Estimar el numero de respiraciones de una persona durante un ano.
+\end{pizarra}
+
+\end{document}

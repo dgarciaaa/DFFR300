@@ -1,0 +1,47 @@
+Semana 02 - Cobertura
+
+Syllabus DFFR300
+- Unidad I: Elementos de mecanica de la particula en 1D.
+- Resultado de aprendizaje asociado:
+  - RA1: Evalua las consecuencias sobre el movimiento de la particula en una
+    dimension debido a las interacciones con el medio.
+- Elementos cubiertos:
+  - Nocion de sistema de referencia aplicada a movimiento 1D.
+  - Elementos de cinematica de la particula.
+  - Posicion, desplazamiento, distancia, velocidad, rapidez y aceleracion.
+  - Lectura fisica de graficos x-t, v-t y a-t.
+
+Semana02-P1
+- Tema: posicion, desplazamiento y velocidad.
+- Cubre: posicion sobre un eje, desplazamiento, distancia recorrida,
+  intervalo de tiempo, velocidad media, rapidez media, velocidad
+  instantanea, rapidez instantanea y modelo de particula bajo velocidad
+  constante.
+- Serway usado: capitulo 2, "Movimiento en una dimension".
+  - 2.1 Posicion, velocidad y rapidez.
+  - 2.2 Velocidad y rapidez instantaneas.
+  - 2.3 Modelos de analisis: La particula bajo velocidad constante.
+- Apoyo: presentacion general/1Clases.pdf, diapositivas sobre cinematica,
+  posicion/desplazamiento y velocidad media/instantanea.
+
+Semana02-P2
+- Tema: aceleracion, graficos y lectura fisica.
+- Cubre: aceleracion media, aceleracion instantanea, signos de velocidad
+  y aceleracion, interpretacion de graficas x-t, v-t y a-t, area simple
+  bajo v-t para desplazamiento por tramos, y diagramas de movimiento.
+- Serway usado: capitulo 2, "Movimiento en una dimension".
+  - 2.4 Aceleracion.
+  - 2.5 Diagramas de movimiento.
+  - 2.1-2.3 como base inmediata para posicion, velocidad y velocidad
+    constante.
+- Apoyo: presentacion general/1Clases.pdf, diapositivas sobre aceleracion,
+  movimiento en 1D, area bajo v-t y puente hacia movimiento uniformemente
+  acelerado.
+
+Puente a Semana 03
+- La semana 03 debe formalizar el caso de aceleracion constante:
+  - modelo de particula bajo velocidad constante;
+  - modelo de particula bajo aceleracion constante;
+  - ecuaciones cinematicas;
+  - caida libre;
+  - estrategia de resolucion de problemas.

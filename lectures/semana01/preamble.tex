@@ -1,0 +1,43 @@
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\geometry{letterpaper,margin=2.5cm}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!55!black,
+  urlcolor=blue!55!black,
+  citecolor=blue!55!black
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.65em}
+\setlength{\jot}{0.4em}
+
+\newcommand{\curso}{F\'isica Aplicada a las Ciencias Farmac\'euticas}
+\newcommand{\unidad}{Elementos de mec\'anica de la part\'icula en una dimensi\'on}
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+\newcommand{\uvect}[1]{\hat{\boldsymbol{#1}}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\dd}{\,\mathrm{d}}
+\newcommand{\unidadSI}[1]{\,\mathrm{#1}}
+\newcommand{\clase}[1]{\section*{#1}\addcontentsline{toc}{section}{#1}}
+\newcommand{\subclase}[1]{\subsection*{#1}\addcontentsline{toc}{subsection}{#1}}
+
+\newenvironment{objetivos}
+  {\subclase{Objetivos de la clase}\begin{itemize}}
+  {\end{itemize}}
+
+\newenvironment{pizarra}
+  {\subclase{Para desarrollar en pizarra}\begin{enumerate}}
+  {\end{enumerate}}
+
+\newenvironment{ejemplo}[1]
+  {\subclase{Ejemplo: #1}}
+  {}

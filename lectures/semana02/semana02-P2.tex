@@ -1,0 +1,439 @@
+\documentclass[11pt]{article}
+\input{preamble}
+
+\title{\curso\\[0.4em]\Large Semana 2 - Parte 2: aceleracion, graficos y lectura fisica}
+\author{Apunte de clase}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section*{Proposito}
+\addcontentsline{toc}{section}{Proposito}
+
+La primera parte de la semana describio el cambio de posicion mediante velocidad. Esta segunda parte introduce el cambio de velocidad mediante aceleracion. La clase debe dejar instalada una idea central: acelerar no significa solamente ``ir mas rapido''; significa que la velocidad cambia, ya sea en magnitud o en direccion. En una dimension, ese cambio se lee con signos.
+
+El objetivo docente es que los estudiantes puedan mirar una grafica $x$--$t$, $v_x$--$t$ o $a_x$--$t$ y decir que esta ocurriendo fisicamente. Esta habilidad sera necesaria antes de usar las ecuaciones de aceleracion constante en la semana siguiente.
+
+\section*{Fuentes usadas}
+\addcontentsline{toc}{section}{Fuentes usadas}
+
+\begin{itemize}
+  \item Syllabus DFFR300: RA1 y Unidad I, ``Elementos de mecanica de la particula en 1D'', especialmente ``Elementos de cinematica de la particula'' como base para estudiar luego interacciones con el medio.
+  \item Serway y Jewett, \emph{Fisica para ciencias e ingenieria}, volumen 1, septima edicion: capitulo 2, ``Movimiento en una dimension''. Secciones usadas: 2.4 ``Aceleracion''; 2.5 ``Diagramas de movimiento''. Se usan tambien las ideas de 2.1--2.3 como base inmediata para posicion, velocidad y modelo de velocidad constante.
+  \item Presentacion `general/1Clases.pdf': diapositivas sobre velocidad media e instantanea, aceleracion, movimiento en una dimension, area bajo grafica $v$ versus $t$, movimiento uniforme y movimiento uniformemente acelerado como puente a la semana 3.
+\end{itemize}
+
+\begin{objetivos}
+  \item Definir aceleracion media e instantanea en una dimension.
+  \item Interpretar la aceleracion como pendiente de una grafica velocidad-tiempo.
+  \item Relacionar el signo de $v_x$ y $a_x$ con aumento o disminucion de rapidez.
+  \item Leer cualitativamente graficas $x$--$t$, $v_x$--$t$ y $a_x$--$t$.
+  \item Usar diagramas de movimiento para distinguir velocidad constante, aumento de rapidez y frenado.
+\end{objetivos}
+
+\section*{Hilo de pizarra}
+\addcontentsline{toc}{section}{Hilo de pizarra}
+
+La clase se puede escribir como una segunda capa sobre la clase anterior:
+
+\[
+  x(t)
+  \xrightarrow{\text{pendiente}}
+  v_x(t)
+  \xrightarrow{\text{pendiente}}
+  a_x(t).
+\]
+
+La pizarra debe insistir en que las pendientes tienen unidades:
+
+\[
+  \text{pendiente de } x(t)=\frac{\Delta x}{\Delta t}\quad [\mathrm{m/s}],
+\]
+
+\[
+  \text{pendiente de } v_x(t)=\frac{\Delta v_x}{\Delta t}\quad [\mathrm{m/s^2}].
+\]
+
+Luego conviene escribir la regla de signos que evita gran parte de las confusiones:
+
+\[
+  v_x \text{ y } a_x \text{ con el mismo signo}
+  \Rightarrow
+  \text{aumenta la rapidez},
+\]
+
+\[
+  v_x \text{ y } a_x \text{ con signos opuestos}
+  \Rightarrow
+  \text{disminuye la rapidez}.
+\]
+
+Esta regla es mas precisa que decir ``aceleracion positiva acelera'' o ``aceleracion negativa frena''. Esas frases son incompletas porque dependen del signo de la velocidad.
+
+\section{Aceleracion media}
+
+La velocidad puede cambiar con el tiempo. Cuando eso ocurre, la particula acelera. En una dimension, la aceleracion media se define como
+
+\[
+  a_{x,\mathrm{med}}
+  =
+  \frac{\Delta v_x}{\Delta t}
+  =
+  \frac{v_{xf}-v_{xi}}{t_f-t_i}.
+\]
+
+Sus unidades SI son
+
+\[
+  \frac{\mathrm{m/s}}{\mathrm{s}}
+  =
+  \mathrm{m/s^2}.
+\]
+
+La lectura pedagogica de $\mathrm{m/s^2}$ es ``metros por segundo, por cada segundo''. Si
+
+\[
+  a_x=2\unidadSI{m/s^2},
+\]
+
+entonces la velocidad cambia en $2\unidadSI{m/s}$ durante cada segundo, siempre que la aceleracion sea constante en ese intervalo.
+
+En pizarra conviene escribir una tabla muy simple:
+
+\begin{center}
+\begin{tabular}{c|cccc}
+$t$ ($\mathrm{s}$) & 0 & 1 & 2 & 3 \\
+\midrule
+$v_x$ ($\mathrm{m/s}$) & 0 & 2 & 4 & 6 \\
+\end{tabular}
+\end{center}
+
+La conclusion es que la velocidad aumenta de forma uniforme:
+
+\[
+  a_x=\frac{2\unidadSI{m/s}}{1\unidadSI{s}}=2\unidadSI{m/s^2}.
+\]
+
+\begin{ejemplo}{cambio de velocidad}
+Un carrito se mueve sobre una pista recta. En $t_i=1.0\unidadSI{s}$ su velocidad es $v_{xi}=6.0\unidadSI{m/s}$ y en $t_f=4.0\unidadSI{s}$ su velocidad es $v_{xf}=0$.
+
+La aceleracion media es
+
+\[
+  a_{x,\mathrm{med}}
+  =
+  \frac{0-6.0\unidadSI{m/s}}{4.0\unidadSI{s}-1.0\unidadSI{s}}
+  =
+  -2.0\unidadSI{m/s^2}.
+\]
+
+Si el eje positivo apunta en la direccion inicial de movimiento, el signo negativo indica que la aceleracion apunta en sentido contrario a la velocidad. Por eso el carrito disminuye su rapidez.
+\end{ejemplo}
+
+\section{Aceleracion instantanea}
+
+La aceleracion media describe un intervalo. La aceleracion instantanea describe el cambio de velocidad en un instante:
+
+\[
+  a_x=\lim_{\Delta t\to 0}\frac{\Delta v_x}{\Delta t}.
+\]
+
+En notacion de calculo:
+
+\[
+  a_x=\frac{\dd v_x}{\dd t}.
+\]
+
+Como $v_x=\dd x/\dd t$, tambien se puede escribir
+
+\[
+  a_x=\frac{\dd^2 x}{\dd t^2}.
+\]
+
+Esta ultima expresion debe presentarse con cuidado. No es una formula nueva para memorizar; resume dos ideas sucesivas:
+
+\[
+  \text{velocidad} = \text{razon de cambio de posicion},
+\]
+
+\[
+  \text{aceleracion} = \text{razon de cambio de velocidad}.
+\]
+
+En una grafica $v_x$ versus $t$, la aceleracion instantanea es la pendiente de la tangente.
+
+\begin{ejemplo}{velocidad dada como funcion del tiempo}
+Sea
+
+\[
+  v_x(t)=8.0\unidadSI{m/s}-(3.0\unidadSI{m/s^2})t.
+\]
+
+La aceleracion es
+
+\[
+  a_x=\frac{\dd v_x}{\dd t}=-3.0\unidadSI{m/s^2}.
+\]
+
+La aceleracion es constante y negativa. En $t=0$, $v_x=8.0\unidadSI{m/s}$, de modo que la particula se mueve hacia $+x$ pero acelera hacia $-x$; por lo tanto disminuye su rapidez.
+
+El instante en que se detiene momentaneamente se obtiene de $v_x(t)=0$:
+
+\[
+  0=8.0-3.0t,
+  \qquad
+  t=2.67\unidadSI{s}.
+\]
+
+Despues de ese instante, $v_x<0$ y $a_x<0$. Ahora velocidad y aceleracion tienen el mismo signo; la particula se mueve hacia $-x$ y aumenta su rapidez en ese sentido.
+\end{ejemplo}
+
+\section{Signos: velocidad, aceleracion y rapidez}
+
+La rapidez es $|v_x|$. Por eso, para saber si un objeto ``acelera'' en el sentido cotidiano de aumentar rapidez, no basta mirar el signo de $a_x$. Hay que comparar los signos de $v_x$ y $a_x$.
+
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+$v_x$ & $a_x$ & Movimiento & Rapidez \\
+\midrule
+$+$ & $+$ & hacia $+x$ & aumenta \\
+$+$ & $-$ & hacia $+x$ & disminuye \\
+$-$ & $+$ & hacia $-x$ & disminuye \\
+$-$ & $-$ & hacia $-x$ & aumenta \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Esta tabla debe quedar en el cuaderno. Es una herramienta de diagnostico para resolver problemas y para interpretar graficos.
+
+Tambien conviene escribir una advertencia:
+
+\[
+  a_x<0 \not\Rightarrow \text{frena siempre}.
+\]
+
+Si $v_x<0$ y $a_x<0$, la rapidez aumenta. La aceleracion negativa solo indica direccion hacia $-x$.
+
+\section{Lectura de graficas posicion-tiempo}
+
+En una grafica $x$ versus $t$:
+
+\[
+  \text{pendiente}=\frac{\Delta x}{\Delta t}=v_x.
+\]
+
+Por lo tanto:
+
+\begin{itemize}
+  \item pendiente positiva: la particula se mueve hacia $+x$;
+  \item pendiente negativa: la particula se mueve hacia $-x$;
+  \item pendiente cero: reposo instantaneo;
+  \item pendiente cada vez mas grande: $v_x$ aumenta;
+  \item pendiente cada vez mas pequena: $v_x$ disminuye.
+\end{itemize}
+
+El error comun es creer que una curva ``sube'' o ``baja'' en el papel como si fuera la trayectoria espacial. En una grafica $x$--$t$, el eje vertical no es altura fisica necesariamente; es posicion. La particula se mueve sobre el eje $x$, no sobre la curva dibujada.
+
+Para pizarra, dibujar tres casos:
+
+\begin{enumerate}
+  \item recta creciente: $v_x$ constante positiva;
+  \item recta decreciente: $v_x$ constante negativa;
+  \item curva con maximo: $v_x$ pasa de positiva a cero y luego a negativa.
+\end{enumerate}
+
+\section{Lectura de graficas velocidad-tiempo}
+
+En una grafica $v_x$ versus $t$:
+
+\[
+  \text{pendiente}=\frac{\Delta v_x}{\Delta t}=a_x.
+\]
+
+Ademas, cuando el movimiento se lee por tramos simples, el desplazamiento se relaciona con el area con signo bajo la curva $v_x$--$t$:
+
+\[
+  \Delta x = \text{area con signo bajo } v_x(t).
+\]
+
+Para velocidad constante, esto sale directamente de
+
+\[
+  \Delta x=v_x\Delta t,
+\]
+
+que es el area de un rectangulo de altura $v_x$ y base $\Delta t$. Si $v_x<0$, el area es negativa.
+
+En esta semana basta usar areas de rectangulos y triangulos simples.
+
+\begin{ejemplo}{desplazamiento desde grafica velocidad-tiempo}
+Una particula tiene la siguiente velocidad por tramos:
+
+\[
+v_x=
+\begin{cases}
+4\unidadSI{m/s}, & 0\le t\le 3\unidadSI{s},\\
+0, & 3\unidadSI{s}<t\le 5\unidadSI{s},\\
+-2\unidadSI{m/s}, & 5\unidadSI{s}<t\le 9\unidadSI{s}.
+\end{cases}
+\]
+
+El desplazamiento total es la suma de areas con signo:
+
+\[
+  \Delta x_1=(4\unidadSI{m/s})(3\unidadSI{s})=12\unidadSI{m},
+\]
+
+\[
+  \Delta x_2=0,
+\]
+
+\[
+  \Delta x_3=(-2\unidadSI{m/s})(4\unidadSI{s})=-8\unidadSI{m}.
+\]
+
+Entonces
+
+\[
+  \Delta x_{\mathrm{total}}=12+0-8=4\unidadSI{m}.
+\]
+
+La distancia recorrida, en cambio, suma magnitudes:
+
+\[
+  d=12+0+8=20\unidadSI{m}.
+\]
+\end{ejemplo}
+
+\section{Lectura de graficas aceleracion-tiempo}
+
+En una grafica $a_x$ versus $t$, el valor de $a_x$ indica como cambia $v_x$: si $a_x=0$, la velocidad es constante; si $a_x>0$, la velocidad se hace mas positiva; si $a_x<0$, la velocidad se hace mas negativa.
+
+Cuando la aceleracion es constante en un intervalo,
+
+\[
+  \Delta v_x=a_x\Delta t.
+\]
+
+Esta expresion puede leerse como area bajo la grafica $a_x$--$t$ en casos simples. De nuevo, si el area es negativa, la velocidad cambia hacia valores mas negativos.
+
+Ejemplo breve para pizarra: si una particula tiene aceleracion constante
+
+\[
+  a_x=-1.5\unidadSI{m/s^2}
+\]
+
+durante $4.0\unidadSI{s}$, entonces
+
+\[
+  \Delta v_x=a_x\Delta t
+  =
+  (-1.5\unidadSI{m/s^2})(4.0\unidadSI{s})
+  =
+  -6.0\unidadSI{m/s}.
+\]
+
+Si inicialmente $v_{xi}=2.0\unidadSI{m/s}$, entonces
+
+\[
+  v_{xf}=v_{xi}+\Delta v_x
+  =
+  2.0\unidadSI{m/s}-6.0\unidadSI{m/s}
+  =
+  -4.0\unidadSI{m/s}.
+\]
+
+La particula primero se mueve hacia $+x$, se detiene en algun instante intermedio y luego se mueve hacia $-x$.
+
+\section{Diagramas de movimiento}
+
+Un diagrama de movimiento representa posiciones sucesivas de una particula separadas por intervalos de tiempo iguales. Es una herramienta visual para no confundir velocidad con aceleracion.
+
+En pizarra se pueden dibujar tres lineas de puntos:
+
+\begin{enumerate}
+  \item Puntos igualmente espaciados: velocidad constante, aceleracion cero.
+  \item Puntos cada vez mas separados hacia la derecha: velocidad positiva y aceleracion positiva.
+  \item Puntos cada vez menos separados hacia la derecha: velocidad positiva y aceleracion negativa.
+\end{enumerate}
+
+La distancia entre puntos sucesivos indica cuanto se desplaza la particula en el mismo intervalo de tiempo. Si esa distancia aumenta, la rapidez aumenta. Si disminuye, la rapidez disminuye.
+
+Luego agregar flechas:
+
+\[
+  \text{flecha de velocidad: direccion del movimiento},
+\]
+
+\[
+  \text{flecha de aceleracion: direccion del cambio de velocidad}.
+\]
+
+Este dibujo prepara la intuicion para Newton: mas adelante, la aceleracion se conectara con la fuerza neta. Por ahora basta reconocer el patron cinematico.
+
+\section{Puente hacia aceleracion constante}
+
+La semana siguiente se concentrara en el caso de aceleracion constante, que permite obtener ecuaciones de movimiento utiles:
+
+\[
+  v_{xf}=v_{xi}+a_xt,
+\]
+
+\[
+  x_f=x_i+v_{xi}t+\frac{1}{2}a_xt^2.
+\]
+
+Hoy no es necesario usarlas como recetas. Lo importante es anticipar su lectura grafica:
+
+\begin{itemize}
+  \item si $a_x$ es constante, la grafica $v_x$--$t$ es una recta;
+  \item si $v_x$ cambia linealmente, la posicion $x(t)$ cambia como una curva cuadratica;
+  \item el signo de $a_x$ dice hacia donde cambia la velocidad.
+\end{itemize}
+
+Asi, cuando aparezcan las ecuaciones cinematicas, seran una forma compacta de escribir lo que ya se lee en los graficos.
+
+\section{Cierre conceptual}
+
+La cadena completa de la semana es:
+
+\[
+  \text{posicion}
+  \xrightarrow{\Delta/\Delta t}
+  \text{velocidad}
+  \xrightarrow{\Delta/\Delta t}
+  \text{aceleracion}.
+\]
+
+Y la cadena grafica es:
+
+\[
+  \text{pendiente de } x(t)=v_x(t),
+  \qquad
+  \text{pendiente de } v_x(t)=a_x(t).
+\]
+
+Antes de resolver cualquier problema, la rutina de pizarra debe ser:
+
+\begin{enumerate}
+  \item Elegir eje y sentido positivo.
+  \item Identificar que grafica o funcion se conoce.
+  \item Decidir si se necesita pendiente, area o sustitucion directa.
+  \item Interpretar el signo de la respuesta.
+  \item Revisar unidades.
+\end{enumerate}
+
+\begin{pizarra}
+  \item Desde dos velocidades medidas en dos tiempos, calcular $a_{x,\mathrm{med}}$ e interpretar el signo.
+  \item Completar la tabla de signos de $v_x$ y $a_x$ para decidir si la rapidez aumenta o disminuye.
+  \item Dibujar tres graficas $x$--$t$ y obtener cualitativamente $v_x$.
+  \item Dibujar tres graficas $v_x$--$t$ y obtener cualitativamente $a_x$.
+  \item Calcular desplazamiento desde una grafica $v_x$--$t$ por tramos rectangulares.
+  \item Dibujar diagramas de movimiento para velocidad constante, aumento de rapidez y frenado.
+\end{pizarra}
+
+\end{document}

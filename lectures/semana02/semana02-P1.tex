@@ -1,0 +1,426 @@
+\documentclass[11pt]{article}
+\input{preamble}
+
+\title{\curso\\[0.4em]\Large Semana 2 - Parte 1: posicion, desplazamiento y velocidad}
+\author{Apunte de clase}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section*{Proposito}
+\addcontentsline{toc}{section}{Proposito}
+
+La semana anterior dejo preparado el lenguaje de referencia, coordenadas y vectores. Ahora se usa ese lenguaje para describir movimiento en una dimension. La pregunta central de esta clase es: \emph{como cambia la posicion de una particula con el tiempo?}
+
+Esta primera parte de la semana introduce posicion, desplazamiento, distancia recorrida, velocidad media, rapidez media, velocidad instantanea y rapidez instantanea. El foco pedagogico no es memorizar formulas, sino aprender a leer el signo, las unidades y la pendiente de una grafica posicion-tiempo. Esa lectura sera la base de la aceleracion en la segunda parte y de las ecuaciones cinematicas de la semana siguiente.
+
+\section*{Fuentes usadas}
+\addcontentsline{toc}{section}{Fuentes usadas}
+
+\begin{itemize}
+  \item Syllabus DFFR300: RA1 y Unidad I, ``Elementos de mecanica de la particula en 1D'', especialmente ``Nocion de sistema de referencia'' y ``Elementos de cinematica de la particula''.
+  \item Serway y Jewett, \emph{Fisica para ciencias e ingenieria}, volumen 1, septima edicion: capitulo 2, ``Movimiento en una dimension''. Secciones usadas: 2.1 ``Posicion, velocidad y rapidez''; 2.2 ``Velocidad y rapidez instantaneas''; 2.3 ``Modelos de analisis: La particula bajo velocidad constante''.
+  \item Presentacion `general/1Clases.pdf': diapositivas sobre cinematica, posicion y desplazamiento, velocidad media e instantanea, movimiento en una dimension y pendiente en graficas $x$ versus $t$.
+\end{itemize}
+
+\begin{objetivos}
+  \item Describir la posicion de una particula sobre un eje con origen y sentido positivo.
+  \item Distinguir desplazamiento de distancia recorrida.
+  \item Distinguir velocidad media de rapidez media.
+  \item Interpretar la velocidad como pendiente de una grafica posicion-tiempo.
+  \item Usar el modelo de particula bajo velocidad constante cuando corresponda.
+\end{objetivos}
+
+\section*{Hilo de pizarra}
+\addcontentsline{toc}{section}{Hilo de pizarra}
+
+La pizarra debe construir la cinematica como una secuencia de razones de cambio:
+
+\[
+  x(t)
+  \longrightarrow
+  \Delta x=x_f-x_i
+  \longrightarrow
+  v_{x,\mathrm{med}}=\frac{\Delta x}{\Delta t}
+  \longrightarrow
+  v_x=\lim_{\Delta t\to 0}\frac{\Delta x}{\Delta t}.
+\]
+
+Conviene escribir primero una recta horizontal, fijar el origen, elegir el sentido positivo y marcar tres posiciones de una particula en tiempos distintos. Desde ese dibujo se introducen las definiciones. La formula aparece despues del dibujo, no antes.
+
+La idea que debe quedar en el cuaderno es:
+
+\[
+  \text{en 1D, la direccion del movimiento se lee en el signo.}
+\]
+
+Si $\Delta x>0$, el desplazamiento apunta hacia $+x$. Si $\Delta x<0$, apunta hacia $-x$. Si $v_x>0$, la posicion aumenta con el tiempo. Si $v_x<0$, la posicion disminuye con el tiempo.
+
+\section{Cinematica: describir sin explicar todavia}
+
+La cinematica describe el movimiento sin preguntar todavia que interaccion lo causa. Esa pregunta aparecera cuando se introduzcan fuerzas y leyes de Newton. Por ahora interesa construir una descripcion clara:
+
+\begin{enumerate}
+  \item donde esta la particula,
+  \item como cambia su posicion,
+  \item que tan rapido cambia,
+  \item y como se representa ese cambio en una grafica.
+\end{enumerate}
+
+El modelo que se usa es el de \emph{particula}. Eso significa que ignoramos el tamano, forma y rotacion del objeto. Una capsula, una gota, un carrito o una persona pueden modelarse como particula si solo importa la posicion de un punto representativo sobre una trayectoria.
+
+En pizarra conviene decir explicitamente que ``particula'' no significa ``objeto pequeno'' en sentido absoluto. Significa que, para la pregunta que estamos haciendo, el tamano interno del objeto no es relevante.
+
+\section{Posicion en una dimension}
+
+Para describir una posicion en una dimension se necesita un eje. El eje debe tener:
+
+\begin{itemize}
+  \item un origen, donde $x=0$;
+  \item una unidad de longitud;
+  \item un sentido positivo.
+\end{itemize}
+
+Una vez elegido el eje, la posicion se escribe como una coordenada con signo:
+
+\[
+  x=+3\unidadSI{m}
+  \quad \text{o} \quad
+  x=-2\unidadSI{m}.
+\]
+
+El signo no es decorativo. Indica en que lado del origen esta la particula. Si se cambia el origen o se invierte el sentido positivo, las coordenadas cambian, aunque el fenomeno fisico sea el mismo.
+
+Para pizarra:
+
+\[
+  \text{posicion} = \text{ubicacion respecto de un origen elegido.}
+\]
+
+La posicion puede depender del tiempo. Cuando escribimos
+
+\[
+  x=x(t),
+\]
+
+estamos diciendo que para cada instante $t$ hay una posicion $x$. Esta notacion sera central en todo el capitulo: conocer el movimiento equivale a conocer $x(t)$ durante el intervalo de interes.
+
+\section{Desplazamiento y distancia recorrida}
+
+Si la particula esta inicialmente en $x_i$ y luego en $x_f$, su desplazamiento es
+
+\[
+  \Delta x=x_f-x_i.
+\]
+
+El desplazamiento depende solo de la posicion inicial y final. Puede ser positivo, negativo o cero. Tiene unidades de longitud.
+
+La distancia recorrida, en cambio, mide la longitud total del camino seguido. Siempre es positiva o cero. No tiene signo porque no conserva informacion de direccion.
+
+Esta diferencia debe quedar muy visible:
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Cantidad & Que mide & Puede ser negativa? \\
+\midrule
+Desplazamiento $\Delta x$ & Cambio neto de posicion & Si \\
+Distancia recorrida $d$ & Longitud total del camino & No \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{ejemplo}{ida y vuelta en una linea}
+Una estudiante parte en $x_i=0$, camina hasta $x=6\unidadSI{m}$ y luego vuelve hasta $x_f=2\unidadSI{m}$.
+
+El desplazamiento neto es
+
+\[
+  \Delta x=x_f-x_i=2\unidadSI{m}-0=2\unidadSI{m}.
+\]
+
+La distancia recorrida es
+
+\[
+  d=6\unidadSI{m}+4\unidadSI{m}=10\unidadSI{m}.
+\]
+
+La frase de cierre para escribir es:
+
+\[
+  \Delta x=2\unidadSI{m}
+  \quad \text{pero} \quad
+  d=10\unidadSI{m}.
+\]
+
+No hay contradiccion: el desplazamiento pregunta por el cambio neto; la distancia pregunta por todo el camino.
+\end{ejemplo}
+
+\section{Intervalo de tiempo}
+
+Para hablar de movimiento se comparan dos instantes:
+
+\[
+  \Delta t=t_f-t_i.
+\]
+
+En los problemas usuales se toma $t_f>t_i$, por lo tanto $\Delta t>0$. El tiempo no indica direccion espacial; solo ordena los eventos. Esta observacion ayuda a interpretar el signo de la velocidad media: como $\Delta t$ es positivo, el signo de $v_{x,\mathrm{med}}$ viene del signo de $\Delta x$.
+
+En pizarra conviene escribir las tres lineas juntas:
+
+\[
+  \Delta x=x_f-x_i,
+  \qquad
+  \Delta t=t_f-t_i,
+  \qquad
+  v_{x,\mathrm{med}}=\frac{\Delta x}{\Delta t}.
+\]
+
+Luego marcar unidades:
+
+\[
+  [v_x]=\frac{L}{T},
+  \qquad
+  \mathrm{SI}: \frac{\mathrm{m}}{\mathrm{s}}.
+\]
+
+\section{Velocidad media}
+
+La velocidad media en una dimension es
+
+\[
+  v_{x,\mathrm{med}}=\frac{\Delta x}{\Delta t}
+  =\frac{x_f-x_i}{t_f-t_i}.
+\]
+
+Esta cantidad responde: \emph{cual fue el cambio neto de posicion por unidad de tiempo?}
+
+Como usa desplazamiento, la velocidad media conserva signo. Si $v_{x,\mathrm{med}}>0$, el desplazamiento neto fue hacia $+x$. Si $v_{x,\mathrm{med}}<0$, el desplazamiento neto fue hacia $-x$. Si $v_{x,\mathrm{med}}=0$, la posicion final coincide con la inicial, aunque la particula pudo haber recorrido una distancia no nula.
+
+En una grafica $x$ versus $t$, la velocidad media entre dos instantes es la pendiente de la recta secante que une los dos puntos:
+
+\[
+  \text{pendiente secante}
+  =
+  \frac{\text{cambio vertical}}{\text{cambio horizontal}}
+  =
+  \frac{\Delta x}{\Delta t}.
+\]
+
+La pendiente tiene unidades. En una grafica $x$--$t$, la pendiente tiene unidades de $\mathrm{m/s}$.
+
+\begin{ejemplo}{lectura de tabla de posiciones}
+Una particula se mueve sobre el eje $x$ con las posiciones:
+
+\begin{center}
+\begin{tabular}{c|cccc}
+$t$ ($\mathrm{s}$) & 0 & 2 & 5 & 8 \\
+\midrule
+$x$ ($\mathrm{m}$) & -1 & 3 & 3 & -5 \\
+\end{tabular}
+\end{center}
+
+Entre $t=0$ y $t=2\unidadSI{s}$:
+
+\[
+  \Delta x=3-(-1)=4\unidadSI{m},
+  \qquad
+  \Delta t=2\unidadSI{s},
+\]
+
+\[
+  v_{x,\mathrm{med}}=\frac{4\unidadSI{m}}{2\unidadSI{s}}
+  =2\unidadSI{m/s}.
+\]
+
+Entre $t=2\unidadSI{s}$ y $t=5\unidadSI{s}$:
+
+\[
+  \Delta x=3-3=0,
+  \qquad
+  v_{x,\mathrm{med}}=0.
+\]
+
+Entre $t=5\unidadSI{s}$ y $t=8\unidadSI{s}$:
+
+\[
+  \Delta x=-5-3=-8\unidadSI{m},
+  \qquad
+  \Delta t=3\unidadSI{s},
+\]
+
+\[
+  v_{x,\mathrm{med}}=-2.67\unidadSI{m/s}.
+\]
+
+La conclusion fisica es que primero la particula se desplaza hacia $+x$, luego no cambia su posicion neta durante el intervalo observado, y finalmente se desplaza hacia $-x$.
+\end{ejemplo}
+
+\section{Rapidez media}
+
+La rapidez media se define como
+
+\[
+  v_{\mathrm{prom}}=\frac{d}{\Delta t},
+\]
+
+donde $d$ es la distancia total recorrida. La rapidez media es escalar: no tiene direccion y no puede ser negativa.
+
+La comparacion clave es:
+
+\[
+  \text{velocidad media usa desplazamiento},
+  \qquad
+  \text{rapidez media usa distancia}.
+\]
+
+Por eso, en un viaje de ida y vuelta al mismo punto:
+
+\[
+  v_{x,\mathrm{med}}=0
+  \quad \text{pero} \quad
+  v_{\mathrm{prom}}>0.
+\]
+
+Esta diferencia es una de las primeras fuentes de error en cinematica. En la pizarra es util subrayar que rapidez y velocidad tienen las mismas unidades, pero no significan lo mismo.
+
+\section{Velocidad instantanea}
+
+La velocidad media describe un intervalo. Pero muchas veces queremos saber la velocidad en un instante. La idea se construye tomando intervalos cada vez mas pequenos:
+
+\[
+  v_x=\lim_{\Delta t\to 0}\frac{\Delta x}{\Delta t}.
+\]
+
+En lenguaje de calculo:
+
+\[
+  v_x=\frac{\dd x}{\dd t}.
+\]
+
+En una grafica $x$ versus $t$, la velocidad instantanea es la pendiente de la recta tangente en el punto considerado.
+
+La explicacion de pizarra debe ser geometrica:
+
+\begin{enumerate}
+  \item Dibujar una curva $x(t)$.
+  \item Elegir dos puntos separados: la secante da velocidad media.
+  \item Acercar el segundo punto al primero.
+  \item En el limite, la secante se transforma en tangente.
+  \item La pendiente de esa tangente es la velocidad instantanea.
+\end{enumerate}
+
+La rapidez instantanea es la magnitud de la velocidad instantanea:
+
+\[
+  \text{rapidez}=|v_x|.
+\]
+
+En este caso si se cumple que la rapidez instantanea es la magnitud de la velocidad instantanea. Esto no debe confundirse con el caso promedio: en general, la rapidez media no es la magnitud de la velocidad media.
+
+\begin{ejemplo}{posicion como funcion del tiempo}
+La posicion de una particula esta dada por
+
+\[
+  x(t)=2.0\unidadSI{m}-(1.0\unidadSI{m/s})t+(0.50\unidadSI{m/s^2})t^2.
+\]
+
+Primero, se revisa la consistencia dimensional: cada termino debe tener unidades de metro.
+
+La velocidad instantanea se obtiene derivando:
+
+\[
+  v_x(t)=\frac{\dd x}{\dd t}
+  =-1.0\unidadSI{m/s}+(1.0\unidadSI{m/s^2})t.
+\]
+
+En $t=0$:
+
+\[
+  v_x(0)=-1.0\unidadSI{m/s}.
+\]
+
+La particula se mueve inicialmente hacia $-x$.
+
+En $t=1.0\unidadSI{s}$:
+
+\[
+  v_x(1.0\unidadSI{s})=0.
+\]
+
+En ese instante esta momentaneamente en reposo. No significa que el movimiento completo haya terminado; significa que la pendiente de $x(t)$ es cero en ese punto.
+
+En $t=3.0\unidadSI{s}$:
+
+\[
+  v_x(3.0\unidadSI{s})=2.0\unidadSI{m/s}.
+\]
+
+Ahora la particula se mueve hacia $+x$.
+\end{ejemplo}
+
+\section{Modelo de particula bajo velocidad constante}
+
+Si la velocidad no cambia durante el intervalo, entonces
+
+\[
+  v_x=v_{x,\mathrm{med}}=\frac{\Delta x}{\Delta t}.
+\]
+
+Tomando $t_i=0$ y $t_f=t$, se obtiene
+
+\[
+  x_f=x_i+v_xt.
+\]
+
+Esta expresion es una recta en una grafica $x$ versus $t$. La pendiente es $v_x$ y la interseccion con el eje vertical es $x_i$.
+
+Este modelo no se debe aplicar automaticamente. Primero hay que preguntar: \emph{es razonable suponer velocidad constante durante este intervalo?} Si la respuesta es si, el modelo permite predecir posiciones y tiempos. Si la velocidad cambia de forma importante, el modelo deja de describir el movimiento.
+
+\begin{ejemplo}{movimiento uniforme de una cinta}
+Una cinta transportadora mueve una muestra en linea recta con velocidad constante $v_x=0.25\unidadSI{m/s}$. En $t=0$ la muestra esta en $x_i=0.40\unidadSI{m}$. Hallar su posicion despues de $12\unidadSI{s}$.
+
+Modelo: particula bajo velocidad constante.
+
+\[
+  x_f=x_i+v_xt
+  =0.40\unidadSI{m}+(0.25\unidadSI{m/s})(12\unidadSI{s}).
+\]
+
+\[
+  x_f=3.40\unidadSI{m}.
+\]
+
+El resultado tiene sentido: en $12\unidadSI{s}$ la cinta avanza $3.0\unidadSI{m}$, y la muestra ya estaba a $0.40\unidadSI{m}$ del origen.
+\end{ejemplo}
+
+\section{Cierre conceptual}
+
+Esta clase deja tres pares de ideas que deben quedar separados:
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+No confundir & Idea correcta \\
+\midrule
+Posicion y desplazamiento & La posicion es ubicacion; el desplazamiento es cambio de posicion. \\
+Desplazamiento y distancia & El desplazamiento tiene signo; la distancia no. \\
+Velocidad y rapidez & La velocidad conserva direccion; la rapidez es magnitud escalar. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+La proxima clase agregara una segunda razon de cambio: la aceleracion. Si la velocidad mide que tan rapido cambia la posicion, la aceleracion medira que tan rapido cambia la velocidad.
+
+\begin{pizarra}
+  \item Dibujar un eje $x$, elegir origen y sentido positivo, y ubicar tres posiciones de una particula en tres tiempos.
+  \item Calcular desplazamiento y distancia recorrida para una trayectoria con ida y vuelta.
+  \item Desde una tabla $t$--$x$, calcular velocidades medias por intervalo e interpretar signos.
+  \item Dibujar una curva $x(t)$ y marcar secante versus tangente.
+  \item Resolver un caso simple de $x_f=x_i+v_xt$ y verificar unidades.
+\end{pizarra}
+
+\end{document}

@@ -1,0 +1,33 @@
+Semana 01 - Cobertura
+
+Syllabus DFFR300
+- Unidad I: Elementos de mecanica de la particula en 1D.
+- Elementos cubiertos:
+  - Vectores y operaciones elementales.
+  - Nocion de sistema de referencia.
+  - Preparacion para elementos de cinematica de la particula.
+
+Semana01-P1
+- Tema: medir, modelar y estimar.
+- Cubre: magnitudes fisicas, unidades SI, prefijos, conversion de unidades,
+  analisis dimensional y estimaciones de orden de magnitud.
+- Serway usado: capitulo 1, "Fisica y medicion", paginas impresas 2-11.
+  - 1.1 Estandares de longitud, masa y tiempo.
+  - 1.2 Materia y construccion de modelos.
+  - 1.3 Analisis dimensional.
+  - 1.4 Conversion de unidades.
+  - 1.5 Estimaciones y calculos de orden de magnitud.
+
+Semana01-P2
+- Tema: referencia, coordenadas y vectores.
+- Cubre: sistema de referencia, coordenadas cartesianas/polares, escalares,
+  vectores, suma/resta vectorial, componentes y vectores unitarios.
+- Serway usado: capitulo 3, "Vectores", paginas impresas 53-62.
+  - 3.1 Sistemas coordenados.
+  - 3.2 Cantidades vectoriales y escalares.
+  - 3.3 Algunas propiedades de los vectores.
+  - 3.4 Componentes de un vector y vectores unitarios.
+
+Referencia menor
+- Serway capitulo 2, paginas impresas 20-23, solo como puente hacia posicion,
+  desplazamiento y velocidad media para la semana siguiente.
