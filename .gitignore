@@ -1,0 +1,10 @@
+.DS_Store
+~$*.docx
+__pycache__/
+*.py[cod]
+
+# Credenciales locales de Canvas
+scripts_canvas/Key.txt
+
+# Entorno virtual local
+.fisica1/
