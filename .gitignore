@@ -8,3 +8,6 @@ scripts_canvas/Key.txt
 
 # Entorno virtual local
 .fisica1/
+
+# Instrucciones locales para construir los apuntes
+lectures/INSTRUCCIONES_PRIVADAS.md
