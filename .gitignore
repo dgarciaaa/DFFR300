@@ -15,3 +15,6 @@ lectures/INSTRUCCIONES_PRIVADAS.md
 # Instrucciones y notas locales para el laboratorio
 lab/INSTRUCCIONES_PRIVADAS.md
 lab/NOTAS_PRIVADAS.txt
+
+# Documentos PDF generados o de referencia
+*.pdf
