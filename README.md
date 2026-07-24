@@ -109,7 +109,8 @@ Cada experimento debería partir de una pregunta clara:
 - ¿Cómo se analizan?
 - ¿Qué conclusión puede defenderse con evidencia?
 
-El archivo `lab/idea.md` fija los criterios generales para construir estas experiencias.
+El archivo `lab/README.md` presenta la organización general de estas
+experiencias.
 
 ## Criterio pedagógico
 
