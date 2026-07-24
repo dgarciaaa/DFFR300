@@ -18,3 +18,5 @@ lab/NOTAS_PRIVADAS.txt
 
 # Documentos PDF generados o de referencia
 *.pdf
+!general/*.pdf
+!general/**/*.pdf
