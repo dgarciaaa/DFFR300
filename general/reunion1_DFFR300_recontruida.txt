@@ -1,0 +1,1683 @@
+REUNIÓN DE COORDINACIÓN DOCENTE
+ASIGNATURA: FÍSICA APLICADA A LAS CIENCIAS FARMACÉUTICAS – DFFR300
+DOCUMENTO RECONSTRUIDO A PARTIR DE UNA TRANSCRIPCIÓN AUTOMÁTICA
+
+NOTA DE EDICIÓN
+
+Este documento reorganiza y reescribe la reunión para entregar un flujo más claro y comprensible.
+
+No se incorporó información externa ni se completaron vacíos mediante suposiciones. Las decisiones, propuestas, dudas y asuntos pendientes se presentan de acuerdo con lo expresado en la reunión.
+
+Se eliminaron saludos, interrupciones, repeticiones, problemas de audio y fragmentos que no permitían recuperar una idea verificable.
+
+La transcripción original termina abruptamente durante una pregunta sobre la distribución de laboratorios. Por esta razón, esa intervención no puede reconstruirse completamente.
+
+======================================================================
+
+1. OBJETIVO GENERAL DE LA REUNIÓN
+   ======================================================================
+
+La reunión tuvo como objetivo presentar y coordinar la implementación nacional de la asignatura Física Aplicada a las Ciencias Farmacéuticas.
+
+Se abordaron principalmente los siguientes temas:
+
+* estructura académica del curso;
+* distribución de cátedras y laboratorios;
+* contenidos y enfoques de cada unidad;
+* relación con la asignatura posterior de Fisicoquímica Farmacéutica;
+* organización semanal de cátedras, talleres y experiencias de laboratorio;
+* evaluaciones;
+* asistencia;
+* eximición y examen;
+* procedimientos ante inasistencias;
+* uso de Canvas, Teams e Intranet;
+* colaboración entre docentes;
+* construcción de un banco de preguntas;
+* homogeneización nacional del curso;
+* atención de estudiantes con necesidades particulares;
+* prevención del fraude académico;
+* procedimientos para ausencias docentes;
+* preparación y publicación de materiales.
+
+La coordinación destacó que se trata de un curso nuevo, de carácter innovador y con una cantidad considerable de contenidos.
+
+Por ello, será necesario mantener una comunicación constante entre docentes y realizar ajustes durante el semestre cuando la respuesta de los estudiantes o las contingencias lo requieran.
+
+======================================================================
+2. ORGANIZACIÓN NACIONAL DEL EQUIPO DOCENTE
+===========================================
+
+El curso se imparte en Santiago, Concepción y Viña del Mar.
+
+Cada sección se identifica mediante su número de sección. Este número será importante para:
+
+* reconocer la cátedra;
+* identificar los laboratorios asociados;
+* organizar los módulos en Canvas;
+* distribuir talleres y experiencias;
+* coordinar evaluaciones;
+* completar formularios y hojas de respuesta.
+
+La coordinación presentó la distribución de profesores de cátedra y laboratorio por sede.
+
+En algunos casos, un profesor de cátedra trabaja con varios docentes de laboratorio. En otros, especialmente en Santiago, el mismo profesor imparte la cátedra y sus secciones de laboratorio.
+
+Se mencionó como excepción el caso de una cátedra en Santiago que trabajará junto con otro docente encargado de una de sus secciones de laboratorio.
+
+Debido a esta organización, cada profesor debe conocer:
+
+* el número de su sección;
+* sus secciones de laboratorio asociadas;
+* el docente de cátedra o laboratorio con quien debe coordinarse;
+* los datos de contacto del equipo correspondiente.
+
+La coordinación entregará un documento con:
+
+* nombres de los docentes;
+* correos;
+* distribución de cátedras;
+* distribución de laboratorios;
+* distribución de talleres;
+* números de sección.
+
+======================================================================
+3. CARÁCTER GENERAL DE LA ASIGNATURA
+====================================
+
+Física Aplicada a las Ciencias Farmacéuticas es un curso nuevo de la carrera de Química y Farmacia.
+
+La innovación principal es que incorpora horas de laboratorio formalmente inscritas dentro del curso.
+
+La asignatura contempla:
+
+* cuatro horas pedagógicas de cátedra por semana;
+* dos horas pedagógicas de laboratorio por semana;
+* aproximadamente doce horas semanales de estudio personal por parte del estudiante.
+
+Cada hora pedagógica corresponde a 45 minutos.
+
+El semestre considera:
+
+* 16 semanas de cátedra;
+* 15 semanas de laboratorio;
+* una primera semana sin laboratorio ni taller presencial.
+
+Los laboratorios comienzan una semana después del inicio de las cátedras.
+
+======================================================================
+4. PROPÓSITO FORMATIVO DEL CURSO
+================================
+
+La asignatura es un curso introductorio de física.
+
+Su propósito es entregar a los estudiantes las estructuras conceptuales necesarias para resolver problemas básicos relacionados con:
+
+* movimiento de partículas;
+* interacción de partículas con el medio;
+* mecánica;
+* mecánica de fluidos;
+* temperatura y calor;
+* termodinámica;
+* electricidad;
+* magnetismo.
+
+Los contenidos deben orientarse constantemente hacia sistemas químicos y biológicos.
+
+El curso no busca desarrollar todos los contenidos con la profundidad de una asignatura tradicional de Física para estudiantes de la disciplina.
+
+El objetivo es seleccionar los conceptos necesarios para estudiantes de primer año de Química y Farmacia y preparar las bases para asignaturas posteriores.
+
+======================================================================
+5. RELACIÓN CON FISICOQUÍMICA FARMACÉUTICA
+==========================================
+
+El curso es requisito para la asignatura posterior de Fisicoquímica Farmacéutica.
+
+La asignatura de Fisicoquímica Farmacéutica incluye contenidos como:
+
+* fundamentos de termodinámica;
+* leyes de la termodinámica;
+* procesos reversibles;
+* potencial químico;
+* termodinámica de disoluciones;
+* conductividad eléctrica;
+* cinética química;
+* fisicoquímica de superficies;
+* tensión superficial;
+* interfaces.
+
+Por esta razón, Física Aplicada a las Ciencias Farmacéuticas debe entregar una base coherente para esos contenidos.
+
+Los enfoques prioritarios señalados fueron:
+
+UNIDAD 1
+
+* fuerzas;
+* fundamentos necesarios para llegar posteriormente a tensiometría;
+* energía cinética;
+* energía potencial;
+* energía potencial de enlace.
+
+UNIDAD 2
+
+* conceptos fundamentales de fluidos;
+* tensión superficial;
+* energía superficial;
+* interfaces;
+* contenidos necesarios para la futura asignatura de Fisicoquímica.
+
+UNIDAD 3
+
+* termodinámica en su conjunto;
+* relación entre temperatura, calor y energía.
+
+UNIDAD 4
+
+* electricidad y magnetismo;
+* énfasis especial en conductividad eléctrica.
+
+Estos enfoques también deben reflejarse en las evaluaciones.
+
+======================================================================
+6. CONOCIMIENTOS PREVIOS DE LOS ESTUDIANTES
+===========================================
+
+Los estudiantes son de primer año.
+
+Antes de cursar esta asignatura deberían haber aprobado Fundamentos de Matemática.
+
+De acuerdo con lo mencionado en la reunión, este curso previo incluye contenidos desde conjuntos hasta integrales.
+
+En principio, los estudiantes deberían contar con las herramientas matemáticas necesarias.
+
+Sin embargo, la coordinación reconoció que será necesario observar durante las primeras semanas cómo responden realmente.
+
+En dinámica no se contempla inicialmente un repaso completo de trigonometría.
+
+Si los estudiantes muestran dificultades, el docente puede realizar un repaso breve enfocado en:
+
+* seno y coseno;
+* descomposición de vectores;
+* fuerzas en componentes;
+* planos inclinados.
+
+======================================================================
+7. UNIDADES DEL CURSO
+=====================
+
+El curso está compuesto por cuatro unidades.
+
+---
+
+## 7.1. UNIDAD 1: ELEMENTOS DE MECÁNICA DE LA PARTÍCULA
+
+La unidad analiza el movimiento de una partícula y las consecuencias de su interacción con el medio.
+
+Incluye:
+
+* representación cartesiana de vectores;
+* suma y resta de vectores;
+* vectores unitarios;
+* sistemas de referencia;
+* inercia;
+* sistemas inerciales;
+* cinemática en una dimensión;
+* movimiento rectilíneo uniforme;
+* movimiento rectilíneo uniformemente acelerado;
+* dinámica;
+* fuerzas;
+* energía;
+* trabajo;
+* colisiones.
+
+El curso no abordará movimiento parabólico.
+
+La cinemática estará restringida principalmente a:
+
+* movimiento horizontal en una dimensión;
+* movimiento vertical en una dimensión.
+
+La cinemática es necesaria dentro del programa, pero no constituye el enfoque central de la unidad.
+
+Los contenidos que requieren mayor énfasis son:
+
+* fuerzas;
+* energía cinética;
+* energía potencial;
+* energía potencial de enlace.
+
+El plano inclinado debe ser comprendido y trabajado lo suficiente para que los estudiantes puedan descomponer fuerzas, pero no será el foco principal de la evaluación.
+
+El concepto de trabajo se introducirá en esta unidad y se retomará posteriormente en termodinámica.
+
+---
+
+## 7.2. UNIDAD 2: MECÁNICA DE FLUIDOS
+
+La unidad busca que los estudiantes apliquen conceptos básicos de fluidos a problemas sencillos asociados con sistemas químicos y biológicos.
+
+Incluye:
+
+* densidad;
+* presión;
+* hidrostática;
+* interfaces;
+* tensiometría;
+* interfaz líquido-gas;
+* interfaz sólido-sólido;
+* tensión superficial;
+* energía superficial;
+* hidrodinámica;
+* ecuación de continuidad;
+* viscosidad;
+* número de Reynolds;
+* ley de Poiseuille.
+
+La tensión superficial y las interfaces son especialmente relevantes por su relación con la asignatura posterior de Fisicoquímica Farmacéutica.
+
+---
+
+## 7.3. UNIDAD 3: TEMPERATURA, CALOR Y TERMODINÁMICA
+
+La unidad busca que los estudiantes resuelvan problemas relacionados con la interacción entre temperatura, calor y energía.
+
+Incluye:
+
+* temperatura;
+* calor;
+* función de estado;
+* capacidad calorífica;
+* transferencia de calor;
+* cambios de fase;
+* macroestados;
+* microestados;
+* procesos termodinámicos;
+* máquinas térmicas;
+* procesos reversibles;
+* eficiencia térmica.
+
+La termodinámica debe abordarse con un enfoque amplio, debido a su importancia para Fisicoquímica Farmacéutica.
+
+---
+
+## 7.4. UNIDAD 4: ELECTROMAGNETISMO
+
+La unidad busca aplicar principios básicos de electricidad y magnetismo a problemas sencillos relacionados con sistemas químicos y biológicos.
+
+Incluye:
+
+* carga eléctrica;
+* ley de Coulomb;
+* campo eléctrico;
+* energía potencial eléctrica;
+* diferencia de potencial;
+* circuitos;
+* magnetismo.
+
+El enfoque principal de esta unidad será la conductividad eléctrica.
+
+======================================================================
+8. NIVEL DE PROFUNDIDAD DE LOS CONTENIDOS
+=========================================
+
+Durante la reunión surgió una consulta sobre la profundidad con la que deben presentarse los contenidos, especialmente durante la primera semana.
+
+La coordinación señaló que se debe buscar un equilibrio.
+
+No se espera:
+
+* presentar solamente fórmulas sin explicación;
+* desarrollar demostraciones excesivamente extensas;
+* profundizar como en un curso completo de Física;
+* detener el avance durante demasiado tiempo en fundamentos matemáticos.
+
+Sí se espera:
+
+* explicar el significado físico de los conceptos;
+* utilizar representaciones gráficas;
+* mostrar de manera breve el origen de las expresiones;
+* evitar una presentación puramente memorística;
+* conectar los conceptos con el contexto farmacéutico;
+* profundizar en los contenidos prioritarios de cada unidad.
+
+Por ejemplo, la velocidad media y la aceleración media pueden introducirse mediante gráficos antes de presentar sus expresiones matemáticas.
+
+No obstante, no se debe dedicar una profundidad excesiva a la formalización mediante límites, ya que el programa es muy amplio.
+
+La coordinación reconoció que el curso es ambicioso.
+
+Durante el semestre se evaluará:
+
+* si los estudiantes comprenden;
+* si algún contenido requiere más tiempo;
+* si ciertos temas deben reducirse;
+* si es necesario modificar la planificación;
+* si el foco de cada unidad está siendo alcanzado.
+
+El objetivo es mantener la mayor homogeneidad posible entre sedes y secciones, sin impedir ajustes justificados.
+
+======================================================================
+9. ORGANIZACIÓN ENTRE CÁTEDRA Y LABORATORIO
+===========================================
+
+Las clases teóricas y las actividades de laboratorio están directamente relacionadas.
+
+Las horas inscritas como laboratorio se dividirán en dos tipos de actividad:
+
+1. Experiencia de laboratorio.
+2. Taller presencial.
+
+La experiencia de laboratorio corresponde a la actividad experimental en la que los estudiantes deben:
+
+* ingresar al laboratorio;
+* trabajar con montajes;
+* medir;
+* registrar datos;
+* desarrollar una experiencia asociada con la unidad.
+
+El taller funciona de manera similar a una ayudantía.
+
+En el taller se trabajará:
+
+* teoría asociada con la experiencia;
+* ejercicios relacionados con el laboratorio;
+* ejercicios generales de la unidad;
+* fortalecimiento de aprendizajes;
+* preparación para evaluaciones.
+
+El curso no tiene una ayudantía independiente.
+
+Por ello, los talleres deben cumplir esa función de aplicación y ejercitación.
+
+======================================================================
+10. RAZÓN DE LA ALTERNANCIA ENTRE LABORATORIO Y TALLER
+======================================================
+
+En Santiago y Concepción existen secciones de laboratorio que funcionan simultáneamente.
+
+En Viña del Mar no se presenta exactamente la misma situación.
+
+La cantidad de materiales disponibles no permite que dos secciones completas realicen simultáneamente la misma experiencia.
+
+Se indicó que aproximadamente existen montajes suficientes para seis grupos de trabajo simultáneos.
+
+Cada cátedra tiene cerca de 60 estudiantes.
+
+Estos estudiantes se dividen aproximadamente en tres secciones de laboratorio de alrededor de 20 estudiantes.
+
+Cada sección de laboratorio puede organizarse en grupos de hasta cuatro integrantes.
+
+Por razones logísticas, mientras una sección realiza la experiencia de laboratorio, otra sección trabaja en un taller.
+
+En la semana siguiente se intercambian las actividades.
+
+Por ejemplo:
+
+* una sección realiza primero laboratorio y después taller;
+* otra sección realiza primero taller y después laboratorio.
+
+La coordinación señaló que no importa cuál actividad se realiza primero, porque el taller y la experiencia estarán directamente relacionados.
+
+Todas las secciones deben recibir:
+
+* la misma información;
+* los mismos contenidos;
+* la misma cantidad de experiencias;
+* ejercicios equivalentes;
+* oportunidades de aprendizaje comparables.
+
+======================================================================
+11. CICLO DE TRABAJO POR UNIDAD
+===============================
+
+Antes de cada prueba, cada sección debe realizar:
+
+1. Una experiencia de laboratorio.
+2. Un taller asociado directamente con la experiencia.
+3. Un taller de ejercicios.
+4. Un taller de fortalecimiento de aprendizajes.
+
+El taller de fortalecimiento se realiza antes de la evaluación de la unidad.
+
+En las semanas de cierre de unidad, ninguna sección realizará experiencia de laboratorio.
+
+Todas las secciones tendrán taller.
+
+La estructura general mencionada es:
+
+* primeras semanas: alternancia entre experiencia y taller;
+* tercera semana de la unidad: ejercicios o consolidación;
+* cuarta semana: fortalecimiento de aprendizajes y evaluación.
+
+La unidad 1 presenta una organización ligeramente distinta porque los laboratorios comienzan en la segunda semana del semestre.
+
+La coordinación preparará un documento semana a semana con la distribución específica para cada sección.
+
+======================================================================
+12. PRIMERA SEMANA
+==================
+
+Durante la primera semana no habrá:
+
+* experiencia de laboratorio;
+* taller presencial.
+
+Los bloques de laboratorio no deben realizarse durante esa semana.
+
+Los estudiantes serán informados mediante:
+
+* anuncio masivo;
+* correo;
+* comunicación de la Escuela de Química y Farmacia;
+* mensajes de los docentes cuando sea necesario.
+
+En la primera clase de cátedra se debe:
+
+* presentar el syllabus;
+* explicar la estructura del curso;
+* explicar las evaluaciones;
+* explicar la asistencia;
+* informar los procedimientos generales;
+* comenzar con vectores;
+* avanzar hacia cinemática cuando sea posible.
+
+La planificación ideal de la primera semana considera avanzar hasta movimiento rectilíneo uniforme y movimiento rectilíneo uniformemente acelerado.
+
+La coordinación reconoció que esto representa una cantidad importante de materia.
+
+Se evaluará durante la implementación cuánto es realmente posible cubrir.
+
+======================================================================
+13. SEMANA DE EVALUACIÓN
+========================
+
+La cuarta semana de cada unidad está destinada al cierre y evaluación.
+
+Durante esa semana:
+
+PRIMERA SESIÓN DE CÁTEDRA
+
+* repaso;
+* resolución de dudas;
+* preparación para la prueba.
+
+SEGUNDA SESIÓN DE CÁTEDRA
+
+* aplicación de la solemne.
+
+Además, antes de la prueba, los estudiantes tendrán un taller de fortalecimiento de aprendizajes.
+
+======================================================================
+14. EVALUACIONES DEL CURSO
+==========================
+
+El curso considera:
+
+* cuatro pruebas solemnes;
+* cuatro reportes de laboratorio;
+* examen final para quienes no se eximan.
+
+Cada unidad tiene:
+
+* una solemne;
+* una experiencia de laboratorio;
+* un reporte asociado.
+
+---
+
+## 14.1. PONDERACIONES
+
+Cada solemne tiene una ponderación de 20 % de la nota de presentación.
+
+Las cuatro solemnes representan en conjunto el 80 % de la nota de presentación.
+
+Cada reporte de laboratorio tiene una ponderación de 5 %.
+
+Los cuatro reportes representan en conjunto el 20 % de la nota de presentación.
+
+Por lo tanto, la nota de presentación se compone de:
+
+* 80 % solemnes;
+* 20 % reportes de laboratorio.
+
+La nota final del curso se calcula mediante:
+
+* 70 % nota de presentación;
+* 30 % examen.
+
+======================================================================
+15. FORMATO DE LAS PRUEBAS SOLEMNES
+===================================
+
+Las pruebas tendrán preguntas de:
+
+* selección múltiple;
+* desarrollo.
+
+La estructura inicialmente considerada es:
+
+* aproximadamente 10 preguntas de alternativas;
+* aproximadamente 2 preguntas de desarrollo.
+
+La cantidad exacta puede modificarse dentro de un margen.
+
+También se consideró la posibilidad de incorporar tres preguntas de desarrollo, de las cuales:
+
+* una sería obligatoria;
+* el estudiante podría elegir entre las otras dos.
+
+Esta opción no quedó confirmada.
+
+Las preguntas de desarrollo deben reflejar el enfoque prioritario de cada unidad.
+
+La coordinación entregará:
+
+* pauta;
+* rúbrica;
+* esquema de puntajes;
+* criterios generales de corrección.
+
+El docente de cátedra corregirá las preguntas de desarrollo.
+
+Aunque existirá una pauta común, el docente deberá aplicar también su criterio académico frente a distintos procedimientos correctos.
+
+El objetivo es mantener la mayor homogeneidad posible entre secciones.
+
+======================================================================
+16. ESCANEO DE LAS PRUEBAS
+==========================
+
+Las respuestas de selección múltiple serán procesadas mediante un sistema de escaneo.
+
+Se indicó que:
+
+* en Santiago ya funciona una nueva máquina;
+* en Viña del Mar y Concepción su implementación estaría en proceso.
+
+La coordinación compartirá tutoriales para utilizar el sistema.
+
+Cada docente será responsable del escaneo correspondiente a su sección.
+
+Los profesores nuevos pueden solicitar apoyo:
+
+* a colegas;
+* al personal presente en la sala de profesores;
+* a la coordinación.
+
+Las hojas de respuesta funcionan de forma similar a las utilizadas en pruebas estandarizadas.
+
+Los estudiantes deberán completar correctamente:
+
+* identificación;
+* RUT;
+* número de sección;
+* forma de la prueba;
+* respuestas.
+
+Se debe insistir en que marquen correctamente las alternativas.
+
+======================================================================
+17. FORMAS DE PRUEBA Y HOMOGENEIZACIÓN
+======================================
+
+Debido al número de secciones, las pruebas tendrán varias formas.
+
+Los docentes deben distribuir correctamente las formas durante la evaluación.
+
+Las pruebas, talleres y experiencias deben mantenerse lo más homogéneos posible a nivel nacional.
+
+Esto implica compartir:
+
+* criterios;
+* contenidos;
+* ejercicios;
+* rúbricas;
+* instrucciones;
+* nivel de dificultad;
+* condiciones de aplicación.
+
+La coordinación generará pautas y documentos comunes para apoyar este proceso.
+
+======================================================================
+18. RETROALIMENTACIÓN Y RECLAMOS DE NOTAS
+=========================================
+
+Los estudiantes tendrán como plazo la semana siguiente a la entrega de una solemne para presentar:
+
+* dudas;
+* comentarios;
+* solicitudes de revisión;
+* reclamos;
+* sugerencias relacionadas con la calificación.
+
+Después de ese plazo no se recibirán nuevas solicitudes de revisión.
+
+Durante la reunión se sugirió dedicar tiempo a la retroalimentación de la prueba.
+
+La coordinación confirmó que existirán pautas.
+
+Los estudiantes recibirán información que les permita identificar:
+
+* su puntaje;
+* su nota;
+* la forma rendida;
+* las preguntas incorrectas;
+* las respuestas correctas.
+
+Se mencionó que una retroalimentación completa puede requerir una parte importante de la sesión posterior.
+
+La manera específica de implementarla deberá coordinarse para no afectar excesivamente el avance del programa.
+
+======================================================================
+19. REPORTES DE LABORATORIO
+===========================
+
+Se realizarán cuatro reportes, uno por cada experiencia de laboratorio.
+
+Cada reporte será elaborado en grupos de hasta cuatro estudiantes.
+
+El reporte debe escribirse a mano.
+
+El propósito de esta medida es:
+
+* disminuir el uso directo de inteligencia artificial;
+* incentivar que los estudiantes procesen lo realizado;
+* favorecer que comprendan el contenido del informe.
+
+La coordinación reconoció que los estudiantes podrían utilizar igualmente herramientas de inteligencia artificial.
+
+Sin embargo, se espera que la escritura manual los obligue al menos a revisar el contenido.
+
+Después de escribirlo, el grupo debe:
+
+* digitalizar el reporte;
+* subirlo a Canvas;
+* utilizar la entrega correspondiente al módulo de la experiencia.
+
+El plazo será de 14 días calendario después de la experiencia de laboratorio.
+
+El profesor de laboratorio será responsable de evaluar el reporte.
+
+======================================================================
+20. MÓDULO DE CADA EXPERIENCIA EN CANVAS
+========================================
+
+Cada experiencia tendrá un módulo propio en Canvas.
+
+El módulo incluirá:
+
+* guía de laboratorio;
+* instructivo;
+* plantilla sencilla del reporte;
+* rúbrica;
+* espacio de entrega.
+
+Cada reporte debe subirse al módulo asociado con la experiencia correspondiente.
+
+La coordinación pretende cargar estos módulos de manera automatizada para mantener la misma estructura en todas las secciones.
+
+======================================================================
+21. ENTREGA DE RETROALIMENTACIÓN DE LOS REPORTES
+================================================
+
+Durante la reunión se discutió cómo acreditar que cada grupo recibió su rúbrica o retroalimentación.
+
+La preocupación es evitar situaciones como:
+
+* “el profesor no me entregó la rúbrica”;
+* “yo subí el reporte y no fue revisado”;
+* “no conozco mi retroalimentación”;
+* “no sé cómo me fue”.
+
+Se propuso mantener un registro de recepción.
+
+La idea preliminar es que, cuando se entregue la rúbrica a cada grupo:
+
+* un integrante firme la recepción;
+* el profesor de laboratorio mantenga una tabla de registro;
+* quede evidencia de que el grupo recibió la retroalimentación.
+
+Esta propuesta fue planteada para discusión y no se presentó como procedimiento definitivo.
+
+======================================================================
+22. ASISTENCIA
+==============
+
+La asistencia exigida es:
+
+* 75 % para cátedra;
+* 100 % para laboratorio.
+
+Cada docente debe registrar la asistencia.
+
+Aunque existen códigos QR en las sedes, se advirtió que algunos estudiantes pueden:
+
+* escanear el código y retirarse;
+* pedir a otro estudiante que registre su asistencia.
+
+Por esta razón, el docente debe supervisar el proceso.
+
+La asistencia puede modificarse posteriormente en la plataforma correspondiente, indicando estados como:
+
+* presente;
+* ausente;
+* atrasado;
+* justificado.
+
+La asistencia debe quedar registrada en el sistema institucional.
+
+======================================================================
+23. EXIMICIÓN
+=============
+
+Las condiciones para eximirse son simultáneas.
+
+El estudiante debe:
+
+* tener nota de presentación igual o superior a 5,0;
+* no tener ninguna solemne con nota inferior a 4,0;
+* cumplir con la asistencia exigida en cátedra;
+* cumplir con las demás condiciones establecidas en el syllabus.
+
+No basta con tener promedio de presentación igual o superior a 5,0 si existe una solemne bajo 4,0.
+
+======================================================================
+24. EXAMEN
+==========
+
+El examen no reemplaza automáticamente la peor solemne.
+
+La nota final se calcula con:
+
+* 70 % nota de presentación;
+* 30 % examen.
+
+El examen puede reemplazar una solemne no rendida cuando la inasistencia ha sido correctamente justificada según el procedimiento establecido.
+
+======================================================================
+25. INASISTENCIA A SOLEMNES
+===========================
+
+No habrá solemne recuperativa.
+
+Si un estudiante falta a una solemne:
+
+1. Tiene tres días calendario desde la fecha de la evaluación para justificar.
+2. Debe entregar los antecedentes a su profesor de cátedra.
+3. El profesor debe enviar la información a coordinación.
+4. Si la justificación corresponde, el examen reemplazará la solemne no rendida.
+
+Si un estudiante falta a más de una solemne, el caso debe ser derivado a coordinación para su revisión.
+
+La solución dependerá de:
+
+* antecedentes;
+* reglamento;
+* justificación;
+* condiciones particulares del caso.
+
+======================================================================
+26. INASISTENCIA A EXPERIENCIAS DE LABORATORIO
+==============================================
+
+La asistencia al laboratorio es obligatoria.
+
+Si un estudiante falta a una experiencia:
+
+1. Tiene tres días calendario posteriores a la experiencia para justificar.
+2. Debe entregar los antecedentes al docente correspondiente.
+3. La información debe enviarse a coordinación.
+4. Si la justificación es aceptada, podrá asistir a una experiencia recuperativa.
+
+Se contempla una única experiencia recuperativa de laboratorio.
+
+La semana exacta todavía debía confirmarse, pero se realizaría hacia el final del semestre.
+
+Si un estudiante falta a más de una experiencia de laboratorio, el caso debe derivarse a coordinación.
+
+======================================================================
+27. CALENDARIO DE EVALUACIONES
+==============================
+
+Las solemnes se realizarán durante la segunda sesión de cátedra de la semana correspondiente.
+
+La primera solemne se realizará durante la semana comprendida entre el 24 y el 29 de agosto.
+
+La segunda solemne se realizará durante la semana del 23 al 26 de septiembre.
+
+La tercera solemne se realizará durante la semana del 26 al 30 de octubre.
+
+La cuarta solemne se realizará durante la semana comprendida entre el 23 y el 28 de noviembre.
+
+El examen se realizará durante la semana 18.
+
+Se mencionó como fecha el 5 de diciembre, entre las 12:10 y las 13:40.
+
+El horario estaba fijado, pero la sala todavía no.
+
+La coordinación compartirá el calendario académico completo.
+
+Las fechas deben confirmarse en:
+
+* syllabus actualizado;
+* calendario académico;
+* Canvas;
+* comunicaciones oficiales.
+
+======================================================================
+28. FRAUDE ACADÉMICO
+====================
+
+El curso se rige por el reglamento de pregrado.
+
+Cuando un estudiante es sorprendido participando en fraude académico, puede recibir la nota mínima en la evaluación.
+
+Se consideran situaciones de fraude, entre otras:
+
+* copia;
+* uso de torpedos;
+* uso de dispositivos prohibidos;
+* uso de celulares;
+* acciones no autorizadas antes o durante la evaluación;
+* incumplimiento de las instrucciones de la prueba;
+* otras conductas definidas por el reglamento.
+
+El docente tiene la facultad de aplicar la sanción correspondiente cuando observa directamente la conducta.
+
+La coordinación también puede investigar situaciones detectadas durante la corrección.
+
+Si un docente identifica indicios de fraude, debe enviar los antecedentes a coordinación.
+
+======================================================================
+29. MEDIDAS DURANTE LAS PRUEBAS
+===============================
+
+Las instrucciones generales deben incluir medidas como:
+
+* mochilas y bolsos ubicados en la parte delantera de la sala;
+* celulares apagados o en modo avión;
+* celulares guardados dentro de mochilas o bolsos;
+* ausencia de estuches sobre la mesa;
+* uso solamente de materiales autorizados;
+* calculadora permitida cuando corresponda;
+* distribución adecuada de las formas de prueba.
+
+Los bolsos deben colocarse sin obstruir las salidas de emergencia.
+
+Se señaló que algunos estudiantes pueden intentar ocultar celulares:
+
+* en la ropa;
+* en chaquetas;
+* en el cabello;
+* bajo la mesa;
+* en otros lugares.
+
+También se informó una experiencia en la que una calculadora aparentemente contenía una cámara utilizada para escanear preguntas.
+
+La coordinación señaló que estos mecanismos deben considerarse durante la supervisión.
+
+El ideal es que en cada solemne estén presentes:
+
+* el profesor de cátedra;
+* el profesor de laboratorio.
+
+Esto es especialmente importante debido al número de estudiantes.
+
+Cuando un docente está encargado simultáneamente de varias secciones, será necesario buscar una solución particular.
+
+======================================================================
+30. ESTUDIANTES CON NECESIDADES PARTICULARES
+============================================
+
+Durante la primera clase, el profesor de cátedra debe informar que los estudiantes que requieran adaptaciones deben acercarse al organismo institucional correspondiente, mencionado en la reunión como CIADE o SIADE.
+
+Puede tratarse de estudiantes que presenten, por ejemplo:
+
+* neurodivergencia;
+* condición dentro del espectro autista;
+* sensibilidad a la luz;
+* sensibilidad al ruido;
+* dificultades frente a grupos numerosos;
+* otras necesidades particulares.
+
+El estudiante debe presentar los antecedentes y documentación solicitada por la unidad institucional.
+
+No todos los estudiantes neurodivergentes requieren adaptaciones.
+
+Algunos se integran al curso sin necesidad de modificaciones.
+
+Si un docente observa que un estudiante podría requerir apoyo, puede preguntarle respetuosamente si:
+
+* conoce el servicio;
+* se ha acercado a la unidad;
+* necesita orientación;
+* cuenta con algún apoyo institucional.
+
+La decisión y tramitación formal corresponde al estudiante y a la unidad institucional.
+
+Después, el organismo correspondiente se comunica con coordinación para definir las medidas.
+
+Las adaptaciones evaluativas deben mantener condiciones adecuadas de supervisión.
+
+Por ejemplo, si un estudiante rinde en una sala separada, debe asegurarse:
+
+* vigilancia;
+* ausencia de internet;
+* ausencia de mochila;
+* cumplimiento de las mismas reglas académicas.
+
+Durante la reunión, un docente advirtió que anteriormente la unidad institucional no habría prestado apoyo para Física y que su intervención se habría limitado a Biología y Química.
+
+La coordinación señaló que revisaría este antecedente con anticipación.
+
+======================================================================
+31. BANCO DE PREGUNTAS
+======================
+
+La coordinación solicitará colaboración a todos los docentes para crear un banco de preguntas.
+
+Después de la reunión se enviará un correo con:
+
+* contenidos asignados;
+* distribución por docente;
+* tipo de problemas solicitados;
+* instrucciones de entrega.
+
+Por ejemplo, un docente podría recibir la tarea de construir ejercicios sobre:
+
+* representación cartesiana de vectores;
+* dinámica;
+* otro tema específico.
+
+El curso es nuevo y todavía no cuenta con:
+
+* pruebas propias;
+* banco consolidado de preguntas;
+* guías completamente adaptadas.
+
+Existía una asignatura anterior con otro código y contenidos parcialmente relacionados.
+
+Algunos de esos materiales pueden reutilizarse o modificarse, pero no corresponden exactamente al nuevo programa.
+
+La construcción del banco se realizará progresivamente durante el semestre.
+
+======================================================================
+32. GUÍAS Y EJERCICIOS DE TALLER
+================================
+
+Los ejercicios de taller serán proporcionados o coordinados centralmente para mantener la equivalencia entre secciones.
+
+Los docentes de laboratorio no tendrán que construir de manera independiente todos los ejercicios.
+
+La coordinación entregará:
+
+* ejercicios;
+* orientaciones;
+* distribución semanal;
+* materiales de apoyo;
+* criterios comunes.
+
+No obstante, se espera colaboración docente para:
+
+* revisar ejercicios;
+* proponer mejoras;
+* aportar preguntas;
+* informar errores;
+* reforzar contenidos no alcanzados en cátedra.
+
+======================================================================
+33. COLABORACIÓN ENTRE CÁTEDRA Y LABORATORIO
+============================================
+
+La comunicación entre el profesor de cátedra y sus profesores de laboratorio debe ser permanente.
+
+El profesor de cátedra puede informar, por ejemplo:
+
+* qué contenido alcanzó a cubrir;
+* qué concepto necesita refuerzo;
+* qué dificultades presentaron los estudiantes;
+* qué ejercicios conviene priorizar;
+* qué contenidos deben postergarse.
+
+Los talleres pueden utilizarse para:
+
+* reforzar contenidos;
+* completar aplicaciones;
+* resolver ejercicios;
+* compensar parcialmente limitaciones de tiempo en cátedra;
+* preparar las evaluaciones.
+
+Se sugirió crear grupos de coordinación por equipo mediante:
+
+* Teams;
+* Outlook;
+* WhatsApp.
+
+Esto es especialmente importante cuando una misma cátedra tiene varios profesores distintos de laboratorio.
+
+======================================================================
+34. SYLLABUS
+============
+
+Cada docente debe cargar y modificar el syllabus en su sección.
+
+El syllabus debe estar disponible tanto en:
+
+* la sección de cátedra;
+* cada sección de laboratorio.
+
+Debe incluir los correos de:
+
+* profesor de cátedra;
+* profesor de laboratorio;
+* coordinación.
+
+Cada sección tiene su propio curso de Canvas.
+
+Aunque una cátedra y sus laboratorios estén vinculados administrativamente, cada sección posee:
+
+* Canvas independiente;
+* módulos propios;
+* publicaciones propias;
+* entregas propias.
+
+Cada docente debe verificar que el syllabus esté correctamente publicado en todos sus cursos.
+
+======================================================================
+35. CANVAS
+==========
+
+Canvas será la plataforma principal de comunicación académica con los estudiantes.
+
+En Canvas se publicarán:
+
+* syllabus;
+* módulos;
+* guías;
+* experiencias de laboratorio;
+* plantillas de reporte;
+* rúbricas;
+* entregas;
+* anuncios;
+* materiales;
+* evaluaciones cuando corresponda.
+
+Cada profesor debe publicar sus cursos.
+
+Para hacerlo, debe revisar en el tablero la sección denominada “Cursos no publicados”.
+
+Si un curso no aparece, el docente debe informar a coordinación y entregar el NRC correspondiente.
+
+La coordinación gestionará el caso con la unidad encargada.
+
+======================================================================
+36. AUTOMATIZACIÓN DE MÓDULOS MEDIANTE TOKEN
+============================================
+
+La coordinación pretende crear y cargar automáticamente los módulos de laboratorio en los distintos cursos de Canvas.
+
+Para hacerlo, cada docente debe enviar:
+
+* token de acceso;
+* ID del curso.
+
+Esto se solicita tanto a:
+
+* profesores de cátedra;
+* profesores de laboratorio.
+
+El token permite que coordinación cargue en el curso:
+
+* módulos;
+* instructivos;
+* guías;
+* plantillas;
+* rúbricas;
+* documentos asociados con las experiencias.
+
+El token no reemplaza Teams.
+
+Tampoco corresponde a una nueva plataforma.
+
+Su función es autorizar temporalmente la carga automatizada de materiales en el Canvas de una sección específica.
+
+======================================================================
+37. CREACIÓN DEL TOKEN DE CANVAS
+================================
+
+El procedimiento explicado fue:
+
+1. Ingresar a Canvas.
+2. Entrar en “Cuenta”.
+3. Seleccionar “Configuraciones”.
+4. Buscar la opción “Nuevo token de acceso”.
+5. Indicar el propósito.
+6. Definir una fecha de vencimiento.
+7. Generar el token.
+8. Copiarlo inmediatamente.
+9. Enviarlo a coordinación junto con el ID del curso.
+
+Como propósito se puede utilizar una referencia como:
+
+* código del curso;
+* periodo académico;
+* número de sección.
+
+Los tokens tienen una vigencia máxima de 30 días.
+
+No es posible establecer como vencimiento el final completo del semestre si supera ese plazo.
+
+La coordinación indicó que probablemente será necesario solicitar nuevos tokens periódicamente.
+
+Se pidió inicialmente enviarlos el lunes al mediodía.
+
+======================================================================
+38. SEGURIDAD DEL TOKEN
+=======================
+
+El token debe tratarse como una credencial sensible.
+
+Las buenas prácticas mencionadas fueron:
+
+* copiarlo inmediatamente;
+* guardarlo en un lugar seguro;
+* utilizar un gestor de contraseñas cuando sea posible;
+* no compartirlo en espacios públicos;
+* evitar dejarlo expuesto en chats;
+* eliminarlo si se sospecha una filtración;
+* regenerarlo cuando sea necesario.
+
+Si el token se pierde o se filtra, el docente puede:
+
+* eliminarlo;
+* generar uno nuevo;
+* enviar la nueva credencial a coordinación.
+
+======================================================================
+39. ID DEL CURSO
+================
+
+El ID del curso se obtiene desde la dirección web de Canvas.
+
+Al ingresar a una sección, la URL contiene un número.
+
+Ese número corresponde al ID solicitado.
+
+Cada docente debe verificar que:
+
+* esté dentro del curso correcto;
+* copie el ID de la sección correcta;
+* no confunda cátedra con laboratorio;
+* envíe el ID junto con el token.
+
+Si algo falla, se debe comprobar:
+
+* que el token siga vigente;
+* que corresponda al curso correcto;
+* que el ID sea correcto;
+* que el curso esté publicado o disponible;
+* que no se haya enviado información de otra sección.
+
+======================================================================
+40. TEAMS Y GRUPO DE COORDINACIÓN
+=================================
+
+Existirá un espacio de coordinación en Teams.
+
+Allí se publicarán:
+
+* syllabus;
+* presentación de la reunión;
+* presentación adaptada para estudiantes;
+* planificación semana a semana;
+* contactos de docentes;
+* distribución de secciones;
+* distribución de experiencias y talleres;
+* guías;
+* documentos administrativos;
+* tutoriales;
+* manuales;
+* grabación de la reunión;
+* otros materiales comunes.
+
+El token de Canvas no reemplaza este grupo.
+
+Si un docente no puede acceder, debe informar a coordinación.
+
+El enlace también se compartió mediante WhatsApp.
+
+======================================================================
+41. OUTLOOK Y WHATSAPP
+======================
+
+La comunicación oficial entre docentes y coordinación se realizará mediante:
+
+* correo institucional;
+* grupo creado en Outlook;
+* Teams para documentos y reuniones.
+
+También existirá un grupo de WhatsApp.
+
+WhatsApp servirá para:
+
+* coordinación rápida;
+* contingencias;
+* avisos breves;
+* resolución de asuntos urgentes.
+
+No será el canal oficial para decisiones académicas o administrativas.
+
+======================================================================
+42. INTRANET
+============
+
+La Intranet institucional se utiliza para:
+
+* consultar horarios;
+* revisar salas;
+* revisar cursos;
+* ingresar calificaciones;
+* firmar contratos;
+* consultar antecedentes académicos;
+* acceder al calendario académico;
+* gestionar procedimientos administrativos.
+
+Los profesores nuevos deben ingresar con sus credenciales institucionales.
+
+Las salas y horarios de cátedra, laboratorio y taller deberían aparecer en la opción de consulta del horario.
+
+La coordinación indicó que algunos cursos o salas todavía podrían no estar cargados.
+
+Se daría plazo al sistema para actualizar la información.
+
+Si después de ese plazo una sección no aparece, el docente debe informar:
+
+* número de sección;
+* NRC;
+* curso faltante;
+* tipo de actividad;
+* sede.
+
+======================================================================
+43. INGRESO DE CALIFICACIONES
+=============================
+
+El profesor de cátedra será responsable de ingresar todas las notas de su grupo.
+
+Esto incluye:
+
+* notas de solemnes;
+* notas de laboratorio;
+* nota de presentación;
+* otras calificaciones oficiales del curso.
+
+Los profesores de laboratorio deben entregar oportunamente las notas de sus reportes al profesor de cátedra.
+
+En Teams se compartirán manuales relacionados con:
+
+* ingreso de notas;
+* actas rectificatorias;
+* procedimientos administrativos;
+* uso del portal.
+
+======================================================================
+44. BIBLIOGRAFÍA
+================
+
+La mayor parte de la bibliografía se encuentra en inglés.
+
+La coordinación señaló que los estudiantes de Química y Farmacia deben desarrollar capacidad para trabajar con estos recursos.
+
+También existen algunas alternativas en español.
+
+Se mencionaron textos generales y libros específicos de:
+
+* Física aplicada a Farmacia;
+* Física para ciencias de la vida;
+* Física para ciencias biológicas.
+
+Los enlaces correspondientes estarán en el syllabus.
+
+Uno de los libros mencionados se encontraba físicamente en la universidad, pero no estaba disponible en los recursos digitales.
+
+La coordinación señaló que estaba gestionando su digitalización o disponibilidad.
+
+También se utilizará al menos un texto en español de Física aplicada a las ciencias de la vida.
+
+Debido a errores de transcripción, algunos nombres de autores no pueden recuperarse con certeza y no se reproducen de forma definitiva en este documento.
+
+======================================================================
+45. AUSENCIA DE UN DOCENTE
+==========================
+
+Los estudiantes no deben perder clases.
+
+Si un profesor no puede realizar una sesión, las opciones deben considerarse en este orden:
+
+1. Reagendar la clase.
+2. Buscar un reemplazo.
+3. Virtualizar la sesión.
+
+La primera opción es reagendar, para que los estudiantes continúen el proceso con su docente habitual.
+
+Si no es posible, el docente debe gestionar un reemplazo.
+
+Como tercera alternativa, puede grabar la clase.
+
+Si se utiliza una clase grabada, debe estar disponible durante el horario que correspondía originalmente a la sesión.
+
+Toda inasistencia debe comunicarse a coordinación.
+
+======================================================================
+46. FERIADOS Y PÉRDIDA DE CLASES
+================================
+
+Se señaló que ninguna sección de laboratorio perdería experiencias o talleres por feriados.
+
+Solo tres secciones de cátedra de Concepción perderían una clase debido al feriado del viernes 18 de septiembre.
+
+Los códigos de esas secciones fueron mencionados durante la reunión.
+
+La coordinación deberá considerar esta pérdida en la planificación.
+
+No se identificaron otras pérdidas de clases por feriados.
+
+======================================================================
+47. COMUNICACIÓN CON LOS ESTUDIANTES
+====================================
+
+Los canales oficiales entre docente y estudiante son:
+
+* correo institucional;
+* Canvas.
+
+Se pidió responder los correos de los estudiantes en un plazo ideal no superior a 48 horas.
+
+La coordinación recordó que el curso debe ofrecer una experiencia:
+
+* formativa;
+* coherente;
+* contextualizada;
+* comparable;
+* respetuosa;
+* profesional.
+
+======================================================================
+48. DOCUMENTOS QUE SERÁN PUBLICADOS
+===================================
+
+La coordinación indicó que publicará:
+
+* syllabus actualizado;
+* presentación completa de la reunión;
+* presentación adaptada para estudiantes;
+* tutorial para crear el token;
+* planificación semana a semana;
+* calendario académico;
+* distribución de cátedras;
+* distribución de laboratorios;
+* distribución de talleres;
+* contactos de docentes;
+* guías de ejercicios;
+* documentos de laboratorio;
+* plantillas de reportes;
+* rúbricas;
+* tutoriales para escaneo de pruebas;
+* manuales para ingreso de notas;
+* manual de acta rectificatoria;
+* grabación de la reunión.
+
+======================================================================
+49. SUGERENCIAS PLANTEADAS POR LOS DOCENTES
+===========================================
+
+Durante la reunión se plantearon varias sugerencias.
+
+---
+
+## 49.1. REDUCIR CONTENIDOS
+
+Se señaló que el curso es muy extenso y que una cobertura excesiva puede sacrificar calidad.
+
+Se sugirió revisar durante el semestre si algunos tópicos deben eliminarse o reducirse.
+
+La coordinación respondió que el programa puede ajustarse según:
+
+* respuesta de los estudiantes;
+* contingencias;
+* ritmo real;
+* objetivos prioritarios.
+
+No se definieron contenidos específicos para eliminar.
+
+---
+
+## 49.2. RETROALIMENTACIÓN DE PRUEBAS
+
+Se sugirió dedicar una sesión o parte importante de ella a:
+
+* entregar las pruebas;
+* responder preguntas;
+* revisar errores;
+* explicar la pauta;
+* clarificar criterios.
+
+La coordinación confirmó que existirán pautas y mecanismos para que los estudiantes identifiquen sus errores.
+
+---
+
+## 49.3. COORDINACIÓN PREVIA CON LA UNIDAD DE APOYO
+
+Se recomendó contactar anticipadamente al organismo de apoyo estudiantil, debido a experiencias anteriores en las que Física no habría recibido el mismo apoyo que otras asignaturas.
+
+La coordinación señaló que consideraría esta advertencia.
+
+---
+
+## 49.4. MAYOR CONTROL DE CELULARES
+
+Se recomendó retirar mochilas y celulares del espacio inmediato de los estudiantes durante las evaluaciones.
+
+La coordinación señaló que estas medidas estarán incorporadas en las instrucciones.
+
+---
+
+## 49.5. VIGILANCIA DE DISPOSITIVOS OCULTOS
+
+Se informó de casos en los que estudiantes habrían utilizado dispositivos con cámara incorporada, incluso aparentemente asociados con calculadoras.
+
+La coordinación indicó que se mantendría atención frente a estos mecanismos.
+
+======================================================================
+50. RESUMEN OPERATIVO DEL CURSO
+===============================
+
+Cada cátedra tendrá aproximadamente 60 estudiantes.
+
+Estos estudiantes se dividirán en cerca de tres secciones de laboratorio de aproximadamente 20 estudiantes.
+
+La primera semana no tendrá laboratorio ni taller.
+
+En las semanas siguientes, las secciones alternarán entre:
+
+* experiencia de laboratorio;
+* taller asociado.
+
+Cada unidad incluirá:
+
+* una experiencia;
+* un taller asociado con la experiencia;
+* un taller de ejercicios;
+* fortalecimiento de aprendizajes;
+* una solemne;
+* un reporte de laboratorio.
+
+Las evaluaciones oficiales serán:
+
+* cuatro solemnes;
+* cuatro reportes;
+* examen cuando corresponda.
+
+======================================================================
+51. RESPONSABILIDADES DEL PROFESOR DE CÁTEDRA
+=============================================
+
+El profesor de cátedra debe:
+
+* presentar el syllabus en la primera clase;
+* informar la estructura del curso;
+* explicar evaluaciones y asistencia;
+* informar sobre el procedimiento de apoyo a estudiantes;
+* desarrollar los contenidos teóricos;
+* coordinarse con sus profesores de laboratorio;
+* informar qué contenidos requieren refuerzo;
+* aplicar las solemnes;
+* corregir las preguntas de desarrollo;
+* gestionar las solicitudes de revisión;
+* recibir justificaciones de inasistencia;
+* enviar antecedentes a coordinación;
+* ingresar todas las notas del curso;
+* responder correos;
+* publicar su Canvas;
+* cargar el syllabus;
+* enviar token e ID;
+* colaborar con el banco de preguntas;
+* comunicar ausencias o contingencias.
+
+======================================================================
+52. RESPONSABILIDADES DEL PROFESOR DE LABORATORIO
+=================================================
+
+El profesor de laboratorio debe:
+
+* conocer la planificación de su sección;
+* distinguir semanas de experiencia y taller;
+* ejecutar las experiencias;
+* desarrollar los talleres;
+* reforzar contenidos de cátedra;
+* comunicarse con el profesor de cátedra;
+* tomar asistencia;
+* evaluar los reportes;
+* entregar notas al profesor de cátedra;
+* registrar la entrega de retroalimentación cuando se establezca el procedimiento;
+* participar idealmente en las solemnes;
+* publicar su Canvas;
+* cargar el syllabus;
+* enviar token e ID;
+* colaborar con ejercicios y banco de preguntas;
+* informar contingencias.
+
+======================================================================
+53. ACUERDOS PRINCIPALES
+========================
+
+1. El curso tendrá cuatro unidades.
+
+2. Cada unidad tendrá una solemne y una experiencia de laboratorio.
+
+3. Se realizarán cuatro reportes de laboratorio.
+
+4. Las solemnes valdrán en conjunto 80 % de la nota de presentación.
+
+5. Los reportes valdrán en conjunto 20 % de la nota de presentación.
+
+6. La nota final se calculará con 70 % de presentación y 30 % de examen.
+
+7. La asistencia será de 75 % en cátedra y 100 % en laboratorio.
+
+8. No habrá solemnes recuperativas.
+
+9. Existirá una experiencia recuperativa de laboratorio, sujeta a confirmación de fecha.
+
+10. Las inasistencias deben justificarse dentro de tres días calendario.
+
+11. El examen puede reemplazar una solemne no rendida y debidamente justificada.
+
+12. El examen no reemplazará automáticamente la peor nota.
+
+13. Cada sección alternará entre laboratorio y taller.
+
+14. La primera semana no habrá actividades presenciales de laboratorio ni taller.
+
+15. Los reportes serán grupales, manuscritos y digitalizados para su entrega.
+
+16. Los reportes se entregarán 14 días después de la experiencia.
+
+17. Los cursos deberán mantenerse homogéneos a nivel nacional.
+
+18. Cada sección tendrá su propio Canvas.
+
+19. Todos los docentes deberán publicar sus cursos.
+
+20. Profesores de cátedra y laboratorio deberán enviar token e ID.
+
+21. Teams se utilizará para la coordinación y publicación de documentos comunes.
+
+22. El correo institucional será el canal oficial.
+
+23. WhatsApp se utilizará para coordinación rápida, pero no será un canal oficial.
+
+24. Los docentes deberán responder correos idealmente dentro de 48 horas.
+
+25. Todos los docentes colaborarán en la construcción del banco de preguntas.
+
+26. El profesor de cátedra ingresará todas las calificaciones.
+
+27. Las evaluaciones incluirán selección múltiple y desarrollo.
+
+28. Existirán rúbricas y pautas comunes.
+
+29. El fraude académico podrá sancionarse con la nota mínima.
+
+30. Los estudiantes que requieran adaptaciones deberán gestionar su caso mediante la unidad institucional correspondiente.
+
+======================================================================
+54. TEMAS PENDIENTES O SUJETOS A CONFIRMACIÓN
+=============================================
+
+Los siguientes temas no quedaron completamente cerrados:
+
+* cantidad exacta de preguntas de desarrollo;
+* posibilidad de permitir elección entre preguntas de desarrollo;
+* fecha de la experiencia recuperativa de laboratorio;
+* procedimiento definitivo para firmar la recepción de rúbricas;
+* forma exacta de realizar la retroalimentación de las solemnes;
+* disponibilidad final de salas;
+* carga definitiva de todas las secciones en los sistemas;
+* funcionamiento del escáner en Viña del Mar y Concepción;
+* coordinación con la unidad de apoyo estudiantil;
+* posibles contenidos que podrían reducirse;
+* ajustes en la profundidad de algunos temas;
+* confirmación final de algunas fechas en el syllabus;
+* periodicidad con la que deberán renovarse y enviarse los tokens;
+* solución para docentes que imparten simultáneamente varias secciones y deben supervisar pruebas;
+* forma de compensar la clase perdida por feriado en determinadas secciones de Concepción.
+
+======================================================================
+55. FRAGMENTO FINAL INCONCLUSO
+==============================
+
+Al final de la transcripción se inició una pregunta relacionada con la distribución de laboratorios de una docente de cátedra.
+
+La grabación transcrita termina antes de que la consulta sea completada y antes de que exista una respuesta.
+
+Por lo tanto, no es posible reconstruir ni concluir ese punto sin inventar información.
+
+======================================================================
+56. CIERRE DE LA REUNIÓN
+========================
+
+La coordinación reiteró que se trata de un curso nuevo, ambicioso y con una cantidad considerable de contenidos.
+
+Se destacó que el éxito de la asignatura dependerá de:
+
+* comunicación constante;
+* colaboración entre cátedra y laboratorio;
+* homogeneidad entre sedes;
+* revisión progresiva del programa;
+* capacidad de adaptación;
+* respeto por los procedimientos comunes;
+* apoyo entre docentes.
+
+La coordinación dio la bienvenida al equipo y manifestó disponibilidad para resolver dudas y acompañar la implementación durante el semestre.
+
