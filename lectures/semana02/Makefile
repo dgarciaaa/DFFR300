@@ -9,9 +9,11 @@ AUX_EXT = aux log out toc lof lot fls fdb_latexmk synctex.gz nav snm vrb
 pdf: $(PDFS)
 
 %.pdf: %.tex preamble.tex
-	mkdir -p $(BUILD)
-	lualatex -interaction=nonstopmode -halt-on-error -output-directory=$(BUILD) $<
-	lualatex -interaction=nonstopmode -halt-on-error -output-directory=$(BUILD) $<
+	mkdir -p $(BUILD) $(TMP)/texmf-var
+	env TEXMFVAR=$(CURDIR)/$(TMP)/texmf-var TEXMFCACHE=$(CURDIR)/$(TMP)/texmf-var \
+		lualatex -interaction=nonstopmode -halt-on-error -output-directory=$(BUILD) $<
+	env TEXMFVAR=$(CURDIR)/$(TMP)/texmf-var TEXMFCACHE=$(CURDIR)/$(TMP)/texmf-var \
+		lualatex -interaction=nonstopmode -halt-on-error -output-directory=$(BUILD) $<
 	cp $(BUILD)/$@ .
 
 clean:
