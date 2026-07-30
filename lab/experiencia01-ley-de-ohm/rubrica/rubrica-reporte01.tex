@@ -1,0 +1,133 @@
+\documentclass[10pt,letterpaper,landscape]{article}
+\usepackage[spanish]{babel}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Heros}
+\usepackage[margin=1.25cm]{geometry}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage[table]{xcolor}
+\usepackage{hyperref}
+\definecolor{azul}{HTML}{173B57}
+\definecolor{claro}{HTML}{E9F0F5}
+\hypersetup{
+  pdftitle={Prototipo - Rúbrica Reporte 01 - Ley de Ohm},
+  pdfauthor={Diego García}
+}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\renewcommand{\arraystretch}{1.25}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\begin{document}
+
+{\color{azul}\LARGE\bfseries Rúbrica prototipo - Reporte 01}\\
+{\large Ley de Ohm: voltaje en una resistencia}
+
+\colorbox{red!10}{\parbox{0.98\textwidth}{
+\textbf{NO PUBLICAR.} Puntaje diseñado únicamente para probar estructura,
+lectura y carga en Canvas. No posee conversión oficial a nota.}}
+
+\small
+\begin{longtable}{P{3.0cm}P{1.0cm}P{4.55cm}P{4.35cm}P{4.15cm}P{3.85cm}}
+\rowcolor{azul}
+\color{white}\textbf{Criterio y evidencia} &
+\color{white}\textbf{Máx.} &
+\color{white}\textbf{Completo} &
+\color{white}\textbf{Mayormente logrado} &
+\color{white}\textbf{Parcial} &
+\color{white}\textbf{Mínimo o cero}\\
+\endfirsthead
+\rowcolor{azul}
+\color{white}\textbf{Criterio y evidencia} &
+\color{white}\textbf{Máx.} &
+\color{white}\textbf{Completo} &
+\color{white}\textbf{Mayormente logrado} &
+\color{white}\textbf{Parcial} &
+\color{white}\textbf{Mínimo o cero}\\
+\endhead
+
+\rowcolor{claro}
+\textbf{1. Registro trazable}\\
+Valor nominal, tolerancia, \(R\) medida, rangos y seis pares \(I,V\). &
+3 &
+\textbf{3,0:} todos los datos, unidades, resolución/rango y observaciones son
+trazables. &
+\textbf{2,25:} falta un dato secundario o existe una inconsistencia menor. &
+\textbf{1,5:} hay datos suficientes para analizar, pero faltan varios metadatos
+o unidades. &
+\textbf{0,75:} registro fragmentario. \textbf{0:} no hay datos evaluables.\\
+
+\textbf{2. Montaje y uso de instrumentos}\\
+Diagrama y explicación de conexiones y seguridad. &
+3 &
+\textbf{3,0:} voltímetro paralelo, amperímetro serie y ohmímetro desenergizado;
+incluye cuidados pertinentes. &
+\textbf{2,25:} montaje correcto con una omisión menor en explicación o cuidado. &
+\textbf{1,5:} idea general correcta, pero conexión o precaución queda ambigua. &
+\textbf{0,75:} errores relevantes sin llegar a un cortocircuito explícito.
+\textbf{0:} propone una conexión peligrosa o no presenta montaje.\\
+
+\rowcolor{claro}
+\textbf{3. Gráfico \(V\) versus \(I\)}\\
+Ejes, unidades, puntos y representación legible. &
+4 &
+\textbf{4,0:} gráfico completo, escala adecuada, ejes y unidades correctos,
+todos los puntos identificables. &
+\textbf{3,0:} gráfico interpretable con un detalle menor de rotulación o escala. &
+\textbf{2,0:} muestra la tendencia, pero tiene errores de eje, unidad o
+presentación. &
+\textbf{1,0:} gráfico apenas interpretable. \textbf{0:} ausente o no corresponde
+a los datos.\\
+
+\end{longtable}
+\newpage
+\begin{longtable}{P{3.0cm}P{1.0cm}P{4.55cm}P{4.35cm}P{4.15cm}P{3.85cm}}
+\rowcolor{azul}
+\color{white}\textbf{Criterio y evidencia} &
+\color{white}\textbf{Máx.} &
+\color{white}\textbf{Completo} &
+\color{white}\textbf{Mayormente logrado} &
+\color{white}\textbf{Parcial} &
+\color{white}\textbf{Mínimo o cero}\\
+
+\textbf{4. Ajuste e interpretación de la pendiente}\\
+Modelo \(V=mI+b\), \(m\), \(b\), unidades y significado físico. &
+4 &
+\textbf{4,0:} ajuste correcto; pendiente e intercepto con unidades y una medida
+de calidad; interpreta \(m\) como resistencia. &
+\textbf{3,0:} cálculo e interpretación correctos con una omisión menor. &
+\textbf{2,0:} ajuste incompleto o interpretación parcialmente correcta. &
+\textbf{1,0:} usa solo \(V/I\) en un punto o comete un error mayor recuperable.
+\textbf{0:} no existe análisis evaluable.\\
+
+\rowcolor{claro}
+\textbf{5. Comparación y calidad de medición}\\
+Compara pendiente, ohmímetro y valor nominal. &
+3 &
+\textbf{3,0:} comparación cuantitativa, diferencia porcentual y discusión de
+tolerancia, resolución, contactos y calentamiento. &
+\textbf{2,25:} comparación correcta con discusión limitada. &
+\textbf{1,5:} comparación cualitativa o cálculo parcial. &
+\textbf{0,75:} enumera valores sin compararlos. \textbf{0:} ausente.\\
+
+\textbf{6. Conclusión y taller contextualizado}\\
+Responde la pregunta con evidencia y distingue resistencia metálica de
+conductancia electrolítica. &
+3 &
+\textbf{3,0:} conclusión sustentada en pendiente/intercepto y puente
+químico-farmacéutico preciso, con límites del modelo. &
+\textbf{2,25:} conclusión correcta y contextualización breve con una omisión. &
+\textbf{1,5:} repite la ley de Ohm, usa poca evidencia o generaliza demasiado
+la analogía. &
+\textbf{0,75:} conclusión vaga. \textbf{0:} ausente o contradice los datos.\\
+\end{longtable}
+
+\textbf{Total: 20 puntos de prototipo.}
+
+\textbf{Errores de arrastre:} un error inicial se descuenta en el criterio
+donde se origina; los pasos posteriores se evalúan por consistencia cuando el
+procedimiento sigue siendo físicamente interpretable.
+
+\textbf{Retroalimentación:} todo descuento debe identificar la evidencia
+faltante, el error y una acción concreta de mejora.
+
+\end{document}

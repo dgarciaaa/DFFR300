@@ -1,0 +1,20 @@
+ESTRUCTURA DEL MÓDULO DE LABORATORIO EN CANVAS
+
+Por cada carpeta `lab/experienciaXX-nombre-breve/`, crear o actualizar un
+módulo llamado `Experiencia XX | nombre breve` con estos elementos:
+
+1. Guía de la experiencia y sus materiales.
+2. Rúbrica del reporte.
+3. Template o plantilla del reporte.
+4. Assignment `Entrega Experiencia XX`, creado automáticamente con:
+   - vencimiento 14 días después de la subida, a las 23:30 de Santiago;
+   - 7 puntos;
+   - entrega de PDF;
+   - 2 intentos;
+   - modalidad individual.
+
+Las presentaciones Beamer se guardan fuera de esa carpeta, en
+`lab/slides_expXX/`, y no se suben a Canvas por el momento.
+
+La modalidad grupal queda pendiente hasta que se defina y configure el
+conjunto de grupos correspondiente en Canvas.

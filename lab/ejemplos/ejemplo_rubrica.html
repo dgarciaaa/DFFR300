@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+body { font-family: Helvetica, Arial, sans-serif; font-size: 11pt; line-height: 1.35; color: #111; }
+h1,h2,h3 { color: #1f2d3d; }
+p.meta { margin: 2px 0; }
+ul { margin-top: 4px; }
+table { border-collapse: collapse; width: 100%; margin: 10px 0 22px 0; table-layout: fixed; }
+th, td { border: 1px solid #666; padding: 7px; vertical-align: top; }
+th { background: #e9eef5; }
+.col-item { width: 18%; }
+.col-score { width: 20.5%; }
+.desc { margin: 4px 0 10px 0; }
+.small { color: #444; }
+code { font-family: Menlo, Consolas, monospace; font-size: 0.95em; }
+</style>
+</head>
+<body>
+<h1>RUBRICA SOLEMNE 3 - Programacion para la Fisica y la Astronomia</h1>
+<p class="meta"><strong>Items:</strong> 5</p>
+<p class="meta"><strong>Valor por item:</strong> 1.0</p>
+<p class="meta"><strong>Puntaje maximo:</strong> 15.0</p>
+<p class="meta"><strong>Nota:</strong> 1.0 + 6.0*(puntos)/(15.0)</p>
+
+<h2>Criterios Generales de Correccion</h2>
+<ul>
+<li>Se evalua la comprension del problema, la traduccion correcta a un algoritmo y la coherencia logica de la solucion.</li>
+<li>Se aceptan distintas implementaciones correctas si resuelven lo pedido de manera funcional.</li>
+<li>El estudiante puede asignar el nombre que desee a las variables mientras se usen correctamente y sean coherentes con el problema. Si define con errores una variable, sus siguientes llamados no deben considerarse como errores de arrastre si son coherentes con la logica del problema.</li>
+<li>No se evalua principalmente el estilo de programacion, sino el entendimiento del problema y la solidez de la logica.</li>
+<li>Cuando exista una idea correcta pero una implementacion incompleta, corresponde asignar puntaje parcial y explicar con precision que parte esta lograda y que parte falla.</li>
+<li>Un error menor de sintaxis, formato de salida o detalle secundario no debe anular por completo una solucion cuyo enfoque general sea correcto.</li>
+<li>La correccion debe ser pedagogica y razonable. No se debe castigar como error grave una decision tipica de principiante si no rompe la logica principal del ejercicio.</li>
+<li>Si el estudiante agrega pasos innecesarios, variables auxiliares redundantes o una organizacion poco elegante, eso no debe considerarse automaticamente incorrecto si la solucion igualmente resuelve lo pedido.</li>
+<li>Cuando el enunciado pide trabajar con arreglos o columnas completas, la solucion debe operar sobre toda la coleccion o recorrerla de forma coherente. Se aceptan soluciones vectorizadas con NumPy/pandas o ciclos <code>for</code> si entregan los mismos resultados conceptuales.</li>
+<li>Si la idea central esta bien encaminada, corresponde privilegiar puntaje parcial alto antes que una penalizacion excesiva.</li>
+<li>Se debe distinguir entre un error conceptual importante y un detalle menor de implementacion. Solo los errores conceptuales que rompen el objetivo del problema justifican una baja fuerte de puntaje.</li>
+<li>Si una solucion funciona en lo esencial, aunque sea torpe, redundante o propia de un nivel inicial, debe valorarse como una respuesta valida o parcialmente valida, no como una respuesta nula.</li>
+</ul>
+
+<h2>PROBLEMA 1: Ajuste cuadratico y estimacion de un umbral</h2>
+<p class="desc">Evalua un programa que ajusta un modelo cuadratico a datos experimentales de radiacion: <code>d = [0, 1, 2, 3, 4, 5, 6]</code> y <code>R = [1.2, 2.0, 4.1, 6.9, 10.8, 16.2, 22.1]</code>.</p>
+<p class="desc">El programa debe usar un ajuste cuadratico, calcular valores ajustados, residuos y R2, estimar el valor de <code>d</code> para el cual <code>R = 12</code>, graficar datos y curva ajustada, e interpretar por que no cualquier raiz del polinomio es una solucion fisicamente aceptable.</p>
+<h3>Orientacion de correccion</h3>
+<ul>
+<li>Debe privilegiarse que el estudiante comprenda la secuencia general: cargar los datos, ajustar un polinomio de grado 2, evaluar el modelo, medir la calidad del ajuste y resolver el umbral pedido.</li>
+<li>El ajuste puede implementarse con <code>np.polyfit(d, R, 2)</code>, <code>np.polyval</code> o una forma algebraicamente equivalente.</li>
+<li>Para el umbral, lo importante es resolver el modelo ajustado igualado a 12 y quedarse con una raiz real y fisicamente razonable, normalmente dentro del rango de medicion o al menos positiva y coherente con el problema.</li>
+<li>Un grafico con etiquetas simples no debe castigarse con dureza si muestra datos, curva ajustada y referencia del umbral de manera interpretable.</li>
+<li>Solo debe bajarse fuertemente el puntaje cuando no aparece el ajuste cuadratico, cuando el umbral se calcula sin relacion con el modelo, o cuando los residuos/R2 quedan desconectados de los datos ajustados.</li>
+</ul>
+<h3>Tabla de evaluacion</h3>
+<table><tr><th class="col-item">Item</th><th class="col-score">Puntaje maximo</th><th class="col-score">Casi completo</th><th class="col-score">Puntaje parcial</th><th class="col-score">Puntaje minimo</th></tr>
+<tr><td><strong>Datos y ajuste cuadratico</strong><br><span class="small">Maximo declarado: 1.0 punto</span></td><td><strong>1.0</strong><br>Define correctamente los arreglos <code>d</code> y <code>R</code>, aplica un ajuste de grado 2 y obtiene coeficientes coherentes para un modelo <code>R(d) = a*d**2 + b*d + c</code>.</td><td><strong>0.75</strong><br>Define casi todos los datos y realiza un ajuste cuadratico, pero presenta un detalle menor en algun valor, nombre de variable, orden de coeficientes o forma de evaluar el modelo.</td><td><strong>0.5</strong><br>La preparacion es parcial: carga datos pero usa un ajuste lineal, intenta un ajuste cuadratico con datos incompletos, o define coeficientes manuales con intencion reconocible.</td><td><strong>0.0</strong><br>No hay datos evaluables ni ajuste cuadratico reconocible.</td></tr>
+<tr><td><strong>Valores ajustados, residuos y R2</strong><br><span class="small">Maximo declarado: 1.0 punto</span></td><td><strong>1.0</strong><br>Calcula valores ajustados, residuos <code>R - R_fit</code>, suma de residuos o error equivalente, y un coeficiente R2 coherente usando <code>SS_res</code> y <code>SS_tot</code>.</td><td><strong>0.75</strong><br>Calcula la mayoria de estos elementos con un detalle menor en signos, nombres o presentacion.</td><td><strong>0.5</strong><br>Obtiene valores ajustados pero no residuos; calcula residuos sin R2; o usa una metrica cercana pero incompleta.</td><td><strong>0.0</strong><br>No hay valores ajustados, residuos ni medida evaluable de calidad del ajuste.</td></tr>
+<tr><td><strong>Estimacion del umbral R = 12</strong><br><span class="small">Maximo declarado: 1.0 punto</span></td><td><strong>1.0</strong><br>Resuelve correctamente <code>a*d**2 + b*d + c = 12</code>, por ejemplo con <code>np.roots([a, b, c - 12])</code>, filtra raices no fisicas y reporta una solucion real coherente.</td><td><strong>0.75</strong><br>La estimacion esta casi completa, pero hay un detalle menor en el filtrado, la impresion del resultado o la seleccion de la raiz.</td><td><strong>0.5</strong><br>Calcula raices pero no ajusta <code>c - 12</code>, estima por inspeccion grafica, o reporta una raiz sin justificar por que es valida.</td><td><strong>0.0</strong><br>No hay estimacion evaluable del umbral o se calcula sin usar el modelo ajustado.</td></tr>
+<tr><td><strong>Grafico de datos, ajuste y umbral</strong><br><span class="small">Maximo declarado: 1.0 punto</span></td><td><strong>1.0</strong><br>Grafica datos originales y curva cuadratica ajustada, idealmente sobre una malla suave, e incluye una referencia clara para <code>R = 12</code> junto con titulo, etiquetas y leyenda o grilla.</td><td><strong>0.75</strong><br>El grafico esta casi completo, con algun detalle menor de etiquetas, leyenda, malla o linea de referencia.</td><td><strong>0.5</strong><br>Muestra solo datos o solo ajuste, omite el umbral, o usa variables invertidas pero permite reconocer la intencion.</td><td><strong>0.0</strong><br>No hay grafico evaluable del ajuste.</td></tr>
+<tr><td><strong>Salida e interpretacion de la raiz valida</strong><br><span class="small">Maximo declarado: 1.0 punto</span></td><td><strong>1.0</strong><br>Imprime coeficientes, R2, umbral estimado y explica que raices complejas, negativas o fuera del contexto fisico no deben aceptarse automaticamente.</td><td><strong>0.75</strong><br>La salida e interpretacion estan casi completas, pero falta un detalle menor en una etiqueta, valor o explicacion.</td><td><strong>0.5</strong><br>Imprime resultados sin interpretarlos; interpreta la raiz pero no muestra todos los valores; o deja la explicacion muy incompleta.</td><td><strong>0.0</strong><br>No hay salida suficiente ni interpretacion evaluable.</td></tr>
+</table>
+
+<h2>PROBLEMA 2: Ordenamiento y busqueda de periodos orbitales</h2>
+<p class="desc">Evalua un programa que trabaja con <code>periodos = [12.4, 3.1, 8.7, 25.0, 1.9, 14.2, 6.5, 18.3]</code>. El programa debe implementar bubble sort, contar comparaciones e intercambios, mostrar lista original y ordenada, calcular minimo y maximo, implementar busqueda binaria y buscar <code>14.2</code> y <code>10.0</code>.</p>
+<h3>Orientacion de correccion</h3>
+<ul>
+<li>Debe privilegiarse que el estudiante comprenda que la busqueda binaria requiere una lista ordenada y que el ordenamiento debe producir una secuencia ascendente.</li>
+<li>Si el enunciado pide bubble sort, usar <code>sort()</code> o <code>sorted()</code> puede recibir puntaje parcial en el item de ordenamiento si el resto del flujo es correcto, pero no debe recibir puntaje completo en la implementacion del algoritmo pedido.</li>
+<li>El conteo de comparaciones e intercambios puede variar levemente segun detalles de implementacion, siempre que sea coherente con el bubble sort.</li>
+<li>El indice devuelto para <code>14.2</code> debe corresponder a la lista ordenada. Tambien es aceptable entregar una posicion clara en lenguaje natural, siempre que no confunda lista original con lista ordenada.</li>
+<li>Solo debe bajarse fuertemente el puntaje cuando no se ordena la lista, cuando la busqueda binaria se aplica sobre datos desordenados, o cuando las busquedas pedidas no se realizan.</li>
+</ul>
+<h3>Tabla de evaluacion</h3>
+<table><tr><th class="col-item">Item</th><th class="col-score">Puntaje maximo</th><th class="col-score">Casi completo</th><th class="col-score">Puntaje parcial</th><th class="col-score">Puntaje minimo</th></tr>
+<tr><td><strong>Datos y preparacion de la lista</strong><br><span class="small">Maximo declarado: 1.0 punto</span></td><td><strong>1.0</strong><br>Define correctamente la lista de periodos, mantiene los datos numericos y prepara una copia o estructura que permite comparar lista original y lista ordenada.</td><td><strong>0.75</strong><br>Define casi todos los valores y prepara la lista de manera funcional, con un detalle menor en un numero, nombre o copia de datos.</td><td><strong>0.5</strong><br>Usa una lista incompleta, altera varios valores pero conserva la idea, o no cuida la lista original aunque el ordenamiento sea evaluable.</td><td><strong>0.0</strong><br>No hay lista de periodos evaluable.</td></tr>
+<tr><td><strong>Bubble sort ascendente con conteos</strong><br><span class="small">Maximo declarado: 1.0 punto</span></td><td><strong>1.0</strong><br>Implementa bubble sort con ciclos anidados, compara vecinos, intercambia cuando corresponde, ordena de menor a mayor y cuenta comparaciones e intercambios de forma coherente.</td><td><strong>0.75</strong><br>El algoritmo esta casi completo, pero hay un detalle menor en el conteo, limites de ciclos, nombre de variables o condicion de intercambio.</td><td><strong>0.5</strong><br>Ordena pero sin contar, cuenta solo comparaciones, usa <code>sorted()</code> en vez de bubble sort, o deja una implementacion cercana pero incompleta.</td><td><strong>0.0</strong><br>No hay ordenamiento evaluable o la lista resultante no queda ordenada.</td></tr>
+<tr><td><strong>Lista original, lista ordenada, minimo y maximo</strong><br><span class="small">Maximo declarado: 1.0 punto</span></td><td><strong>1.0</strong><br>Muestra o conserva la lista original, muestra la lista ordenada y reporta correctamente el periodo minimo y maximo.</td><td><strong>0.75</strong><br>La salida esta casi completa, con un detalle menor en etiquetas, formato o preservacion de la lista original.</td><td><strong>0.5</strong><br>Muestra solo la lista ordenada, calcula minimo o maximo pero no ambos, o mezcla parcialmente la lista original con la ordenada.</td><td><strong>0.0</strong><br>No hay salida evaluable de listas ni minimo/maximo.</td></tr>
+<tr><td><strong>Busqueda binaria</strong><br><span class="small">Maximo declarado: 1.0 punto</span></td><td><strong>1.0</strong><br>Implementa busqueda binaria sobre la lista ordenada, actualiza limites inferior/superior, usa punto medio y retorna el indice encontrado o <code>-1</code> si no aparece.</td><td><strong>0.75</strong><br>La busqueda esta casi completa, con un detalle menor en limites, condicion de parada, retorno o forma de reportar el resultado.</td><td><strong>0.5</strong><br>Reconoce la idea de partir por mitades pero falla algun caso, realiza busqueda lineal en vez de binaria, o no maneja correctamente el caso no encontrado.</td><td><strong>0.0</strong><br>No hay busqueda evaluable o se aplica de manera incoherente con la lista ordenada.</td></tr>
+<tr><td><strong>Busquedas pedidas y salida</strong><br><span class="small">Maximo declarado: 1.0 punto</span></td><td><strong>1.0</strong><br>Busca <code>14.2</code> y <code>10.0</code>, informa claramente que <code>14.2</code> esta presente y que <code>10.0</code> no aparece, y entrega una salida organizada.</td><td><strong>0.75</strong><br>Realiza ambas busquedas con algun detalle menor en indice, etiqueta o formato de salida.</td><td><strong>0.5</strong><br>Busca solo uno de los valores, informa encontrado/no encontrado sin indice, o imprime resultados relevantes pero incompletos.</td><td><strong>0.0</strong><br>No realiza las busquedas pedidas ni entrega salida suficiente para revisar el ejercicio.</td></tr>
+</table>
+
+<h2>PROBLEMA 3: Limpieza y resumen de un catalogo estelar con pandas</h2>
+<p class="desc">Evalua un programa que lee <code>catalogo_estrellas_s3.csv</code>, inspecciona el DataFrame, limpia filas con datos faltantes en columnas numericas relevantes, calcula <code>luminosidad_rel = radio_Rsol**2 * (temperatura_K/5778)**4</code>, resume por tipo estelar y grafica temperatura versus luminosidad relativa.</p>
+<h3>Orientacion de correccion</h3>
+<ul>
+<li>Debe privilegiarse que el estudiante comprenda el flujo de trabajo con pandas: lectura, inspeccion, limpieza, nueva columna, agrupacion y visualizacion.</li>
+<li>La limpieza debe enfocarse en columnas necesarias para los calculos numericos, como <code>temperatura_K</code>, <code>radio_Rsol</code>, <code>distancia_pc</code> y <code>magnitud_V</code>. No se debe castigar con dureza si el estudiante decide eliminar tambien filas con otros datos faltantes, siempre que explique o mantenga coherencia.</li>
+<li>La formula de luminosidad relativa debe usar radio al cuadrado y temperatura normalizada a 5778 elevada a la cuarta potencia.</li>
+<li>La agrupacion por <code>tipo</code> puede usar <code>groupby</code>, <code>agg</code>, <code>describe</code>, conteos y medias/desviaciones, siempre que entregue un resumen interpretable por categoria.</li>
+<li>Solo debe bajarse fuertemente el puntaje cuando no se usa pandas para leer/procesar el catalogo, cuando la luminosidad relativa no usa las columnas correctas, o cuando el resumen por tipo queda ausente.</li>
+</ul>
+<h3>Tabla de evaluacion</h3>
+<table><tr><th class="col-item">Item</th><th class="col-score">Puntaje maximo</th><th class="col-score">Casi completo</th><th class="col-score">Puntaje parcial</th><th class="col-score">Puntaje minimo</th></tr>
+<tr><td><strong>Lectura e inspeccion inicial del catalogo</strong><br><span class="small">Maximo declarado: 1.0 punto</span></td><td><strong>1.0</strong><br>Lee correctamente el archivo con pandas y revisa estructura inicial usando <code>head()</code>, <code>shape</code>, <code>info()</code>, <code>dtypes</code> o conteo de valores faltantes.</td><td><strong>0.75</strong><br>Lee el archivo y realiza una inspeccion casi completa, con un detalle menor en una llamada, etiqueta o cantidad de informacion mostrada.</td><td><strong>0.5</strong><br>Lee el archivo pero apenas revisa columnas; intenta inspeccionar datos sin mostrar faltantes; o usa una ruta cercana con intencion clara.</td><td><strong>0.0</strong><br>No hay lectura evaluable del catalogo con pandas.</td></tr>
+<tr><td><strong>Limpieza de datos faltantes</strong><br><span class="small">Maximo declarado: 1.0 punto</span></td><td><strong>1.0</strong><br>Identifica valores faltantes y crea un DataFrame limpio eliminando filas con datos faltantes en las columnas necesarias, idealmente usando <code>dropna(subset=[...])</code>.</td><td><strong>0.75</strong><br>La limpieza esta casi completa, con un detalle menor en la seleccion de columnas, uso de <code>copy()</code> o forma de reportar cuantas filas quedan.</td><td><strong>0.5</strong><br>Elimina faltantes sin controlar columnas, detecta faltantes pero no genera DataFrame limpio, o limpia de forma incompleta.</td><td><strong>0.0</strong><br>No hay limpieza evaluable de datos faltantes.</td></tr>
+<tr><td><strong>Calculo de luminosidad relativa</strong><br><span class="small">Maximo declarado: 1.0 punto</span></td><td><strong>1.0</strong><br>Agrega correctamente la columna <code>luminosidad_rel</code> usando <code>radio_Rsol**2 * (temperatura_K/5778)**4</code> sobre el DataFrame limpio.</td><td><strong>0.75</strong><br>El calculo esta casi completo, con un detalle menor en nombres de columnas, parentesis o asignacion de la nueva columna.</td><td><strong>0.5</strong><br>Usa solo radio o solo temperatura, falla una potencia, o calcula la luminosidad pero no la agrega claramente al DataFrame.</td><td><strong>0.0</strong><br>No hay calculo reconocible de luminosidad relativa.</td></tr>
+<tr><td><strong>Agrupacion y resumen por tipo</strong><br><span class="small">Maximo declarado: 1.0 punto</span></td><td><strong>1.0</strong><br>Agrupa por <code>tipo</code> y entrega conteos, promedios y/o desviaciones de variables relevantes, evitando problemas con columnas no numericas cuando corresponde.</td><td><strong>0.75</strong><br>El resumen esta casi completo, con un detalle menor en una estadistica, columna o presentacion.</td><td><strong>0.5</strong><br>Calcula conteos sin resumen numerico, resume variables sin separar por tipo, o usa <code>describe()</code> de forma incompleta pero interpretable.</td><td><strong>0.0</strong><br>No hay resumen evaluable por tipo estelar.</td></tr>
+<tr><td><strong>Grafico y salida final</strong><br><span class="small">Maximo declarado: 1.0 punto</span></td><td><strong>1.0</strong><br>Grafica temperatura versus luminosidad relativa con puntos o dispersion, incluye titulo, etiquetas, grilla o elementos suficientes, y muestra una salida final clara del DataFrame/resumen.</td><td><strong>0.75</strong><br>El grafico y la salida estan casi completos, con algun detalle menor de etiquetas, escala, leyenda o formato.</td><td><strong>0.5</strong><br>Grafica variables cercanas, omite parte de las etiquetas, o muestra el resumen sin una figura clara.</td><td><strong>0.0</strong><br>No hay grafico evaluable ni salida suficiente para revisar el catalogo.</td></tr>
+</table>
+
+<h2>Observaciones complementarias</h2>
+<ul>
+<li>Si el estudiante usa una solucion vectorizada o una solucion con ciclos, ambas deben considerarse validas si calculan y presentan los resultados pedidos.</li>
+<li>Si una solucion contiene errores de nombres de variables, pero la logica principal y los calculos son claros, corresponde asignar puntaje parcial segun los items afectados.</li>
+<li>Los errores de grafico, etiquetas, <code>plt.show()</code> o formato de impresion no deben anular los calculos correctos. Deben afectar principalmente el item de visualizacion o salida.</li>
+<li>En los tres problemas, un error de arrastre no debe castigarse varias veces si el estudiante mantiene una logica coherente a partir de una definicion inicial equivocada.</li>
+<li>En el problema de ordenamiento, usar funciones nativas de ordenamiento puede demostrar que el estudiante entiende el resultado esperado, pero no reemplaza completamente la implementacion de bubble sort si ese algoritmo fue pedido explicitamente.</li>
+</ul>
+</body>
+</html>

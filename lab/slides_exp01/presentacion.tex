@@ -1,0 +1,132 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+\usepackage[spanish]{babel}
+\usepackage{fontspec}
+\setsansfont{TeX Gyre Heros}
+\usepackage{circuitikz}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\definecolor{azul}{HTML}{173B57}
+\definecolor{morado}{HTML}{6A3D8F}
+\setbeamercolor{structure}{fg=azul}
+\setbeamercolor{frametitle}{fg=white,bg=azul}
+\setbeamercolor{block title}{fg=white,bg=morado}
+\setbeamercolor{block body}{fg=black,bg=morado!8}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\title{Ley de Ohm: voltaje en una resistencia}
+\subtitle{Laboratorio de Física Aplicada a las Ciencias Farmacéuticas}
+\author{Diego García}
+\date{}
+\hypersetup{
+  pdftitle={Ley de Ohm: voltaje en una resistencia},
+  pdfauthor={Diego García}
+}
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Prototipo de estructura}
+\begin{alertblock}{No publicar}
+Esta Experiencia 01 permite probar carpetas, documentos y carga no publicada
+en Canvas. Los rangos y límites deben validarse con los equipos reales.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Pregunta experimental}
+\centering
+\Large ¿La caída de voltaje en una resistencia fija es proporcional a la
+corriente que la atraviesa?
+
+\vspace{1cm}
+\[
+V=RI
+\]
+\end{frame}
+
+\begin{frame}{Qué vamos a medir}
+\begin{columns}[T]
+\column{0.48\textwidth}
+\begin{itemize}
+  \item \(R\) con el circuito apagado.
+  \item \(I\) en serie.
+  \item \(V\) en paralelo.
+  \item Al menos seis puntos.
+\end{itemize}
+\column{0.48\textwidth}
+\begin{circuitikz}[scale=0.8,transform shape,american currents]
+  \draw (0,0) to[battery1] (0,3)
+        to[ammeter,l={$A$}] (3,3)
+        to[R,l={$R$}] (3,0) -- (0,0);
+  \draw (3,3) -- (5,3)
+        to[voltmeter,l={$V$}] (5,0) -- (3,0);
+\end{circuitikz}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Instrumentos}
+\begin{itemize}
+  \item Fuente DC regulada con límite de corriente.
+  \item Multímetro como voltímetro.
+  \item Multímetro como amperímetro.
+  \item Función ohmímetro con circuito desenergizado.
+  \item Resistencia fija, placa y conductores.
+\end{itemize}
+\vfill
+\textbf{Pendiente:} confirmar modelos, rangos, resolución, fusibles,
+tolerancia y potencia.
+\end{frame}
+
+\begin{frame}{Tres reglas que protegen el equipo}
+\begin{enumerate}
+  \item El amperímetro nunca se conecta en paralelo con la fuente.
+  \item El ohmímetro nunca se usa con el circuito energizado.
+  \item Toda reconexión se realiza con la fuente apagada.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{De los datos a la resistencia}
+\begin{columns}
+\column{0.48\textwidth}
+\[
+V=mI+b
+\]
+\begin{itemize}
+  \item \(m\): resistencia estimada.
+  \item \(b\): intercepto que debe discutirse.
+  \item Comparar con ohmímetro y valor nominal.
+\end{itemize}
+\column{0.48\textwidth}
+\begin{tikzpicture}[scale=0.85]
+  \draw[->] (0,0)--(5,0) node[right] {\(I\)};
+  \draw[->] (0,0)--(0,3.5) node[above] {\(V\)};
+  \draw[azul,thick] (0.3,0.25)--(4.6,3.1);
+  \foreach \x/\y in {0.7/0.55,1.4/1.0,2.1/1.48,2.8/1.85,3.5/2.45,4.2/2.8}
+    \fill[morado] (\x,\y) circle (2pt);
+\end{tikzpicture}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Taller: puente químico-farmacéutico}
+\begin{block}{De una resistencia a una solución}
+Una solución electrolítica también permite transporte de carga. Un
+conductímetro relaciona respuesta eléctrica y conductancia, pero incorpora
+geometría de celda, temperatura y calibración.
+\end{block}
+\vspace{0.4cm}
+\textbf{Pregunta:} ¿por qué la resistencia metálica del montaje no basta para
+describir una solución farmacéutica?
+\end{frame}
+
+\begin{frame}{A trabajar}
+\begin{enumerate}
+  \item Asignen cuatro roles.
+  \item Midan \(R\) con la fuente apagada.
+  \item Armen y soliciten revisión.
+  \item Registren seis pares \(I,V\).
+  \item Grafiquen, ajusten y concluyan.
+\end{enumerate}
+\end{frame}
+
+\end{document}

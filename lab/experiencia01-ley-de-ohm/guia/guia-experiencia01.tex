@@ -1,0 +1,171 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[spanish]{babel}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Heros}
+\usepackage[margin=2.1cm]{geometry}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{circuitikz}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\definecolor{azul}{HTML}{173B57}
+\definecolor{morado}{HTML}{6A3D8F}
+\definecolor{gris}{HTML}{F1F4F6}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=azul,
+  urlcolor=azul,
+  pdftitle={Prototipo - Guía Experiencia 01 - Ley de Ohm},
+  pdfauthor={Diego García}
+}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlist{itemsep=2pt,topsep=3pt}
+\newtcolorbox{aviso}{
+  colback=red!5,colframe=red!65!black,title=\textbf{PROTOTIPO - NO PUBLICAR}
+}
+\newtcolorbox{farmacia}{
+  colback=morado!7,colframe=morado,title=\textbf{Puente químico-farmacéutico}
+}
+\begin{document}
+
+{\color{azul}\Large\bfseries Experiencia 01 - Ley de Ohm}\\[2pt]
+{\large Medición de voltaje en una resistencia}\\[8pt]
+\textbf{Laboratorio de Física Aplicada a las Ciencias Farmacéuticas}
+
+\begin{aviso}
+Este documento existe para probar la estructura y la carga no publicada en
+Canvas. Los modelos, rangos y límites de los instrumentos aún deben verificarse.
+\end{aviso}
+
+\section*{Pregunta experimental}
+
+¿La caída de voltaje \(V\) en una resistencia fija es proporcional a la
+corriente \(I\) que la atraviesa dentro del intervalo seguro del montaje?
+
+\section*{Objetivos}
+
+\begin{itemize}
+  \item conectar correctamente voltímetro, amperímetro y ohmímetro;
+  \item registrar pares de corriente y voltaje;
+  \item representar \(V\) en función de \(I\);
+  \item estimar la resistencia a partir de la pendiente;
+  \item decidir si los datos son compatibles con \(V=RI\).
+\end{itemize}
+
+\section*{Fundamento mínimo}
+
+Para un elemento óhmico a temperatura aproximadamente constante,
+\[
+  V=RI.
+\]
+Si se grafica \(V\) en el eje vertical e \(I\) en el horizontal, la pendiente
+del ajuste lineal estima \(R\). Un intercepto distinto de cero o una curvatura
+sistemática deben discutirse; no se eliminan datos solo para mejorar el ajuste.
+
+\section*{Montaje}
+
+\begin{center}
+\begin{circuitikz}[american currents,american voltages]
+  \draw (0,0) to[battery1,l={Fuente DC}] (0,3)
+        to[ammeter,l={$A$}] (3,3)
+        to[R,l={$R$}] (3,0) -- (0,0);
+  \draw (3,3) -- (5,3)
+        to[voltmeter,l={$V$}] (5,0) -- (3,0);
+\end{circuitikz}
+\end{center}
+
+El amperímetro se conecta \textbf{en serie}; el voltímetro,
+\textbf{en paralelo}. La resistencia se mide con ohmímetro únicamente cuando
+está aislada y el circuito se encuentra desenergizado.
+
+\section*{Instrumentos y materiales por grupo}
+
+\begin{tabularx}{\textwidth}{@{}p{3.3cm}X@{}}
+\toprule
+\textbf{Elemento} & \textbf{Uso y dato que debe confirmarse}\\
+\midrule
+Multímetro 1 & Voltaje DC; modelo, rango, resolución y exactitud pendientes.\\
+Multímetro 2 & Corriente DC; modelo, rango, resolución, entrada y fusible pendientes.\\
+Función ohmímetro & Medición previa de \(R\) con circuito desenergizado.\\
+Fuente DC regulada & Rango y límite de corriente pendientes de prueba.\\
+Resistencia fija & Valor nominal, tolerancia y potencia máxima pendientes.\\
+Montaje & Placa o tablero, cables compatibles e interruptor si corresponde.\\
+\bottomrule
+\end{tabularx}
+
+\section*{Seguridad y cuidado}
+
+\begin{enumerate}
+  \item Mantener la fuente apagada mientras se arma o modifica el circuito.
+  \item Solicitar revisión antes de energizar.
+  \item Nunca conectar el amperímetro en paralelo con la fuente.
+  \item Nunca usar el modo resistencia en un circuito energizado.
+  \item No superar los límites definidos tras la prueba piloto.
+  \item Apagar inmediatamente ante calentamiento, olor o lectura inestable.
+\end{enumerate}
+
+\section*{Procedimiento}
+
+\begin{enumerate}
+  \item Identificar el valor nominal, tolerancia y potencia de la resistencia.
+  \item Con la fuente desconectada, medir la resistencia con el ohmímetro.
+  \item Construir el circuito del esquema y comprobar rangos y terminales.
+  \item Pedir la verificación del docente o ayudante.
+  \item Encender desde el ajuste mínimo de la fuente.
+  \item Registrar al menos seis pares \((I,V)\) dentro del intervalo aprobado.
+  \item No reconectar ningún instrumento con el circuito energizado.
+  \item Volver la fuente a cero, apagarla y desmontar.
+\end{enumerate}
+
+\section*{Registro de datos}
+
+\begin{tabularx}{\textwidth}{@{}cXXXX@{}}
+\toprule
+\textbf{Punto} & \textbf{\(I\) (unidad)} & \textbf{\(V\) (unidad)}
+& \textbf{\(V/I\) (\(\Omega\))} & \textbf{Observación}\\
+\midrule
+1 & & & &\\[5mm]
+2 & & & &\\[5mm]
+3 & & & &\\[5mm]
+4 & & & &\\[5mm]
+5 & & & &\\[5mm]
+6 & & & &\\[5mm]
+\bottomrule
+\end{tabularx}
+
+\section*{Análisis}
+
+\begin{enumerate}
+  \item Construir el gráfico \(V\) versus \(I\), con unidades y barras de
+  incertidumbre si la resolución de los equipos permite estimarlas.
+  \item Ajustar \(V=mI+b\) y reportar \(m\), \(b\) y una medida de calidad.
+  \item Interpretar \(m\) como estimación de resistencia.
+  \item Comparar \(m\) con la medición del ohmímetro y el valor nominal.
+  \item Evaluar si los datos son compatibles con un comportamiento óhmico.
+\end{enumerate}
+
+\begin{farmacia}
+Los conductímetros usados con soluciones electrolíticas también estudian la
+respuesta eléctrica y el transporte de carga. Sin embargo, requieren considerar
+la geometría de la celda, la temperatura y la calibración. Explique por qué una
+resistencia metálica fija es un punto de partida útil, pero no un modelo completo
+de una solución farmacéutica.
+\end{farmacia}
+
+\section*{Producto}
+
+Completar el template del reporte con datos, gráfico, ajuste, comparación y una
+conclusión sustentada. Este prototipo no constituye todavía una entrega oficial.
+
+\vspace{3pt}
+{\small\textbf{Fuentes de construcción.}
+Syllabus oficial, AE 04; distribución semana a semana, semana 15;
+\texttt{1Clases.pdf}, páginas PDF 169-172; \texttt{martins-2011.pdf}, páginas
+PDF 249-251.}
+
+\end{document}
