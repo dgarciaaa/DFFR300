@@ -3,7 +3,7 @@
 
 \begin{document}
 
-\portada{1}{Medir, modelar y estimar}{Unidad I: Elementos de mecánica de la partícula en una dimensión}
+\portada{1}{Vectores y representación cartesiana}{Unidad I: Elementos de mecánica de la partícula en una dimensión}
 
 \pagenumbering{roman}
 \tableofcontents
@@ -12,404 +12,436 @@
 \section{Mapa conceptual}
 
 \mapalineal{
-  \node[concepto] (fen) {fenómeno};
-  \node[concepto,right=of fen] (mod) {modelo};
-  \node[concepto,right=of mod] (mag) {magnitudes};
-  \node[concepto,right=of mag] (uni) {unidades};
-  \node[concepto,right=of uni] (ecu) {relaciones};
-  \node[concepto,right=of ecu] (con) {control físico};
-  \draw[flecha] (fen)--(mod);
-  \draw[flecha] (mod)--(mag);
-  \draw[flecha] (mag)--(uni);
-  \draw[flecha] (uni)--(ecu);
-  \draw[flecha] (ecu)--(con);
+  \node[concepto] (can) {cantidad};
+  \node[concepto,right=of can] (vec) {vector};
+  \node[concepto,right=of vec] (graf) {flecha};
+  \node[concepto,right=of graf] (comp) {componentes};
+  \node[concepto,right=of comp] (ope) {operaciones};
+  \node[concepto,right=of ope] (des) {desplazamiento};
+  \draw[flecha] (can)--(vec);
+  \draw[flecha] (vec)--(graf);
+  \draw[flecha] (graf)--(comp);
+  \draw[flecha] (comp)--(ope);
+  \draw[flecha] (ope)--(des);
 }
 
-Una descripción física comienza con un fenómeno, pero no intenta copiar todos
-sus detalles. Se escoge un modelo, se identifican las magnitudes relevantes y
-se expresan con unidades. Las ecuaciones relacionan esas magnitudes. Antes de
-aceptar un resultado se revisan sus unidades, sus dimensiones y su escala.
+La física no solo pregunta \emph{cuánto}. También pregunta \emph{hacia dónde}.
+Una masa queda descrita por un valor y una unidad; un desplazamiento necesita,
+además, una dirección y un sentido. Los vectores conservan esa información y
+permiten traducir una situación geométrica a operaciones algebraicas.
 
-\section{Medir exige una pregunta}
+\section{Escalares y vectores}
 
-Una botella con líquido admite muchas preguntas: ¿cuánta masa contiene?,
-¿qué volumen ocupa?, ¿a qué temperatura está?, ¿cuánto tarda en vaciarse? Cada
-pregunta selecciona propiedades distintas. La masa puede ser importante para
-preparar una formulación, mientras que el tiempo de vaciado puede ser
-irrelevante para esa misma tarea.
+Una \textbf{cantidad escalar} queda determinada por un valor y una unidad. La
+masa de una muestra, el volumen de una disolución, la temperatura y un
+intervalo de tiempo son escalares. El signo de un escalar no lo convierte en
+vector: una temperatura de \(-5\,^\circ\mathrm{C}\) sigue sin apuntar en el
+espacio.
+
+Una \textbf{cantidad vectorial} requiere tres datos:
+\[
+  \text{magnitud}
+  +\text{dirección}
+  +\text{sentido}.
+\]
+La posición, el desplazamiento, la velocidad, la aceleración y la fuerza son
+vectores. Se escriben con letra destacada, por ejemplo \(\vect{A}\). Su
+magnitud se escribe
+\[
+  A=|\vect{A}|\geq 0.
+\]
+La magnitud es un escalar no negativo. El vector \(-\vect{A}\) tiene la misma
+magnitud que \(\vect{A}\), pero sentido opuesto.
 
 \begin{center}
-\begin{tikzpicture}[
-  objeto/.style={draw=GrisTexto,thick,rounded corners=1mm},
-  rotulo/.style={font=\small,align=center},
-  flecha/.style={-{Stealth[length=2mm]},draw=GrisLinea}
-]
-  \draw[objeto] (0,0) rectangle (2.1,3.0);
-  \draw[AzulTitulo,thick] (0.15,1.7) -- (1.95,1.7);
-  \node[rotulo] at (1.05,0.9) {líquido};
-  \node[rotulo] (real) at (1.05,-0.45) {sistema real};
-
-  \node[rotulo,draw=GrisLinea,rounded corners=1mm,minimum width=3.1cm,
-        minimum height=1.2cm] (modelo) at (5.0,1.5)
-        {modelo homogéneo\\\(\rho=\text{constante}\)};
-  \draw[flecha] (2.3,1.5)--(3.35,1.5);
-  \node[font=\small] at (2.83,1.82) {simplificar};
-
-  \node[rotulo,draw=GrisLinea,rounded corners=1mm,minimum width=3.0cm,
-        minimum height=1.2cm] (datos) at (8.9,1.5)
-        {\(m,\ V,\ \rho\)\\magnitudes};
-  \draw[flecha] (6.65,1.5)--(7.35,1.5);
+\begin{tikzpicture}[scale=1.05]
+  \coordinate (O) at (0,0);
+  \coordinate (P) at (4.5,2.0);
+  \draw[-{Stealth[length=3mm]},AzulTitulo,very thick] (O)--(P);
+  \fill (O) circle (1.6pt) node[below] {cola};
+  \node[above right] at (P) {punta};
+  \node[above left,AzulTitulo] at ($(O)!0.55!(P)$) {\(\vect{A}\)};
+  \draw[dashed,GrisLinea] (O)--(4.5,0);
+  \draw (1,0) arc[start angle=0,end angle=24,radius=1];
+  \node at (1.32,0.3) {\(\theta\)};
+  \node[right] at (5.25,1.05) {
+    \(\begin{aligned}
+      A&=|\vect{A}| && \text{magnitud},\\
+      \theta&&& \text{dirección},\\
+      \text{punta}&&& \text{sentido}.
+    \end{aligned}\)
+  };
 \end{tikzpicture}
 \end{center}
 
-Un \textbf{sistema} es la parte de la realidad que se estudia. Un
-\textbf{modelo} es una representación deliberadamente simplificada del
-sistema. Si el líquido se considera homogéneo, su densidad puede tratarse como
-constante; si hay sedimento o gradientes de temperatura, ese supuesto puede
-fallar. Un modelo no es verdadero en cualquier circunstancia: es útil dentro
-de un dominio.
-
-\textbf{Medir} significa comparar una propiedad con un patrón acordado. Una
-medición se expresa como
+Dos vectores son iguales cuando tienen igual magnitud, dirección y sentido,
+aunque se dibujen en lugares diferentes. En cambio,
 \[
-  \text{cantidad física}
-  =
-  \text{valor numérico}\times\text{unidad}.
+  \vect{A}=5\unidadSI{m}
 \]
-El número sin unidad está incompleto. \(5\) puede representar cinco metros,
-cinco segundos o cinco miligramos; cada opción describe una realidad distinta.
-
-\begin{ejemplocualitativo}{la misma muestra, dos preguntas}
-Para determinar cuánto espacio ocupa una muestra interesa su volumen. Para
-determinar cuánto principio activo contiene interesa su masa o su
-concentración. La muestra es la misma, pero la pregunta cambia las magnitudes
-que deben medirse y el modelo que resulta útil.
-\end{ejemplocualitativo}
+es una descripción incompleta: solo entrega la magnitud. Una descripción
+completa sería \(5\unidadSI{m}\) hacia el este.
 
 \begin{pregunta}
-Una tableta se modela como una partícula para describir la posición de su centro
-durante una caída. ¿Qué propiedad de la tableta se omite con ese modelo y en
-qué situación dejaría de ser una omisión aceptable?
+Clasifique y justifique cada cantidad:
+\(37\,^\circ\mathrm{C}\), \(2\unidadSI{min}\),
+\(5\unidadSI{m}\) hacia el oeste y
+\(9{,}8\unidadSI{m/s^2}\) hacia abajo. ¿Por qué un signo negativo no basta
+para reconocer un vector?
 \end{pregunta}
 
-\section{Magnitudes, unidades y dimensiones}
+\section{Coordenadas y sistema de referencia}
 
-En mecánica, longitud, masa y tiempo funcionan como magnitudes fundamentales.
-Sus símbolos dimensionales y unidades SI son:
+Para indicar una dirección hace falta acordar una referencia. Un
+\textbf{sistema de referencia} reúne un origen, ejes orientados, una escala y
+un reloj. En una dimensión se escoge un eje \(x\), un origen \(O\) y un
+sentido positivo:
+\[
+  x>0\quad\text{en el sentido elegido como \(+x\)},\qquad
+  x<0\quad\text{en el sentido contrario}.
+\]
 
 \begin{center}
-\begin{tabular}{lll}
+\begin{tikzpicture}[x=1.2cm,y=1cm]
+  \draw[-{Stealth[length=2.2mm]},thick] (-3.5,0)--(4.2,0)
+    node[right] {\(x\,[\mathrm{m}]\)};
+  \foreach \x in {-3,-2,-1,0,1,2,3}{
+    \draw (\x,0.1)--(\x,-0.1);
+    \node[below,font=\small] at (\x,-0.1) {\(\x\)};
+  }
+  \fill[AzulTitulo] (2,0) circle (2.2pt);
+  \node[above] at (2,0.12) {partícula};
+  \node[above left] at (0,0.12) {\(O\)};
+  \draw[-{Stealth[length=2mm]},AzulTitulo,thick] (0,0.58)--(2,0.58);
+  \node[above,AzulTitulo] at (1,0.58) {\(x=+2\unidadSI{m}\)};
+\end{tikzpicture}
+\end{center}
+
+La coordenada depende de la referencia. Si se traslada el origen sin mover la
+partícula, cambia el número \(x\), pero no cambia la situación física. Por eso
+todo problema de movimiento debe declarar el origen y el sentido positivo.
+
+En dos dimensiones se usan dos ejes cartesianos perpendiculares. Un punto se
+ubica mediante \((x,y)\), y el vector posición que va desde el origen hasta el
+punto se escribe
+\[
+  \vect{r}=x\,\uvect{\imath}+y\,\uvect{\jmath}.
+\]
+
+\begin{center}
+\begin{tikzpicture}[scale=1.05]
+  \coordinate (O) at (0,0);
+  \coordinate (P) at (4.2,2.7);
+  \draw[-{Stealth[length=2mm]},thick] (-0.4,0)--(5,0) node[right] {\(+x\)};
+  \draw[-{Stealth[length=2mm]},thick] (0,-0.35)--(0,3.4) node[above] {\(+y\)};
+  \draw[dashed,GrisLinea] (P)--(4.2,0) node[below] {\(x\)};
+  \draw[dashed,GrisLinea] (P)--(0,2.7) node[left] {\(y\)};
+  \draw[-{Stealth[length=2.8mm]},AzulTitulo,very thick] (O)--(P)
+    node[midway,above left] {\(\vect{r}\)};
+  \fill[AzulTitulo] (P) circle (2.1pt) node[above right] {\(P(x,y)\)};
+\end{tikzpicture}
+\end{center}
+
+Un sistema de referencia \textbf{inercial} es aquel en que una partícula sin
+interacción neta conserva su velocidad. Un sistema \textbf{no inercial}
+acelera respecto de uno inercial y puede hacer aparecer efectos asociados al
+movimiento de la propia referencia. Por ahora basta esta distinción: los
+modelos de cinemática de estas clases se escribirán respecto de ejes fijos al
+laboratorio.
+
+\section{Representación gráfica y operaciones}
+
+La longitud de la flecha representa la magnitud del vector cuando se fija una
+escala. Su inclinación representa la dirección y la punta indica el sentido.
+La representación gráfica permite anticipar el resultado antes de calcular.
+
+\subsection{Suma}
+
+Para sumar \(\vect{A}+\vect{B}\), se coloca la cola de \(\vect{B}\) en la
+punta de \(\vect{A}\). El vector resultante va desde la cola inicial hasta la
+punta final.
+
+\begin{center}
+\begin{tikzpicture}[scale=1.05]
+  \coordinate (O) at (0,0);
+  \coordinate (P) at (3.2,0.7);
+  \coordinate (Q) at (5.0,2.9);
+  \draw[-{Stealth[length=2.8mm]},AzulTitulo,very thick] (O)--(P)
+    node[midway,below] {\(\vect{A}\)};
+  \draw[-{Stealth[length=2.8mm]},BordeEjemplo,very thick] (P)--(Q)
+    node[midway,right] {\(\vect{B}\)};
+  \draw[-{Stealth[length=2.8mm]},GrisTexto,very thick] (O)--(Q)
+    node[midway,above left] {\(\vect{R}\)};
+  \node[right] at (5.45,1.4) {\(\vect{R}=\vect{A}+\vect{B}\)};
+\end{tikzpicture}
+\end{center}
+
+La suma vectorial es conmutativa y asociativa:
+\[
+  \vect{A}+\vect{B}=\vect{B}+\vect{A},
+  \qquad
+  (\vect{A}+\vect{B})+\vect{C}
+  =
+  \vect{A}+(\vect{B}+\vect{C}).
+\]
+Estas propiedades permiten encadenar varios cambios dirigidos sin alterar el
+resultado.
+
+\subsection{Resta y multiplicación por un escalar}
+
+La resta se define mediante el vector opuesto:
+\[
+  \vect{A}-\vect{B}
+  \equiv
+  \vect{A}+(-\vect{B}).
+\]
+El vector \(\vect{A}-\vect{B}\) apunta desde la punta de \(\vect{B}\) hasta la
+punta de \(\vect{A}\) cuando ambos comparten la misma cola.
+
+Multiplicar \(\vect{A}\) por un escalar \(\alpha\) produce un vector de
+magnitud \(|\alpha|A\). Si \(\alpha>0\), conserva el sentido; si
+\(\alpha<0\), lo invierte. Por ejemplo, \(2\vect{A}\) duplica la magnitud y
+\(-\tfrac12\vect{A}\) apunta en sentido contrario con la mitad de la magnitud.
+
+En general, las magnitudes no se suman como escalares:
+\[
+  |\vect{A}+\vect{B}|
+  \neq
+  |\vect{A}|+|\vect{B}|.
+\]
+La igualdad solo ocurre cuando ambos vectores son paralelos y apuntan en el
+mismo sentido.
+
+\begin{pregunta}
+Dos vectores tienen magnitudes \(3\unidadSI{m}\) y \(4\unidadSI{m}\).
+¿Qué magnitud puede tener su suma si son perpendiculares? ¿Y si apuntan en
+sentidos opuestos sobre una misma línea?
+\end{pregunta}
+
+\section{Componentes cartesianas}
+
+Las componentes son las proyecciones con signo de un vector sobre los ejes. Si
+\(\vect{A}\) forma un ángulo \(\theta\) medido desde \(+x\),
+\[
+  A_x=A\cos\theta,
+  \qquad
+  A_y=A\sin\theta.
+\]
+
+\begin{center}
+\begin{tikzpicture}[scale=1.05]
+  \coordinate (O) at (0,0);
+  \coordinate (P) at (4.5,3.0);
+  \coordinate (X) at (4.5,0);
+  \draw[-{Stealth[length=2mm]},thick] (-0.35,0)--(5.2,0) node[right] {\(+x\)};
+  \draw[-{Stealth[length=2mm]},thick] (0,-0.3)--(0,3.7) node[above] {\(+y\)};
+  \draw[-{Stealth[length=2.8mm]},AzulTitulo,very thick] (O)--(P)
+    node[midway,above left] {\(\vect{A}\)};
+  \draw[-{Stealth[length=2.5mm]},GrisTexto,thick] (O)--(X)
+    node[midway,below] {\(A_x\)};
+  \draw[-{Stealth[length=2.5mm]},GrisTexto,thick] (X)--(P)
+    node[midway,right] {\(A_y\)};
+  \draw (0.9,0) arc[start angle=0,end angle=33.7,radius=0.9];
+  \node at (1.2,0.34) {\(\theta\)};
+\end{tikzpicture}
+\end{center}
+
+El coseno corresponde al cateto adyacente al ángulo que realmente se dibujó;
+no significa siempre ``componente horizontal''. Si el ángulo se mide desde el
+eje \(y\), la asignación de seno y coseno cambia.
+
+La magnitud se recupera con el teorema de Pitágoras:
+\[
+  A=\sqrt{A_x^2+A_y^2}.
+\]
+Para la dirección,
+\[
+  \tan\theta=\frac{A_y}{A_x},
+\]
+pero el cociente por sí solo no identifica el cuadrante. Antes de aceptar el
+ángulo de una calculadora se revisan los signos de \(A_x\) y \(A_y\).
+
+\begin{center}
+\begin{tabular}{c@{\qquad}cc}
 \toprule
-Magnitud & Dimensión & Unidad SI \\
+Cuadrante & \(A_x\) & \(A_y\) \\
 \midrule
-longitud & \(L\) & metro, \(\mathrm{m}\) \\
-masa & \(M\) & kilogramo, \(\mathrm{kg}\) \\
-tiempo & \(T\) & segundo, \(\mathrm{s}\) \\
+I   & \(+\) & \(+\) \\
+II  & \(-\) & \(+\) \\
+III & \(-\) & \(-\) \\
+IV  & \(+\) & \(-\) \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-Una \textbf{dimensión} indica la naturaleza física de una cantidad. Una
-\textbf{unidad} indica el patrón usado para medirla. Metro, centímetro y
-kilómetro son unidades diferentes, pero las tres corresponden a la dimensión
-longitud \(L\).
+\section{Vectores unitarios y suma por componentes}
 
-Las magnitudes derivadas se construyen combinando magnitudes fundamentales.
-Si \(A\) representa área, \(V\) volumen, \(v\) rapidez y \(\rho\) densidad,
+Los vectores unitarios \(\uvect{\imath}\) y \(\uvect{\jmath}\) tienen
+magnitud uno, no poseen unidades y apuntan en las direcciones \(+x\) y \(+y\):
 \[
-  [A]=L^2,\qquad
-  [V]=L^3,\qquad
-  [v]=LT^{-1},\qquad
-  [\rho]=ML^{-3}.
+  |\uvect{\imath}|=|\uvect{\jmath}|=1.
 \]
-Los corchetes se leen ``dimensión de''. Así, \([v]=LT^{-1}\) afirma que una
-rapidez compara una longitud con un tiempo; no especifica si se mide en
-\(\mathrm{m/s}\) o en \(\mathrm{km/h}\).
-
-La densidad aparece cuando interesa comparar cuánta masa está contenida en un
-volumen:
+Permiten separar magnitud y dirección:
 \[
-  \rho\equiv\frac{m}{V}.
+  \vect{A}=A_x\uvect{\imath}+A_y\uvect{\jmath}.
 \]
-Aquí \(m\) es la masa, \(V\) el volumen y \(\rho\) la densidad. En el SI,
-\(\rho\) se expresa en \(\mathrm{kg/m^3}\). En laboratorio también es común
-\(\mathrm{g/mL}\). Ambas unidades representan \(ML^{-3}\).
-
-\begin{pregunta}
-Dos muestras tienen densidades \(1{,}2\unidadSI{g/mL}\) y
-\(1200\unidadSI{kg/m^3}\). ¿La segunda muestra es mil veces más densa o ambas
-densidades describen el mismo valor físico?
-\end{pregunta}
-
-\section{Escalas, notación científica y prefijos}
-
-La física compara tamaños muy distintos. Una molécula puede medirse en
-nanómetros, una célula en micrómetros, una tableta en milímetros y una sala en
-metros. La notación científica separa la cifra significativa de la potencia de
-diez:
+Si
 \[
-  N=a\times10^n,
-  \qquad 1\leq |a|<10.
-\]
-
-\begin{center}
-\begin{tikzpicture}[x=1.25cm,y=1cm]
-  \draw[-{Stealth[length=2mm]},thick] (0,0)--(8.4,0);
-  \foreach \x/\e in {0/-9,2/-6,4/-3,6/0,8/3}{
-    \draw (\x,0.12)--(\x,-0.12);
-    \node[below,font=\small] at (\x,-0.12) {\(10^{\e}\unidadSI{m}\)};
-  }
-  \node[above,font=\small] at (0,0.15) {molécula};
-  \node[above,font=\small] at (2,0.15) {célula};
-  \node[above,font=\small] at (4,0.15) {tableta};
-  \node[above,font=\small] at (6,0.15) {persona};
-  \node[above,font=\small] at (8,0.15) {ciudad};
-\end{tikzpicture}
-\end{center}
-
-Los prefijos sustituyen potencias de diez:
-\[
-\begin{array}{c@{\qquad}c@{\qquad}c}
-\text{nano (n)}=10^{-9}
-&
-\text{micro (\(\mu\))}=10^{-6}
-&
-\text{mili (m)}=10^{-3}
-\\[0.3em]
-\text{centi (c)}=10^{-2}
-&
-\text{kilo (k)}=10^{3}.
-\end{array}
-\]
-El prefijo forma parte de la unidad. Si la unidad se eleva a una potencia, el
-factor del prefijo también:
-\[
-  1\unidadSI{cm^2}
-  =(10^{-2}\unidadSI{m})^2
-  =10^{-4}\unidadSI{m^2},
-\]
-\[
-  1\unidadSI{cm^3}
-  =(10^{-2}\unidadSI{m})^3
-  =10^{-6}\unidadSI{m^3}.
-\]
-Esta última igualdad explica por qué
-\(1\unidadSI{mL}=1\unidadSI{cm^3}=10^{-6}\unidadSI{m^3}\).
-
-\section{Conversión de unidades}
-
-Convertir una unidad no cambia la cantidad física; cambia su forma de
-escritura. La igualdad
-\[
-  1\unidadSI{km}=10^3\unidadSI{m}
-\]
-permite construir dos factores iguales a uno:
-\[
-  \frac{10^3\unidadSI{m}}{1\unidadSI{km}}=1,
+  \vect{A}=A_x\uvect{\imath}+A_y\uvect{\jmath},
   \qquad
-  \frac{1\unidadSI{km}}{10^3\unidadSI{m}}=1.
+  \vect{B}=B_x\uvect{\imath}+B_y\uvect{\jmath},
 \]
-Se escoge la orientación que cancela la unidad inicial.
-
-Por ejemplo,
+entonces
 \[
-72\frac{\mathrm{km}}{\mathrm{h}}
-\left(\frac{10^3\unidadSI{m}}{1\unidadSI{km}}\right)
-\left(\frac{1\unidadSI{h}}{3600\unidadSI{s}}\right)
-=20\frac{\mathrm{m}}{\mathrm{s}}.
+  \vect{A}+\vect{B}
+  =
+  (A_x+B_x)\uvect{\imath}
+  +(A_y+B_y)\uvect{\jmath}.
 \]
-El resultado expresa la misma rapidez: \(72\unidadSI{km/h}\) significa avanzar
-\(20\unidadSI{m}\) cada segundo.
-
-\Needspace{27\baselineskip}
-\subsection{Ejemplo resuelto: masa de un excipiente líquido}
-
-Se transfieren \(250\unidadSI{mL}\) de un excipiente líquido homogéneo cuya
-densidad es
-\[
-  \rho=1{,}26\frac{\mathrm{g}}{\mathrm{mL}}.
-\]
-Se busca la masa transferida en kilogramos. El sistema es el líquido contenido
-en la probeta. El modelo supone densidad uniforme, temperatura fija y ausencia
-de pérdidas.
+La suma se hace componente a componente porque las direcciones
+\(\uvect{\imath}\) y \(\uvect{\jmath}\) son independientes.
 
 \begin{center}
 \begin{tikzpicture}[scale=0.95]
-  \draw[thick] (0,0)--(0.25,3.2)--(1.75,3.2)--(2,0)--cycle;
-  \fill[AzulPregunta] (0.15,0.15)--(0.8,2.45)--(1.2,2.45)--(1.85,0.15)--cycle;
-  \draw[AzulTitulo,thick] (0.76,2.45)--(1.24,2.45);
-  \draw (2.15,2.45)--(2.45,2.45);
-  \node[right,font=\small] at (2.45,2.45) {\(V=250\unidadSI{mL}\)};
-  \node[font=\small] at (1,-0.35) {\(\rho=1{,}26\unidadSI{g/mL}\)};
+  \draw[-{Stealth[length=2.2mm]},thick] (-0.4,0)--(5.2,0) node[right] {\(+x\)};
+  \draw[-{Stealth[length=2.2mm]},thick] (0,-2.2)--(0,3.1) node[above] {\(+y\)};
+  \draw[-{Stealth[length=2.7mm]},AzulTitulo,very thick] (0,0)--(3,2)
+    node[above left] {\(\vect{A}\)};
+  \draw[-{Stealth[length=2.7mm]},BordeEjemplo,very thick] (0,0)--(1,-1.5)
+    node[below right] {\(\vect{B}\)};
+  \draw[-{Stealth[length=2.7mm]},GrisTexto,very thick] (0,0)--(4,0.5)
+    node[above right] {\(\vect{R}\)};
+  \node[right] at (6.4,-0.8) {
+    \(\begin{aligned}
+      \vect{A}&=3\uvect{\imath}+2\uvect{\jmath},\\
+      \vect{B}&=\uvect{\imath}-1{,}5\uvect{\jmath},\\
+      \vect{R}&=4\uvect{\imath}+0{,}5\uvect{\jmath}.
+    \end{aligned}\)
+  };
 \end{tikzpicture}
 \end{center}
 
-La densidad está definida por \(\rho=m/V\). Al despejar la masa,
-\[
-  m=\rho V.
-\]
-La sustitución conserva las unidades:
-\begin{align*}
-  m
-  &=
-  \left(1{,}26\frac{\mathrm{g}}{\mathrm{mL}}\right)
-  (250\unidadSI{mL})
-  =315\unidadSI{g},
-  \\
-  m
-  &=
-  315\unidadSI{g}
-  \left(\frac{1\unidadSI{kg}}{10^3\unidadSI{g}}\right)
-  =0{,}315\unidadSI{kg}.
-\end{align*}
-\resultado{\(m=0{,}315\unidadSI{kg}\).}
-
-Las unidades de volumen se cancelan en la primera línea y los gramos en la
-segunda. Además, como la densidad es algo mayor que
-\(1\unidadSI{g/mL}\), la masa debe ser algo mayor que
-\(250\unidadSI{g}\); \(315\unidadSI{g}\) es razonable.
-
-La misma respuesta se obtiene en unidades SI:
-\[
-  \rho=1{,}26\times10^3\frac{\mathrm{kg}}{\mathrm{m^3}},
-  \qquad
-  V=2{,}50\times10^{-4}\unidadSI{m^3},
-\]
-\[
-  m=\rho V
-  =(1{,}26\times10^3)(2{,}50\times10^{-4})\unidadSI{kg}
-  =0{,}315\unidadSI{kg}.
-\]
-
-\section{Análisis dimensional}
-
-Una ecuación física solo puede igualar o sumar cantidades de la misma
-dimensión. Esta exigencia se llama \textbf{homogeneidad dimensional}. En
-\[
-  x=x_0+vt,
-\]
-\(x\) y \(x_0\) son longitudes, mientras que
-\[
-  [vt]=(LT^{-1})T=L.
-\]
-Los tres términos tienen dimensión \(L\). En cambio, \(x=x_0+v+t\) no puede
-representar una igualdad física: intenta sumar longitud, rapidez y tiempo.
-
-La homogeneidad es una condición necesaria, pero no suficiente. Una expresión
-dimensionalmente correcta todavía puede tener un signo, un factor numérico o
-un supuesto equivocado.
-
-\subsection{Forma posible de una distancia}
-
-Supóngase que una distancia \(x\) depende únicamente de una aceleración
-constante \(a\) y de un tiempo \(t\). Se propone
-\[
-  x=C\,a^n t^m,
-\]
-donde \(C\) no tiene dimensión. Como
-\([x]=L\), \([a]=LT^{-2}\) y \([t]=T\),
-\begin{align*}
-  L
-  &=(LT^{-2})^nT^m,
-  \\
-  L
-  &=L^nT^{m-2n}.
-\end{align*}
-Las potencias de \(L\) y \(T\) deben coincidir en ambos lados:
-\[
-  n=1,\qquad m-2n=0,
-\]
-por lo que
-\[
-  n=1,\qquad m=2,\qquad x=C\,at^2.
-\]
-Las unidades confirman la forma:
-\[
-  \left(\frac{\mathrm{m}}{\mathrm{s^2}}\right)\mathrm{s^2}
-  =\mathrm{m}.
-\]
-El análisis dimensional no determina \(C\). Tampoco demuestra que la posición
-inicial y la velocidad inicial sean nulas. Cuando la cinemática incorpore esos
-supuestos, aparecerá el caso particular
-\(\Delta x=\tfrac12at^2\).
-
-\begin{pregunta}
-¿Cuál de las expresiones puede sumarse a una posición inicial \(x_0\)?
-\[
-  \text{A) }vt+at
-  \qquad\qquad
-  \text{B) }vt+at^2.
-\]
-La decisión debe justificarse comparando dimensiones término a término.
-\end{pregunta}
-
-\section{Estimaciones y orden de magnitud}
-
-Una estimación busca la escala dominante de un resultado. Se declaran
-supuestos simples, se redondean los datos y se operan potencias de diez. El
-objetivo no es reemplazar una medición precisa, sino anticipar si una respuesta
-debe estar en miles, millones o miles de millones.
-
-\subsection{Ejemplo resuelto: respiraciones en un año}
-
-Una frecuencia respiratoria media del orden de
-\[
-  f\sim10\frac{\text{respiraciones}}{\mathrm{min}}
-\]
-y la duración
-\[
-  1\ \text{año}
-  \sim
-  (60\ \text{min/h})(24\ \text{h/día})(365\ \text{días})
-  \sim5\times10^5\ \text{min}
-\]
-producen
-\[
-  N
-  \sim
-  \left(10\frac{\text{resp}}{\text{min}}\right)
-  (5\times10^5\text{ min})
-  =5\times10^6\ \text{resp}.
-\]
-El orden de magnitud es \(10^7\) respiraciones por año. La frecuencia real
-cambia con el sueño, el ejercicio y el estado de salud, pero la escala de
-millones es robusta. Un resultado de \(10^3\) o \(10^{12}\) exigiría revisar
-los datos, las unidades o las potencias de diez.
-
-\begin{ejemplocualitativo}{una cifra que delata un error}
-Para \(250\unidadSI{mL}\) de un líquido de densidad cercana a
-\(1\unidadSI{g/mL}\), la masa debe estar cerca de cientos de gramos. Un
-resultado de \(315\,000\unidadSI{kg}\) puede rechazarse antes de repetir la
-aritmética: contradice la escala del sistema y convierte gramos a kilogramos en
-la dirección equivocada.
+\begin{ejemplocualitativo}{movimiento de una muestra en una mesa automatizada}
+Una plataforma puede trasladar una muestra primero a lo largo de un riel \(x\)
+y luego a lo largo de un riel \(y\). Cada etapa controla una componente, pero
+la muestra experimenta un solo desplazamiento resultante. La descomposición
+cartesiana permite programar por separado ambos motores sin perder la
+dirección neta del movimiento.
 \end{ejemplocualitativo}
+
+\section{Ejemplo resuelto: recorrido en dos tramos}
+
+Una plataforma parte del origen y desplaza una muestra
+\(0{,}40\unidadSI{m}\) hacia \(+x\). Luego la desplaza
+\(0{,}30\unidadSI{m}\) hacia \(+y\). Se busca el desplazamiento resultante
+respecto del punto de partida.
+
+\begin{center}
+\begin{tikzpicture}[scale=1.05]
+  \coordinate (O) at (0,0);
+  \coordinate (P) at (4,0);
+  \coordinate (Q) at (4,3);
+  \draw[-{Stealth[length=2mm]},thin] (-0.4,0)--(5.2,0) node[right] {\(+x\)};
+  \draw[-{Stealth[length=2mm]},thin] (0,-0.35)--(0,3.8) node[above] {\(+y\)};
+  \draw[-{Stealth[length=2.8mm]},AzulTitulo,very thick] (O)--(P)
+    node[midway,below] {\(\vect{A}=0{,}40\unidadSI{m}\,\uvect{\imath}\)};
+  \draw[-{Stealth[length=2.8mm]},BordeEjemplo,very thick] (P)--(Q)
+    node[midway,right] {\(\vect{B}=0{,}30\unidadSI{m}\,\uvect{\jmath}\)};
+  \draw[-{Stealth[length=2.8mm]},GrisTexto,very thick] (O)--(Q)
+    node[midway,above left] {\(\Delta\vect{r}\)};
+  \draw (0.9,0) arc[start angle=0,end angle=36.87,radius=0.9];
+  \node at (1.2,0.34) {\(\theta\)};
+\end{tikzpicture}
+\end{center}
+
+Los dos desplazamientos se escriben en componentes:
+\[
+  \vect{A}
+  =(0{,}40\unidadSI{m})\,\uvect{\imath},
+  \qquad
+  \vect{B}
+  =(0{,}30\unidadSI{m})\,\uvect{\jmath}.
+\]
+El desplazamiento resultante es
+\[
+  \Delta\vect{r}
+  =\vect{A}+\vect{B}
+  =(0{,}40\,\uvect{\imath}+0{,}30\,\uvect{\jmath})\unidadSI{m}.
+\]
+Su magnitud vale
+\begin{align*}
+  |\Delta\vect{r}|
+  &=
+  \sqrt{(0{,}40\unidadSI{m})^2+(0{,}30\unidadSI{m})^2}
+  \\
+  &=0{,}50\unidadSI{m}.
+\end{align*}
+Como ambas componentes son positivas, el vector está en el primer cuadrante:
+\[
+  \theta
+  =
+  \tan^{-1}\left(\frac{0{,}30}{0{,}40}\right)
+  =36{,}9^\circ
+  \quad\text{sobre \(+x\)}.
+\]
+
+\resultado{La muestra termina a
+\(0{,}50\unidadSI{m}\) del origen, en dirección
+\(36{,}9^\circ\) sobre \(+x\).}
+
+\revision{La magnitud debe quedar entre
+\(|0{,}40-0{,}30|=0{,}10\unidadSI{m}\) y
+\(0{,}40+0{,}30=0{,}70\unidadSI{m}\). El resultado
+\(0{,}50\unidadSI{m}\) satisface esa condición y concuerda con el triángulo
+rectángulo del dibujo.}
+
+La distancia recorrida por la muestra fue
+\[
+  d=0{,}40\unidadSI{m}+0{,}30\unidadSI{m}
+  =0{,}70\unidadSI{m},
+\]
+pero la magnitud del desplazamiento fue \(0{,}50\unidadSI{m}\). La distancia
+cuenta la longitud del camino; el desplazamiento conecta directamente la
+posición inicial con la final.
 
 \section{Síntesis}
 
 \[
-\begin{gathered}
-\text{medición}
-\longrightarrow
-\text{número con unidad},
-\\[0.4em]
-\text{significado de la magnitud}
-\longrightarrow
-\text{dimensión},
-\\[0.4em]
-\text{ecuación}
-\longrightarrow
-\text{homogeneidad dimensional},
-\\[0.4em]
-\text{resultado}
-\longrightarrow
-\text{unidad, dimensión y escala razonable}.
-\end{gathered}
+  \text{referencia}
+  \longrightarrow
+  \text{componentes con signo}
+  \longrightarrow
+  \text{operaciones vectoriales}
+  \longrightarrow
+  \text{desplazamiento}.
 \]
 
-Las unidades no se agregan al final: participan en cada paso del cálculo. Las
-dimensiones descartan relaciones imposibles y las estimaciones permiten
-reconocer resultados absurdos. Para describir dónde está una partícula hará
-falta, además, fijar un origen y una dirección positiva: ese será el paso desde
-la medición hacia los sistemas de referencia y los vectores.
+\begin{center}
+\begin{tabularx}{\textwidth}{>{\bfseries}l X X}
+\toprule
+Idea & Escritura & Interpretación \\
+\midrule
+Magnitud
+& \(A=|\vect{A}|\geq0\)
+& tamaño del vector \\
+Componentes
+& \(A_x=A\cos\theta,\quad A_y=A\sin\theta\)
+& proyecciones con signo \\
+Vector cartesiano
+& \(\vect{A}=A_x\uvect{\imath}+A_y\uvect{\jmath}\)
+& magnitud y dirección en una sola expresión \\
+Suma
+& \(R_x=A_x+B_x,\quad R_y=A_y+B_y\)
+& suma independiente sobre cada eje \\
+Desplazamiento
+& \(\Delta\vect{r}=\vect{r}_f-\vect{r}_i\)
+& cambio neto de posición \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+La cinemática comienza precisamente con ese cambio neto. La siguiente parte
+incorporará el tiempo para medir qué tan rápido cambia la posición y qué tan
+rápido cambia la velocidad.
 
 \end{document}

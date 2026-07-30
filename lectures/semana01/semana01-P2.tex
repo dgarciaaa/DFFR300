@@ -3,7 +3,7 @@
 
 \begin{document}
 
-\portada{2}{Referencia, coordenadas y vectores}{Unidad I: Elementos de mecánica de la partícula en una dimensión}
+\portada{2}{Introducción a la cinemática en una dimensión}{Unidad I: Elementos de mecánica de la partícula en una dimensión}
 
 \pagenumbering{roman}
 \tableofcontents
@@ -12,518 +12,550 @@
 \section{Mapa conceptual}
 
 \mapalineal{
-  \node[concepto] (ref) {referencia};
-  \node[concepto,right=of ref] (pos) {posición};
-  \node[concepto,right=of pos] (vec) {vector};
-  \node[concepto,right=of vec] (com) {componentes};
-  \node[concepto,right=of com] (ope) {operaciones};
-  \node[concepto,right=of ope] (des) {desplazamiento};
-  \draw[flecha] (ref)--(pos);
-  \draw[flecha] (pos)--(vec);
-  \draw[flecha] (vec)--(com);
-  \draw[flecha] (com)--(ope);
-  \draw[flecha] (ope)--(des);
+  \node[concepto] (pos) {posición};
+  \node[concepto,right=of pos] (des) {desplazamiento};
+  \node[concepto,right=of des] (vel) {velocidad};
+  \node[concepto,right=of vel] (ace) {aceleración};
+  \node[concepto,right=of ace] (mru) {MRU};
+  \node[concepto,right=of mru] (mrua) {MRUA};
+  \draw[flecha] (pos)--(des);
+  \draw[flecha] (des)--(vel);
+  \draw[flecha] (vel)--(ace);
+  \draw[flecha] (ace)--(mru);
+  \draw[flecha] (mru)--(mrua);
 }
 
-Decir que una partícula está ``a dos metros'' no basta para ubicarla. Hay que
-declarar desde dónde se miden esos dos metros y hacia qué lado. Un sistema de
-referencia permite asignar coordenadas; los vectores permiten conservar
-magnitud y dirección; las componentes transforman la geometría en operaciones
-con números y signos.
-
-\section{Sistema de referencia y posición}
-
-Una posición siempre se describe \emph{respecto de algo}. En una dimensión se
-escoge un origen \(O\), una escala y un sentido positivo. La coordenada \(x\)
-indica la posición de la partícula respecto de ese origen:
+La \textbf{cinemática} describe el movimiento sin estudiar todavía las
+interacciones que lo producen. Su tarea es responder tres preguntas:
 \[
-  x>0\quad\text{en el sentido positivo},\qquad
-  x<0\quad\text{en el sentido opuesto}.
+  \text{¿dónde está?}
+  \longrightarrow
+  \text{¿qué tan rápido cambia su posición?}
+  \longrightarrow
+  \text{¿qué tan rápido cambia su velocidad?}
 \]
+En esta parte el movimiento ocurre sobre una línea recta. El objeto se modela
+como una partícula: se conserva su posición y se ignoran su forma y tamaño
+cuando no son necesarios para describir el movimiento.
 
-\begin{center}
-\begin{tikzpicture}[x=1.2cm,y=1cm]
-  \draw[-{Stealth[length=2.2mm]},thick] (-3.5,0)--(4.2,0)
-    node[right] {\(x\,[\mathrm{m}]\)};
-  \foreach \x in {-3,-2,-1,0,1,2,3}{
-    \draw (\x,0.1)--(\x,-0.1);
-    \node[below,font=\small] at (\x,-0.1) {\(\x\)};
-  }
-  \fill[AzulTitulo] (2,0) circle (2.2pt);
-  \node[above] at (2,0.12) {partícula};
-  \node[above left] at (0,0.12) {\(O\)};
-  \draw[-{Stealth[length=2mm]},AzulTitulo,thick] (0,0.55)--(2,0.55);
-  \node[above,AzulTitulo] at (1,0.55) {\(x=+2\unidadSI{m}\)};
-\end{tikzpicture}
-\end{center}
+\section{Posición y desplazamiento}
 
-La coordenada no es una propiedad absoluta de la partícula. Si el origen se
-traslada un metro hacia la derecha, la partícula no se mueve, pero su
-coordenada cambia. Del mismo modo, invertir el sentido positivo cambia los
-signos sin alterar la situación física.
-
-Para describir movimiento también se necesita un reloj: se fija un instante
-\(t=0\) y se compara la posición en instantes posteriores. Por ello, un sistema
-de referencia para la cinemática reúne
-\[
-  \text{origen}
-  +\text{ejes orientados}
-  +\text{escala}
-  +\text{reloj}.
-\]
-
-\begin{ejemplocualitativo}{dos observadores en un pasillo}
-Una persona situada en la puerta puede describir una camilla a
-\(+4\unidadSI{m}\). Otra persona que escoge como origen el ascensor puede
-asignarle una coordenada diferente. No discrepan sobre la camilla: emplean
-referencias distintas. Para comparar resultados deben declarar sus orígenes y
-sentidos positivos.
-\end{ejemplocualitativo}
-
-\begin{pregunta}
-Una partícula tiene coordenada \(x=+3\unidadSI{m}\). El origen se traslada
-\(5\unidadSI{m}\) hacia \(+x\), sin mover la partícula. ¿Cuál es la nueva
-coordenada? ¿Qué cambió físicamente?
-\end{pregunta}
-
-\section{Coordenadas en el plano}
-
-En dos dimensiones se necesitan dos números para ubicar un punto. El sistema
-cartesiano usa ejes perpendiculares \(x\) e \(y\); la posición se expresa como
-\((x,y)\). El sistema polar usa una distancia \(r\) al origen y un ángulo
-\(\theta\) medido desde un eje acordado.
-
-\begin{center}
-\begin{tikzpicture}[scale=1.05]
-  \coordinate (O) at (0,0);
-  \coordinate (P) at (4,2.6);
-  \draw[-{Stealth[length=2mm]},thick] (-0.4,0)--(5,0) node[right] {\(x\)};
-  \draw[-{Stealth[length=2mm]},thick] (0,-0.35)--(0,3.4) node[above] {\(y\)};
-  \draw[dashed,GrisLinea] (P)--(4,0) node[below] {\(x\)};
-  \draw[dashed,GrisLinea] (P)--(0,2.6) node[left] {\(y\)};
-  \draw[-{Stealth[length=2.3mm]},AzulTitulo,very thick] (O)--(P)
-    node[midway,above left] {\(r\)};
-  \fill[AzulTitulo] (P) circle (2.2pt) node[above right] {\(P(x,y)\)};
-  \draw (0.9,0) arc[start angle=0,end angle=33,radius=0.9];
-  \node at (1.15,0.35) {\(\theta\)};
-\end{tikzpicture}
-\end{center}
-
-El triángulo rectángulo de la figura entrega
-\[
-  \cos\theta=\frac{x}{r},
-  \qquad
-  \sin\theta=\frac{y}{r}.
-\]
-Por tanto,
-\[
-  x=r\cos\theta,
-  \qquad
-  y=r\sin\theta,
-\]
-y la transformación inversa es
-\[
-  r=\sqrt{x^2+y^2},
-  \qquad
-  \theta=\operatorname{atan2}(y,x).
-\]
-La función \(\operatorname{atan2}\) usa por separado los signos de \(x\) e
-\(y\) y recupera el cuadrante correcto. Si solo se emplea
-\(\tan^{-1}(y/x)\), puntos de cuadrantes distintos pueden producir el mismo
-cociente.
-
-\begin{pregunta}
-El punto \((-3\unidadSI{m},4\unidadSI{m})\) está a
-\(5\unidadSI{m}\) del origen. ¿En qué cuadrante se encuentra y por qué el
-ángulo no puede ser el valor negativo que entrega una aplicación directa de
-\(\tan^{-1}(4/-3)\)?
-\end{pregunta}
-
-\section{Cantidades escalares y vectoriales}
-
-Una \textbf{cantidad escalar} queda especificada por un valor y una unidad. La
-masa, la temperatura, el volumen y un intervalo de tiempo son escalares. Una
-temperatura de \(-5\,^\circ\mathrm{C}\) tiene signo, pero no apunta en el
-espacio.
-
-Una \textbf{cantidad vectorial} necesita magnitud, dirección y sentido. La
-posición, el desplazamiento, la velocidad, la aceleración y la fuerza son
-vectores. Se representan mediante flechas:
-
-\begin{center}
-\begin{tikzpicture}[scale=1.1]
-  \coordinate (A0) at (0,0);
-  \coordinate (A1) at (4.3,1.7);
-  \draw[-{Stealth[length=3mm]},AzulTitulo,very thick] (A0)--(A1);
-  \fill (A0) circle (1.6pt) node[below] {cola};
-  \node[above right] at (A1) {punta};
-  \node[above left,AzulTitulo] at ($(A0)!0.55!(A1)$) {\(\vect{A}\)};
-  \draw[dashed] (A0)--(4.3,0);
-  \draw (0.9,0) arc[start angle=0,end angle=21.6,radius=0.9];
-  \node at (1.2,0.27) {\(\theta\)};
-  \node[below] at (2.15,0) {dirección};
-  \node[right] at (5.1,0.9) {
-    \(\begin{aligned}
-      A&=|\vect{A}|\geq0 && \text{magnitud},\\
-      \theta&&& \text{dirección},\\
-      \text{punta}&&& \text{sentido}.
-    \end{aligned}\)
-  };
-\end{tikzpicture}
-\end{center}
-
-La magnitud \(A=|\vect{A}|\) es una cantidad escalar no negativa. El vector
-\(-\vect{A}\) tiene la misma magnitud y dirección geométrica, pero sentido
-opuesto. Dos vectores son iguales si tienen igual magnitud, dirección y
-sentido, aunque se dibujen en lugares distintos.
-
-La expresión \(\vect{A}=5\unidadSI{m}\) es incompleta: solo informa la
-magnitud. Una descripción completa sería
-\[
-  \vect{A}=5\unidadSI{m}\ \text{hacia el este}.
-\]
-
-\begin{pregunta}
-Clasifique cada cantidad y justifique: \(37\,^\circ\mathrm{C}\);
-\(5\unidadSI{m}\) al este; \(2\unidadSI{min}\);
-\(9{,}8\unidadSI{m/s^2}\) hacia abajo. ¿Por qué la presencia de un signo no
-basta para decidir si una cantidad es vectorial?
-\end{pregunta}
-
-\section{Suma, resta y multiplicación por un escalar}
-
-La suma vectorial encadena cambios dirigidos. Para
-\(\vect{R}=\vect{A}+\vect{B}\), la cola de \(\vect{B}\) se coloca en la punta
-de \(\vect{A}\). El resultante va desde la cola inicial hasta la punta final.
-
-\begin{center}
-\begin{tikzpicture}[scale=1.05]
-  \coordinate (O) at (0,0);
-  \coordinate (P) at (3.3,0.7);
-  \coordinate (Q) at (5.0,3.0);
-  \draw[-{Stealth[length=2.8mm]},AzulTitulo,very thick] (O)--(P)
-    node[midway,below] {\(\vect{A}\)};
-  \draw[-{Stealth[length=2.8mm]},BordeEjemplo,very thick] (P)--(Q)
-    node[midway,right] {\(\vect{B}\)};
-  \draw[-{Stealth[length=2.8mm]},GrisTexto,very thick] (O)--(Q)
-    node[midway,above left] {\(\vect{R}=\vect{A}+\vect{B}\)};
-  \fill (O) circle (1.5pt);
-  \fill (P) circle (1.5pt);
-  \fill (Q) circle (1.5pt);
-\end{tikzpicture}
-\end{center}
-
-El orden de la construcción puede invertirse sin cambiar el resultante:
-\[
-  \vect{A}+\vect{B}=\vect{B}+\vect{A}.
-\]
-La resta se define mediante el vector opuesto:
-\[
-  \vect{A}-\vect{B}
-  \equiv
-  \vect{A}+(-\vect{B}).
-\]
-Multiplicar por un escalar \(\alpha\) cambia la magnitud a
-\(|\alpha|\,|\vect{A}|\). Si \(\alpha>0\), conserva el sentido; si
-\(\alpha<0\), lo invierte.
-
-Las magnitudes no se suman como si los vectores fueran escalares:
-\[
-  |\vect{A}+\vect{B}|
-  \neq
-  |\vect{A}|+|\vect{B}|
-  \qquad\text{en general}.
-\]
-Si dos desplazamientos perpendiculares tienen magnitudes
-\(3\unidadSI{m}\) y \(4\unidadSI{m}\), el resultante mide
-\(5\unidadSI{m}\), no \(7\unidadSI{m}\). El valor
-\(7\unidadSI{m}\) solo aparece cuando ambos apuntan en igual dirección y
-sentido.
-
-\begin{ejemplocualitativo}{caminar y deshacer el camino}
-Un desplazamiento \(\vect{A}\) seguido por \(-\vect{A}\) devuelve al punto de
-partida:
-\[
-  \vect{A}+(-\vect{A})=\vect{0}.
-\]
-La distancia recorrida no es cero, pero el cambio neto de posición sí. Esta
-diferencia anticipa la distinción entre distancia y desplazamiento.
-\end{ejemplocualitativo}
-
-\section{Componentes cartesianas}
-
-Las componentes son las proyecciones con signo de un vector sobre los ejes. Si
-\(\vect{A}\) forma un ángulo \(\theta\) con \(+x\),
-\[
-  A_x=A\cos\theta,
-  \qquad
-  A_y=A\sin\theta.
-\]
-
-\begin{center}
-\begin{tikzpicture}[scale=1.05]
-  \coordinate (O) at (0,0);
-  \coordinate (P) at (4.5,3.0);
-  \coordinate (X) at (4.5,0);
-  \draw[-{Stealth[length=2mm]},thick] (-0.35,0)--(5.2,0) node[right] {\(+x\)};
-  \draw[-{Stealth[length=2mm]},thick] (0,-0.3)--(0,3.7) node[above] {\(+y\)};
-  \draw[-{Stealth[length=2.8mm]},AzulTitulo,very thick] (O)--(P)
-    node[midway,above left] {\(\vect{A}\)};
-  \draw[-{Stealth[length=2.5mm]},GrisTexto,thick] (O)--(X)
-    node[midway,below] {\(A_x\)};
-  \draw[-{Stealth[length=2.5mm]},GrisTexto,thick] (X)--(P)
-    node[midway,right] {\(A_y\)};
-  \draw (0.9,0) arc[start angle=0,end angle=33.7,radius=0.9];
-  \node at (1.2,0.34) {\(\theta\)};
-\end{tikzpicture}
-\end{center}
-
-Estas expresiones no se memorizan como ``horizontal usa coseno''. El coseno
-corresponde al cateto adyacente al ángulo que realmente se dibujó. Si el
-ángulo se mide desde el eje vertical, la asignación cambia.
-
-La magnitud y la dirección se recuperan desde las componentes:
-\[
-  A=\sqrt{A_x^2+A_y^2},
-  \qquad
-  \theta=\operatorname{atan2}(A_y,A_x).
-\]
-La magnitud \(A\) es no negativa; \(A_x\) y \(A_y\) pueden ser positivas,
-negativas o cero. Sus signos se anticipan mirando el cuadrante:
-
-\begin{center}
-\begin{tabular}{c@{\qquad}cc}
-\toprule
-Cuadrante & \(A_x\) & \(A_y\) \\
-\midrule
-I & \(+\) & \(+\) \\
-II & \(-\) & \(+\) \\
-III & \(-\) & \(-\) \\
-IV & \(+\) & \(-\) \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\begin{pregunta}
-Un vector de magnitud \(10\unidadSI{N}\) se encuentra en el segundo
-cuadrante. Antes de usar trigonometría, ¿qué signos deben tener sus componentes?
-¿Podría alguna componente tener magnitud mayor que \(10\unidadSI{N}\)?
-\end{pregunta}
-
-\Needspace{9\baselineskip}
-\section{Vectores unitarios y operaciones por componentes}
-
-Los vectores unitarios \(\uvect{i}\) y \(\uvect{j}\) tienen magnitud uno y
-señalan las direcciones \(+x\) y \(+y\):
-\[
-  |\uvect{i}|=|\uvect{j}|=1.
-\]
-No aportan una unidad física; separan la dirección del valor de cada
-componente. Un vector del plano se escribe
-\[
-  \vect{A}=A_x\uvect{i}+A_y\uvect{j}.
-\]
-
-La suma gráfica se convierte en suma algebraica:
-\begin{align*}
-  \vect{R}
-  &=
-  \vect{A}+\vect{B},
-  \\
-  &=
-  (A_x\uvect{i}+A_y\uvect{j})
-  +(B_x\uvect{i}+B_y\uvect{j}),
-  \\
-  &=
-  (A_x+B_x)\uvect{i}
-  +(A_y+B_y)\uvect{j}.
-\end{align*}
-Por tanto,
-\[
-  R_x=A_x+B_x,
-  \qquad
-  R_y=A_y+B_y.
-\]
-Solo se suman componentes que pertenecen al mismo eje y representan la misma
-clase de magnitud física.
-
-Si
-\[
-  \vect{C}=3\uvect{i}+4\uvect{j},
-\]
-entonces \(|\vect{C}|=5\). El vector unitario que apunta en la dirección de
-\(\vect{C}\) es
-\[
-  \uvect{C}
-  =\frac{\vect{C}}{|\vect{C}|}
-  =\frac35\uvect{i}+\frac45\uvect{j}.
-\]
-El unitario opuesto es
-\[
-  -\uvect{C}
-  =-\frac35\uvect{i}-\frac45\uvect{j}.
-\]
-
-\section{Ejemplo resuelto: recorrido en dos tramos}
-
-Una estudiante camina \(1{,}00\unidadSI{km}\) hacia el norte y después
-\(2{,}00\unidadSI{km}\) hacia el este. Se busca el desplazamiento resultante
-respecto del punto de partida.
-
-Se escoge \(+x\) hacia el este y \(+y\) hacia el norte. Los tramos son rectos
-y perpendiculares; la superficie se modela como un plano.
-
-\begin{center}
-\begin{tikzpicture}[scale=1.25]
-  \coordinate (O) at (0,0);
-  \coordinate (N) at (0,2.2);
-  \coordinate (F) at (4.4,2.2);
-  \draw[-{Stealth[length=2mm]},thick] (-0.35,0)--(5.0,0)
-    node[right] {\(+x\), este};
-  \draw[-{Stealth[length=2mm]},thick] (0,-0.3)--(0,3.0)
-    node[above] {\(+y\), norte};
-  \draw[-{Stealth[length=2.8mm]},BordeEjemplo,very thick] (O)--(N)
-    node[midway,left] {\(\vect{A}\)};
-  \draw[-{Stealth[length=2.8mm]},AzulTitulo,very thick] (N)--(F)
-    node[midway,above] {\(\vect{B}\)};
-  \draw[-{Stealth[length=2.8mm]},GrisTexto,very thick] (O)--(F)
-    node[midway,below right] {\(\vect{R}\)};
-  \fill (O) circle (1.6pt) node[below left] {inicio};
-  \fill (F) circle (1.6pt) node[above right] {final};
-  \draw (0.9,0) arc[start angle=0,end angle=26.6,radius=0.9];
-  \node at (1.2,0.25) {\(\theta\)};
-\end{tikzpicture}
-\end{center}
-
-Los desplazamientos por tramo son
-\[
-  \vect{A}
-  =0\uvect{i}+1{,}00\uvect{j}\ \unidadSI{km},
-\]
-\[
-  \vect{B}
-  =2{,}00\uvect{i}+0\uvect{j}\ \unidadSI{km}.
-\]
-La suma por componentes entrega
-\[
-  \vect{R}
-  =\vect{A}+\vect{B}
-  =(2{,}00\uvect{i}+1{,}00\uvect{j})\unidadSI{km}.
-\]
-La magnitud es
-\[
-  R
-  =\sqrt{R_x^2+R_y^2}
-  =\sqrt{(2{,}00)^2+(1{,}00)^2}\unidadSI{km}
-  =2{,}24\unidadSI{km}.
-\]
-Como ambas componentes son positivas, el vector está en el primer cuadrante.
-El ángulo medido al norte del este es
-\[
-  \theta
-  =\tan^{-1}\left(\frac{R_y}{R_x}\right)
-  =\tan^{-1}\left(\frac{1{,}00}{2{,}00}\right)
-  =26{,}6^\circ.
-\]
-
-\resultado{\(\vect{R}=(2{,}00\uvect{i}+1{,}00\uvect{j})\unidadSI{km}\), de
-magnitud \(2{,}24\unidadSI{km}\), dirigido \(26{,}6^\circ\) al norte del
-este.}
-
-La distancia recorrida es
-\[
-  d=1{,}00\unidadSI{km}+2{,}00\unidadSI{km}
-  =3{,}00\unidadSI{km}.
-\]
-No coincide con la magnitud del desplazamiento. El dibujo también permite
-comprobar que \(2{,}00<R<3{,}00\unidadSI{km}\), de modo que
-\(2{,}24\unidadSI{km}\) es físicamente razonable.
-
-\begin{pregunta}
-Si los dos tramos se recorren en orden inverso, ¿cambian la distancia total, el
-desplazamiento resultante o solo la posición intermedia durante el recorrido?
-\end{pregunta}
-
-\section{Posición y desplazamiento en una dimensión}
-
-En una dimensión, la naturaleza vectorial queda codificada en el signo. Si una
-partícula cambia desde \(x_i\) hasta \(x_f\), su desplazamiento es
-\[
-  \Delta x=x_f-x_i.
-\]
-El símbolo \(\Delta\) indica cambio: valor final menos valor inicial.
-\(\Delta x>0\) apunta hacia \(+x\), mientras que \(\Delta x<0\) apunta hacia
-\(-x\).
-
-La distancia recorrida suma las longitudes de todos los tramos y nunca es
-negativa. El desplazamiento solo compara los extremos.
-
-Una partícula parte de \(x_i=-2\unidadSI{m}\), llega a
-\(x=5\unidadSI{m}\) y luego vuelve hasta \(x_f=1\unidadSI{m}\):
+Se fija un eje \(x\), un origen \(O\), un sentido positivo y un instante
+\(t=0\). La \textbf{posición} \(x(t)\) es la coordenada de la partícula en cada
+instante. El signo indica a qué lado del origen se encuentra, no cuánto camino
+ha recorrido.
 
 \begin{center}
 \begin{tikzpicture}[x=1.05cm,y=1cm]
-  \draw[-{Stealth[length=2mm]},thick] (-3,0)--(6,0) node[right] {\(x\,[\mathrm{m}]\)};
-  \foreach \x in {-2,-1,0,1,2,3,4,5}{
+  \draw[-{Stealth[length=2.2mm]},thick] (-4.4,0)--(5.0,0)
+    node[right] {\(x\,[\mathrm{m}]\)};
+  \foreach \x in {-4,-3,-2,-1,0,1,2,3,4}{
     \draw (\x,0.1)--(\x,-0.1);
     \node[below,font=\small] at (\x,-0.1) {\(\x\)};
   }
-  \draw[-{Stealth[length=2.5mm]},AzulTitulo,very thick]
-    (-2,0.65) to[bend left=20] (5,0.65);
-  \draw[-{Stealth[length=2.5mm]},BordeEjemplo,very thick]
-    (5,1.1) to[bend left=20] (1,1.1);
-  \fill (-2,0) circle (2pt) node[above left] {\(x_i\)};
-  \fill (1,0) circle (2pt) node[above] {\(x_f\)};
-  \fill (5,0) circle (2pt) node[above right] {giro};
+  \fill[AzulTitulo] (-2,0) circle (2.1pt);
+  \node[above] at (-2,0.15) {\(x_i=-2\unidadSI{m}\)};
+  \fill[BordeEjemplo] (3,0) circle (2.1pt);
+  \node[above] at (3,0.15) {\(x_f=+3\unidadSI{m}\)};
+  \draw[-{Stealth[length=2.8mm]},GrisTexto,very thick] (-2,0.72)--(3,0.72);
+  \node[above] at (0.5,0.72) {\(\Delta x=+5\unidadSI{m}\)};
+  \node[above left] at (0,0.12) {\(O\)};
 \end{tikzpicture}
 \end{center}
 
-El desplazamiento neto es
+El \textbf{desplazamiento} durante el intervalo desde \(t_i\) hasta \(t_f\) es
+el cambio de posición:
 \[
   \Delta x
-  =x_f-x_i
-  =1-(-2)
-  =+3\unidadSI{m}.
+  \equiv
+  x_f-x_i.
 \]
-La distancia recorrida es
+En una dimensión, \(\Delta x\) es la componente \(x\) del vector
+\(\Delta\vect{r}\). Puede ser positiva, negativa o cero:
 \[
-  d
-  =|5-(-2)|+|1-5|
-  =7+4
-  =11\unidadSI{m}.
+  \Delta x>0
+  \Rightarrow
+  \text{cambio neto hacia \(+x\)},
+  \qquad
+  \Delta x<0
+  \Rightarrow
+  \text{cambio neto hacia \(-x\)}.
 \]
-El signo positivo del desplazamiento indica que la posición final está a la
-derecha de la inicial; no afirma que todo el movimiento haya ocurrido hacia la
-derecha.
+
+La \textbf{distancia recorrida} \(d\) es la longitud total del camino y nunca
+es negativa. Si una partícula va desde \(x=0\) hasta \(x=4\unidadSI{m}\) y
+regresa a \(x=1\unidadSI{m}\),
+\[
+  \Delta x=1\unidadSI{m}-0=+1\unidadSI{m},
+  \qquad
+  d=4\unidadSI{m}+3\unidadSI{m}=7\unidadSI{m}.
+\]
+El desplazamiento conserva solamente el cambio neto; la distancia conserva
+todo el recorrido.
+
+\begin{pregunta}
+Una partícula parte en \(x_i=+2\unidadSI{m}\), pasa por
+\(-3\unidadSI{m}\) y termina otra vez en \(+2\unidadSI{m}\).
+¿Cuál es su desplazamiento? ¿Cuál es la distancia mínima que recorrió?
+\end{pregunta}
+
+\section{Velocidad media y rapidez media}
+
+El intervalo de tiempo transcurrido es
+\[
+  \Delta t=t_f-t_i>0.
+\]
+La \textbf{velocidad media} mide el desplazamiento por unidad de tiempo:
+\[
+  v_{x,\mathrm{med}}
+  \equiv
+  \frac{\Delta x}{\Delta t}
+  =
+  \frac{x_f-x_i}{t_f-t_i}.
+\]
+Su unidad SI es \(\mathrm{m/s}\). El signo de \(v_{x,\mathrm{med}}\) es el
+signo de \(\Delta x\), porque \(\Delta t\) es positivo.
+
+En una gráfica posición-tiempo, la velocidad media es la pendiente de la recta
+secante que une los extremos del intervalo:
+\[
+  \text{pendiente}
+  =
+  \frac{\text{cambio vertical}}{\text{cambio horizontal}}
+  =
+  \frac{\Delta x}{\Delta t}
+  =
+  v_{x,\mathrm{med}}.
+\]
+
+\begin{center}
+\begin{tikzpicture}[x=1.1cm,y=0.75cm]
+  \draw[-{Stealth[length=2.2mm]},thick] (0,0)--(6.5,0)
+    node[right] {\(t\,[\mathrm{s}]\)};
+  \draw[-{Stealth[length=2.2mm]},thick] (0,-0.2)--(0,6.2)
+    node[above] {\(x\,[\mathrm{m}]\)};
+  \draw[AzulTitulo,very thick,domain=0.5:5.8,smooth,samples=60]
+    plot (\x,{0.12*(\x-1)^2+1.25*\x});
+  \coordinate (A) at (1,1.25);
+  \coordinate (B) at (5,7.17);
+  \draw[GrisTexto,thick] (A)--(B);
+  \draw[dashed,GrisLinea] (A)--(1,0);
+  \draw[dashed,GrisLinea] (B)--(5,0);
+  \fill (A) circle (2pt) node[left] {\((t_i,x_i)\)};
+  \fill (B) circle (2pt) node[right] {\((t_f,x_f)\)};
+  \draw[decorate,decoration={brace,amplitude=5pt}]
+    (1,-0.55)--(5,-0.55) node[midway,below=5pt] {\(\Delta t\)};
+  \draw[decorate,decoration={brace,amplitude=5pt}]
+    (5.55,1.25)--(5.55,7.17) node[midway,right=5pt] {\(\Delta x\)};
+\end{tikzpicture}
+\end{center}
+
+La \textbf{rapidez media} usa la distancia total:
+\[
+  v_{\mathrm{rap,med}}
+  \equiv
+  \frac{d}{\Delta t}.
+\]
+Es un escalar no negativo. Velocidad media y rapidez media tienen las mismas
+unidades, pero responden preguntas distintas.
+
+\subsection{Ejemplo resuelto: ida y regreso por un pasillo}
+
+Un carro parte en \(x_i=0\). En \(12\unidadSI{s}\) llega a
+\(x=18\unidadSI{m}\) y luego regresa hasta \(x_f=6\unidadSI{m}\) durante los
+siguientes \(8\unidadSI{s}\). Se buscan su desplazamiento, distancia,
+velocidad media y rapidez media para el recorrido completo.
+
+El intervalo total es
+\[
+  \Delta t=12\unidadSI{s}+8\unidadSI{s}=20\unidadSI{s}.
+\]
+El desplazamiento depende solo de las posiciones inicial y final:
+\[
+  \Delta x=x_f-x_i
+  =6\unidadSI{m}-0
+  =+6\unidadSI{m}.
+\]
+La distancia suma ambos tramos:
+\[
+  d=18\unidadSI{m}+12\unidadSI{m}
+  =30\unidadSI{m}.
+\]
+Por tanto,
+\[
+  v_{x,\mathrm{med}}
+  =
+  \frac{+6\unidadSI{m}}{20\unidadSI{s}}
+  =
+  +0{,}30\unidadSI{m/s},
+\]
+\[
+  v_{\mathrm{rap,med}}
+  =
+  \frac{30\unidadSI{m}}{20\unidadSI{s}}
+  =
+  1{,}5\unidadSI{m/s}.
+\]
+
+\resultado{La velocidad media es
+\(+0{,}30\unidadSI{m/s}\) y la rapidez media es
+\(1{,}5\unidadSI{m/s}\).}
+
+\revision{La rapidez media debe ser al menos tan grande como la magnitud de la
+velocidad media. Aquí \(1{,}5>0{,}30\), como corresponde a un recorrido que
+incluye un cambio de sentido.}
+
+\section{Velocidad instantánea}
+
+La velocidad media describe un intervalo completo. Para describir el
+movimiento en un instante se reduce ese intervalo alrededor del instante de
+interés:
+\[
+  v_x(t)
+  \equiv
+  \lim_{\Delta t\to0}
+  \frac{\Delta x}{\Delta t}
+  =
+  \frac{\dd x}{\dd t}.
+\]
+La \textbf{velocidad instantánea} es la pendiente de la recta tangente a la
+gráfica \(x(t)\). Su magnitud es la \textbf{rapidez instantánea}:
+\[
+  v_{\mathrm{rap}}=|v_x|.
+\]
+
+\begin{center}
+\begin{tikzpicture}[x=1.05cm,y=0.72cm]
+  \draw[-{Stealth[length=2.2mm]},thick] (0,0)--(6.4,0)
+    node[right] {\(t\)};
+  \draw[-{Stealth[length=2.2mm]},thick] (0,-0.2)--(0,6.2)
+    node[above] {\(x\)};
+  \draw[AzulTitulo,very thick,domain=0.45:5.75,smooth,samples=60]
+    plot (\x,{0.16*(\x-1.2)^2+1.05*\x});
+  \coordinate (P) at (3,3.67);
+  \fill (P) circle (2.1pt) node[above left] {\(t_0\)};
+  \draw[BordeEjemplo,very thick] (1.4,1.43)--(4.7,6.05)
+    node[right] {tangente};
+  \node[align=left] at (5.25,2.1)
+    {\(\displaystyle v_x(t_0)\)\\[0.2em]\(\displaystyle=\) pendiente};
+\end{tikzpicture}
+\end{center}
+
+Si la pendiente es positiva, la partícula se mueve hacia \(+x\); si es
+negativa, se mueve hacia \(-x\); si es cero, está instantáneamente en reposo.
+Una posición negativa no implica una velocidad negativa: una partícula puede
+estar a la izquierda del origen y moverse hacia la derecha.
+
+\section{Movimiento rectilíneo uniforme}
+
+En el \textbf{movimiento rectilíneo uniforme} (MRU) la velocidad es constante:
+\[
+  v_x(t)=v_x=\text{constante},
+  \qquad
+  a_x=0.
+\]
+Como la velocidad media coincide con la instantánea en cualquier intervalo,
+\[
+  v_x
+  =
+  \frac{x_f-x_i}{t_f-t_i}.
+\]
+Al despejar la posición final,
+\[
+  x_f=x_i+v_x(t_f-t_i).
+\]
+Si se elige \(t_i=0\), la ecuación de posición queda
+\[
+  \boxed{x(t)=x_i+v_xt}.
+\]
+No es una fórmula aislada: proviene de la definición de velocidad bajo el
+supuesto específico de que \(v_x\) no cambia.
+
+\begin{center}
+\begin{tikzpicture}[x=0.9cm,y=0.72cm]
+  \begin{scope}
+    \draw[-{Stealth[length=2mm]},thick] (0,0)--(5.6,0) node[right] {\(t\)};
+    \draw[-{Stealth[length=2mm]},thick] (0,-0.2)--(0,5.4) node[above] {\(x\)};
+    \draw[AzulTitulo,very thick] (0.5,0.9)--(5,4.8);
+    \node at (2.7,-0.75) {posición};
+    \node[rotate=38,AzulTitulo] at (3.8,3.65) {pendiente \(v_x\)};
+  \end{scope}
+  \begin{scope}[xshift=7.2cm]
+    \draw[-{Stealth[length=2mm]},thick] (0,0)--(5.6,0) node[right] {\(t\)};
+    \draw[-{Stealth[length=2mm]},thick] (0,-0.2)--(0,5.4) node[above] {\(v_x\)};
+    \draw[BordeEjemplo,very thick] (0.5,3.25)--(5,3.25);
+    \draw[dashed,GrisLinea] (0,3.25)--(0.5,3.25);
+    \node[left] at (0,3.25) {\(v_x\)};
+    \node at (2.7,-0.75) {velocidad};
+  \end{scope}
+\end{tikzpicture}
+\end{center}
+
+\begin{ejemplocualitativo}{una muestra sobre una cinta transportadora}
+Si una cinta avanza con velocidad constante, marcas iguales de tiempo dejan
+posiciones igualmente espaciadas. Aumentar la velocidad de la cinta aumenta
+esa separación; invertir el sentido cambia el signo de \(v_x\), pero la
+ecuación \(x(t)=x_i+v_xt\) sigue siendo la misma.
+\end{ejemplocualitativo}
+
+Por ejemplo, una muestra parte en \(x_i=0{,}50\unidadSI{m}\) y se mueve con
+\(v_x=0{,}20\unidadSI{m/s}\). Después de \(12\unidadSI{s}\),
+\[
+  x
+  =
+  0{,}50\unidadSI{m}
+  +(0{,}20\unidadSI{m/s})(12\unidadSI{s})
+  =
+  2{,}90\unidadSI{m}.
+\]
+Las unidades del producto \(v_xt\) se reducen a metros, como exige una
+posición.
+
+\section{Aceleración media e instantánea}
+
+La velocidad puede cambiar en magnitud, en sentido o en ambos. La
+\textbf{aceleración media} mide el cambio de velocidad por unidad de tiempo:
+\[
+  a_{x,\mathrm{med}}
+  \equiv
+  \frac{\Delta v_x}{\Delta t}
+  =
+  \frac{v_{xf}-v_{xi}}{t_f-t_i}.
+\]
+Su unidad SI es
+\[
+  \frac{\mathrm{m/s}}{\mathrm{s}}
+  =
+  \mathrm{m/s^2}.
+\]
+Una aceleración de \(+2\unidadSI{m/s^2}\) significa que, en cada segundo, la
+velocidad cambia \(+2\unidadSI{m/s}\).
+
+La \textbf{aceleración instantánea} se obtiene al reducir el intervalo:
+\[
+  a_x(t)
+  \equiv
+  \lim_{\Delta t\to0}
+  \frac{\Delta v_x}{\Delta t}
+  =
+  \frac{\dd v_x}{\dd t}
+  =
+  \frac{\dd^2x}{\dd t^2}.
+\]
+En una gráfica \(v_x(t)\), \(a_x\) es la pendiente de la recta tangente.
+
+\begin{center}
+\begin{tikzpicture}[x=1.05cm,y=0.72cm]
+  \draw[-{Stealth[length=2.2mm]},thick] (0,0)--(6.5,0)
+    node[right] {\(t\,[\mathrm{s}]\)};
+  \draw[-{Stealth[length=2.2mm]},thick] (0,-0.2)--(0,6.0)
+    node[above] {\(v_x\,[\mathrm{m/s}]\)};
+  \draw[AzulTitulo,very thick] (0.7,1.1)--(5.6,5.1);
+  \draw[dashed,GrisLinea] (0.7,1.1)--(0.7,0);
+  \draw[dashed,GrisLinea] (5.6,5.1)--(5.6,0);
+  \node[below] at (0.7,0) {\(t_i\)};
+  \node[below] at (5.6,0) {\(t_f\)};
+  \node[rotate=39,above,AzulTitulo] at (3.2,3.15)
+    {\(a_x=\Delta v_x/\Delta t\)};
+\end{tikzpicture}
+\end{center}
+
+El signo de la aceleración no indica por sí solo si la rapidez aumenta o
+disminuye:
+\[
+\begin{array}{c@{\qquad}c@{\qquad}c}
+v_x>0,\ a_x>0 &\Rightarrow& \text{aumenta la rapidez},\\
+v_x>0,\ a_x<0 &\Rightarrow& \text{disminuye la rapidez},\\
+v_x<0,\ a_x<0 &\Rightarrow& \text{aumenta la rapidez},\\
+v_x<0,\ a_x>0 &\Rightarrow& \text{disminuye la rapidez}.
+\end{array}
+\]
+La rapidez aumenta cuando velocidad y aceleración tienen el mismo signo.
+Disminuye cuando tienen signos opuestos.
+
+\begin{pregunta}
+Un carro se mueve hacia \(-x\) y su aceleración también apunta hacia \(-x\).
+¿Está frenando o aumentando su rapidez? ¿Qué signo tiene cada cantidad?
+\end{pregunta}
+
+\section{Movimiento rectilíneo uniformemente acelerado}
+
+En el \textbf{movimiento rectilíneo uniformemente acelerado} (MRUA), la
+aceleración es constante:
+\[
+  a_x(t)=a_x=\text{constante}.
+\]
+Al tomar \(t_i=0\), la definición de aceleración se puede despejar:
+\[
+  a_x
+  =
+  \frac{v_x-v_{xi}}{t}
+  \quad\Longrightarrow\quad
+  \boxed{v_x(t)=v_{xi}+a_xt}.
+\]
+La velocidad cambia linealmente con el tiempo. Para una función lineal, la
+velocidad media es la media aritmética de sus extremos:
+\[
+  v_{x,\mathrm{med}}
+  =
+  \frac{v_{xi}+v_x}{2}.
+\]
+Como \(\Delta x=v_{x,\mathrm{med}}t\),
+\[
+  x-x_i
+  =
+  \left(\frac{v_{xi}+v_x}{2}\right)t.
+\]
+Sustituyendo \(v_x=v_{xi}+a_xt\),
+\[
+  x-x_i
+  =
+  \left(v_{xi}+\frac12a_xt\right)t,
+\]
+y se obtiene
+\[
+  \boxed{x(t)=x_i+v_{xi}t+\frac12a_xt^2}.
+\]
+
+Si se elimina el tiempo entre las ecuaciones anteriores, resulta
+\[
+  \boxed{v_x^2=v_{xi}^2+2a_x(x-x_i)}.
+\]
+Estas ecuaciones solo son válidas cuando \(a_x\) permanece constante durante
+todo el intervalo analizado.
+
+\begin{center}
+\begin{tikzpicture}[x=0.72cm,y=0.60cm]
+  \begin{scope}
+    \draw[-{Stealth[length=2mm]},thick] (0,0)--(5.5,0) node[right] {\(t\)};
+    \draw[-{Stealth[length=2mm]},thick] (0,-0.2)--(0,5.5) node[above] {\(x\)};
+    \draw[AzulTitulo,very thick,domain=0.4:4.8,samples=50]
+      plot (\x,{0.18*(\x)^2+0.45*\x+0.5});
+    \node at (2.7,-0.75) {\(x(t)\): parábola};
+  \end{scope}
+  \begin{scope}[xshift=5.6cm]
+    \draw[-{Stealth[length=2mm]},thick] (0,0)--(5.5,0) node[right] {\(t\)};
+    \draw[-{Stealth[length=2mm]},thick] (0,-0.2)--(0,5.5) node[above] {\(v_x\)};
+    \draw[BordeEjemplo,very thick] (0.5,1.0)--(4.8,4.8);
+    \node at (2.7,-0.75) {\(v_x(t)\): recta};
+    \node[rotate=41,above] at (3.4,3.65) {pendiente \(a_x\)};
+  \end{scope}
+  \begin{scope}[xshift=11.2cm]
+    \draw[-{Stealth[length=2mm]},thick] (0,0)--(5.5,0) node[right] {\(t\)};
+    \draw[-{Stealth[length=2mm]},thick] (0,-0.2)--(0,5.5) node[above] {\(a_x\)};
+    \draw[GrisTexto,very thick] (0.5,3.2)--(4.8,3.2);
+    \node[left] at (0,3.2) {\(a_x\)};
+    \node at (2.7,-0.75) {\(a_x(t)\): constante};
+  \end{scope}
+\end{tikzpicture}
+\end{center}
+
+\section{Ejemplo resuelto: carro que parte del reposo}
+
+Un carro de transporte parte desde \(x_i=0\) con velocidad inicial nula y se
+mueve en línea recta con aceleración constante
+\[
+  a_x=0{,}80\unidadSI{m/s^2}
+\]
+durante \(5{,}0\unidadSI{s}\). Se buscan su velocidad y posición finales. Se
+supone que el eje \(+x\) coincide con el movimiento y que la aceleración se
+mantiene constante.
+
+Los datos son
+\[
+  x_i=0,\qquad
+  v_{xi}=0,\qquad
+  a_x=+0{,}80\unidadSI{m/s^2},\qquad
+  t=5{,}0\unidadSI{s}.
+\]
+La velocidad final se obtiene de
+\[
+  v_x=v_{xi}+a_xt:
+\]
+\[
+  v_x
+  =
+  0
+  +(0{,}80\unidadSI{m/s^2})(5{,}0\unidadSI{s})
+  =
+  4{,}0\unidadSI{m/s}.
+\]
+La posición final se obtiene de
+\[
+  x=x_i+v_{xi}t+\frac12a_xt^2:
+\]
+\begin{align*}
+  x
+  &=
+  0+0
+  +\frac12(0{,}80\unidadSI{m/s^2})(5{,}0\unidadSI{s})^2
+  \\
+  &=10\unidadSI{m}.
+\end{align*}
+
+\resultado{Después de \(5{,}0\unidadSI{s}\), el carro está en
+\(x=10\unidadSI{m}\) y se mueve con
+\(v_x=+4{,}0\unidadSI{m/s}\).}
+
+\revision{Como la velocidad crece linealmente desde \(0\) hasta
+\(4{,}0\unidadSI{m/s}\), su valor medio es
+\(2{,}0\unidadSI{m/s}\). Entonces
+\(\Delta x=v_{x,\mathrm{med}}t=(2{,}0)(5{,}0)=10\unidadSI{m}\), el mismo
+resultado obtenido con la ecuación de posición.}
+
+Si el carro mantuviera \(v_x=4{,}0\unidadSI{m/s}\) después de ese instante,
+pasaría a un tramo de MRU. Si comenzara a frenar, la aceleración tendría signo
+opuesto a la velocidad y se necesitaría un nuevo intervalo de MRUA con sus
+propias condiciones iniciales.
 
 \section{Síntesis}
 
 \[
-\begin{gathered}
-\text{referencia}
-\longrightarrow
-\text{coordenada con signo}
-\longrightarrow
-\text{posición},
-\\[0.45em]
-\text{magnitud y dirección}
-\longrightarrow
-\text{vector}
-\longrightarrow
-\text{componentes},
-\\[0.45em]
-\vect{A}=A_x\uvect{i}+A_y\uvect{j},
-\qquad
-\vect{R}=\sum_k\vect{A}_k,
-\\[0.45em]
-\Delta x=x_f-x_i
-\qquad\text{en una dimensión}.
-\end{gathered}
+  x(t)
+  \xrightarrow{\text{pendiente}}
+  v_x(t)
+  \xrightarrow{\text{pendiente}}
+  a_x(t).
 \]
 
-El origen y los ejes hacen inequívoca la posición. Los vectores conservan la
-dirección de los cambios y las componentes permiten sumarlos con precisión.
-En la próxima etapa, el desplazamiento se comparará con el intervalo de tiempo:
-esa razón introducirá la velocidad media.
+\begin{center}
+\begin{tabularx}{\textwidth}{>{\bfseries}l X X}
+\toprule
+Cantidad o modelo & Relación principal & Lectura física \\
+\midrule
+Desplazamiento
+& \(\Delta x=x_f-x_i\)
+& cambio neto de posición \\
+Velocidad media
+& \(v_{x,\mathrm{med}}=\Delta x/\Delta t\)
+& pendiente secante en \(x(t)\) \\
+Velocidad instantánea
+& \(v_x=\dd x/\dd t\)
+& pendiente tangente en \(x(t)\) \\
+Aceleración
+& \(a_x=\dd v_x/\dd t\)
+& cambio de velocidad por unidad de tiempo \\
+MRU
+& \(x=x_i+v_xt\)
+& \(v_x\) constante, \(a_x=0\) \\
+MRUA
+& \(v_x=v_{xi}+a_xt\)
+& \(a_x\) constante \\
+MRUA
+& \(x=x_i+v_{xi}t+\tfrac12a_xt^2\)
+& posición cuadrática en el tiempo \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+La cinemática ya permite describir cómo cambia el movimiento. El paso siguiente
+será preguntar qué interacción produce ese cambio:
+\[
+  \text{aceleración observada}
+  \longrightarrow
+  \text{interacción con el medio}
+  \longrightarrow
+  \text{fuerza neta}.
+\]
 
 \end{document}

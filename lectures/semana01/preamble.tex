@@ -9,7 +9,7 @@
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta,calc,positioning,angles,quotes}
+\usetikzlibrary{arrows.meta,calc,positioning,angles,quotes,decorations.pathreplacing}
 \usepackage{needspace}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
@@ -141,7 +141,8 @@
       inner xsep=3mm,
       inner ysep=2mm,
       fill=white,
-      font=\small
+      font=\small,
+      align=center
     },
     flecha/.style={-{Stealth[length=2.3mm]},thick,draw=GrisLinea}
   ]
