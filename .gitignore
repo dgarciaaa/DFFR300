@@ -2,6 +2,8 @@
 ~$*.docx
 __pycache__/
 *.py[cod]
+build/
+tmp/
 
 # Credenciales locales de Canvas
 scripts_canvas/Key.txt
@@ -9,14 +11,17 @@ scripts_canvas/Key.txt
 # Entorno virtual local
 .fisica1/
 
-# Instrucciones locales para construir los apuntes
-lectures/INSTRUCCIONES_PRIVADAS.md
-
-# Instrucciones y notas locales para el laboratorio
-lab/INSTRUCCIONES_PRIVADAS.md
+# Notas locales para el laboratorio
 lab/NOTAS_PRIVADAS.txt
+
+# Instrucciones locales de trabajo (no versionar)
+**/INSTRUCCIONES.md
 
 # Documentos PDF generados o de referencia
 *.pdf
 !general/*.pdf
 !general/**/*.pdf
+!lab/ejemplos/*.pdf
+!lab/experiencia*/guia/*.pdf
+!lab/experiencia*/rubrica/*.pdf
+!lab/slides_exp*/*.pdf
