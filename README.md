@@ -8,7 +8,7 @@ El curso está pensado para estudiantes de primer año del área química y farm
 
 La meta es construir un conjunto coherente de materiales que permitan:
 
-- planificar el curso semana a semana;
+- desarrollar las clases conforme a la distribución oficial semana a semana;
 - escribir apuntes breves para clases de pizarra;
 - preparar actividades de laboratorio conectadas con la teoría;
 - conservar las fuentes base y documentos oficiales;
@@ -37,13 +37,22 @@ Contiene documentos de referencia para construir el curso:
 
 Estos archivos no son materiales finales para estudiantes necesariamente. Funcionan como fuentes para tomar decisiones sobre contenidos, profundidad, secuencia y resultados de aprendizaje.
 
-Fuentes actuales relevantes:
+La prioridad de las fuentes es:
 
-- `DFFR300_Física Aplicada a las Ciencias Farmacéuticas.pdf`: programa oficial del curso.
-- `Serway_vol1-7Ed.pdf`: texto base principal para mecánica, fluidos y termodinámica.
-- `1Clases.pdf`: apoyo visual y referencia pedagógica previa.
+1. `Syllabus-DFBR300-202620_v0.docx`: ley del curso para aprendizajes
+   esperados, contenidos, alcance y evaluación.
+2. `WEEK2WEEK-DISTRIBUTIONLAB-v1-DFFR300 .pdf`: distribución vigente de esos
+   contenidos por semana. Ordena el trabajo, pero no puede agregar, quitar ni
+   contradecir contenidos del syllabus.
+3. Los libros de `general/`: fuentes para explicar, derivar, ejemplificar y
+   construir la pizarra. `Serway_vol1-7Ed.pdf` aporta la base física general y
+   `martins-2011.pdf` fundamenta los ejemplos cualitativos químicos y
+   farmacéuticos de los bloques morados.
+4. `1Clases.pdf`: antecedente visual y pedagógico complementario; no reemplaza
+   las fuentes anteriores.
 
-Para la unidad de electricidad y magnetismo conviene incorporar una fuente de física general equivalente a Serway Vol. 2. Textos más avanzados, como Griffiths, pueden servir como referencia docente puntual, pero no como base directa para estudiantes de primer año.
+No debe mantenerse una planificación paralela dentro de `lectures/`. Si
+aparece una diferencia entre documentos, prevalece siempre el syllabus.
 
 ## `lectures/`
 
@@ -60,7 +69,6 @@ lectures/
     preamble.tex
     semana01-P1.tex
     semana01-P2.tex
-    cobertura.txt
     build/
     tmp/
 ```
@@ -73,34 +81,47 @@ Cada parte semanal debe dejar claro:
 - hacia qué idea prepara la clase siguiente;
 - qué definiciones, ecuaciones y ejemplos deberían quedar en el cuaderno del estudiante.
 
-El archivo `lectures/plan_semanal_curso.txt` contiene una planificación tentativa de 16 semanas, con dos clases semanales, organizada por unidades:
-
-- Unidad I: mecánica de la partícula en una dimensión;
-- Unidad II: mecánica de fluidos;
-- Unidad III: temperatura, calor y termodinámica;
-- Unidad IV: electricidad y magnetismo.
+La trazabilidad bibliográfica se mantiene de forma centralizada y breve en
+`lectures/BITACORA.md`. No se crean archivos `cobertura.txt` por semana.
+Las reglas reproducibles para construir y revisar los apuntes están en
+`lectures/INSTRUCCIONES.md`.
 
 ## `lab/`
 
 Contiene el diseño del laboratorio del curso.
 
-El laboratorio debe conectar la física básica con mediciones reales, uso de instrumentos, análisis de datos y discusión de errores. La organización recomendada es por experimentos, no estrictamente por semanas, porque una experiencia puede ocupar una o más sesiones.
+El laboratorio debe conectar la física básica con mediciones reales, uso de
+instrumentos, análisis de datos y discusión de errores. La organización
+recomendada es por experiencias oficiales, no por semanas.
 
 Estructura sugerida:
 
 ```text
 lab/
-  experimento01-nombre-breve/
+  INSTRUCCIONES.md
+  BITACORA.md
+  ejemplos/
+  slides_exp01/
+    presentacion.tex
+    Makefile
+    assets/
+  experiencia01-nombre-breve/
     README.md
-    slides/
+    guia/
+    rubrica/
+    template/
     instrumentos/
     datos/
-    guia-estudiante.md
     guia-docente.md
-    rubrica.md
 ```
 
-Cada experimento debería partir de una pregunta clara:
+El syllabus también es la autoridad para el laboratorio. La sesión semanal
+tiene 2 horas pedagógicas y el trabajo experimental se realiza en grupos de
+cuatro. Las presentaciones Beamer se guardan separadamente en
+`lab/slides_expXX/`; el flujo de Canvas publica solo la guía, la rúbrica y el
+template de cada `experienciaXX-*`.
+
+Cada experiencia debería partir de una pregunta clara:
 
 - ¿Qué se quiere medir?
 - ¿Qué fenómeno físico está involucrado?
@@ -110,7 +131,8 @@ Cada experimento debería partir de una pregunta clara:
 - ¿Qué conclusión puede defenderse con evidencia?
 
 El archivo `lab/README.md` presenta la organización general de estas
-experiencias.
+experiencias. `lab/INSTRUCCIONES.md` contiene el procedimiento reproducible y
+`lab/BITACORA.md` registra fuentes, estado y cambios de cada experiencia.
 
 ## Criterio pedagógico
 
@@ -131,24 +153,30 @@ La referencia conceptual principal debe ser física general universitaria. El ni
 
 Para desarrollar una clase:
 
-1. Revisar el contenido correspondiente en el syllabus.
-2. Ubicar las secciones del texto base.
-3. Mirar el plan semanal para mantener continuidad.
-4. Escribir el propósito de la clase.
-5. Definir las fuentes usadas.
-6. Desarrollar el guion conceptual.
-7. Agregar ejemplos mínimos y ejercicios de cierre.
-8. Registrar en `cobertura.txt` qué quedó cubierto y qué queda pendiente.
+1. Determinar en el syllabus los aprendizajes y contenidos permitidos.
+2. Ubicar la semana en `WEEK2WEEK-DISTRIBUTIONLAB-v1-DFFR300 .pdf`.
+3. Seleccionar capítulos y páginas de los libros de `general/`.
+4. Construir el desarrollo físico desde los textos base.
+5. Preparar con `martins-2011.pdf` al menos un puente químico o farmacéutico
+   pertinente cuando el tema lo permita, presentado en un bloque morado.
+6. Desarrollar el artículo de pizarra y compilarlo.
+7. Verificar que el PDF no exceda ni omita el alcance del syllabus.
+8. Actualizar `lectures/BITACORA.md` con tema, estado y páginas realmente
+   utilizadas.
 
 Para desarrollar un laboratorio:
 
-1. Definir la pregunta experimental.
-2. Identificar la unidad del curso que refuerza.
-3. Revisar instrumentos disponibles.
-4. Diseñar procedimiento y registro de datos.
-5. Probar si los datos son razonables.
-6. Escribir guía de estudiante, guía docente y rúbrica.
-7. Preparar slides breves para abrir la sesión.
+1. Revisar en el syllabus la unidad, el aprendizaje, la evaluación y las
+   reglas aplicables.
+2. Definir la pregunta experimental.
+3. Confirmar la ubicación en el documento semana a semana.
+4. Revisar instrumentos disponibles.
+5. Diseñar procedimiento y registro de datos para una sesión de 2 horas
+   pedagógicas y grupos de cuatro.
+6. Probar si los datos son razonables.
+7. Escribir guía de estudiante, guía docente, template y rúbrica.
+8. Preparar en `lab/slides_expXX/` las slides breves para abrir la sesión; no
+   se publican en Canvas por el momento.
 
 ## Uso de Git
 
@@ -174,8 +202,10 @@ Como el proyecto puede contener PDFs grandes, conviene cuidar qué archivos se s
 El proyecto está en etapa de organización inicial. Ya existen:
 
 - fuentes generales del curso;
-- una planificación semanal tentativa;
+- una distribución oficial semana a semana;
 - criterios para escribir clases teóricas;
 - una guía inicial para diseñar el laboratorio.
 
-Los próximos pasos naturales son crear las carpetas de semanas en `lectures/`, definir los primeros experimentos en `lab/` y completar la fuente base para electricidad y magnetismo.
+Los próximos pasos naturales son crear las carpetas de semanas en `lectures/`,
+definir las primeras experiencias en `lab/` y completar la fuente base para
+electricidad y magnetismo.
